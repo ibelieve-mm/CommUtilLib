@@ -1,0 +1,27 @@
+ext {
+    android = [
+            compileSdkVersion: 29,
+            minSdkVersion    : 21,
+            targetSdkVersion : 29,
+            applicationId    : 'com.dahu.app',
+            versionCode      : 200429,
+            versionName      : '1.0.0',
+            multiDexEnabled  : true,
+    ]
+
+    depsVersion = [
+            /**
+             * 腾讯原生UI框架
+             */
+            qmui              : '2.0.0-alpha08',
+    ]
+
+    depsLibs = [
+            /**
+             * 腾讯原生UI框架
+             */
+            qmui               : "com.qmuiteam:qmui:${depsVersion.qmui}",
+            qmuiArch           : "com.qmuiteam:arch:${depsVersion.qmui}",
+            qmuiArchCompiler   : "com.qmuiteam:arch-compiler:${depsVersion.qmui}",
+    ]
+}
