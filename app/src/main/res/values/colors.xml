@@ -3,4 +3,27 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
+
+    <!-- 透明度百分值对照表
+      10 : 19
+      20 : 33
+      30 : 4C
+      40 : 66
+      50 : 7F
+      60 : 99
+      70 : B2
+      80 : CC
+      90 : E6
+      -->
+
+    <!-- 主题色 -->
+    <color name="color_theme">#1B85ED</color>
+    <color name="color_theme_t70">#B21B85ED</color>
+
+    <!-- 标题栏 -->
+    <color name="color_titleBg">#F0F0F0</color>
+
+    <!-- 分割线 -->
+    <color name="color_dividerLine">#D7D7D7</color>
 </resources>

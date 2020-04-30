@@ -1,19 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<com.qmuiteam.qmui.widget.QMUIWindowInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.MainActivity">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/tv_hw"
-        android:layout_width="wrap_content"
+    <ScrollView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="?attr/qmui_topbar_height"
+        android:background="@color/qmui_config_color_white"
+        android:fitsSystemWindows="true">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                android:id="@+id/btn_printLog"
+                style="@style/InitBtnWrap"
+                android:layout_marginStart="@dimen/size_pageContentMarginHor"
+                android:layout_marginTop="10dp"
+                android:text="打印 Log"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                android:id="@+id/qmBtn_cannotUse"
+                style="@style/InitBtnWrap.Round"
+                android:layout_marginStart="@dimen/size_pageContentMarginHor"
+                android:layout_marginTop="10dp"
+                android:text="按钮不可用"
+                android:enabled="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_printLog" />
+
+            <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                android:id="@+id/qmBtn_showToast"
+                style="@style/InitBtnFull"
+                android:layout_marginTop="10dp"
+                android:text="弹出 Toast"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/qmBtn_cannotUse" />
+
+
+            <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                android:id="@+id/qmBtn_noEvent"
+                style="@style/InitBtnFull.Round"
+                android:layout_marginTop="10dp"
+                android:text="可用、无事件监听"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/qmBtn_showToast" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <com.qmuiteam.qmui.widget.QMUITopBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+        <!--        android:background="#ff639b"-->
+
+        <!--            app:qmui_bottomDividerColor="#FF0000"-->
+        <!--            app:qmui_bottomDividerHeight="10dp"-->
+        <!--            app:qmui_topbar_title_color="@android:color/white"-->
+        <com.qmuiteam.qmui.widget.QMUITopBar
+            android:id="@+id/topbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/qmui_topbar_height"
+            android:background="@color/qmui_config_color_transparent"
+            android:fitsSystemWindows="true"
+            app:qmui_layout_collapseMode="pin"
+            app:qmui_topbar_title_gravity="left_center" />
+    </com.qmuiteam.qmui.widget.QMUITopBarLayout>
+</com.qmuiteam.qmui.widget.QMUIWindowInsetLayout>
+

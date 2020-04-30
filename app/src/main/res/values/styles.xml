@@ -8,4 +8,62 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+
+    <!--
+      *
+      * 主题
+      *
+    -->
+    <style name="BThemeNoActionBar" parent="QMUI.Compat.NoActionBar">
+
+        <!-- 标题栏 -->
+        <item name="qmui_skin_support_topbar_bg">@color/color_titleBg</item> <!-- 标题栏背景色 -->
+        <item name="qmui_skin_support_topbar_title_color">@color/color_theme</item> <!-- 标题文字颜色 -->
+        <item name="qmui_skin_support_topbar_subtitle_color">@color/color_theme_t70
+        </item> <!-- 副标题文字颜色 -->
+        <item name="qmui_skin_support_topbar_separator_color">@color/color_dividerLine
+        </item> <!-- 标题栏分割线色 -->
+
+        <!-- Button -->
+        <item name="qmui_skin_support_round_btn_bg_color">@color/color_theme</item> <!-- 背景色 -->
+        <item name="qmui_skin_support_round_btn_border_color">@color/color_theme
+        </item> <!-- 边框颜色 -->
+        <item name="qmui_skin_support_round_btn_text_color">@android:color/white
+        </item> <!-- 文字颜色 -->
+        <item name="qmui_round_btn_border_width">0dp</item>
+        <item name="qmui_round_btn_text_size">50sp</item>
+    </style>
+
+    <!--
+      *
+      * 按钮
+      *
+    -->
+    <!-- 初始化 wrap_content Button -->
+    <style name="InitBtnWrap">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:paddingTop">7dp</item>
+        <item name="android:paddingBottom">7dp</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
+    </style>
+
+    <style name="InitBtnWrap.Round">
+        <item name="qmui_isRadiusAdjustBounds">true</item>
+    </style>
+
+    <style name="InitBtnFull">
+        <item name="qmui_radius">5dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/size_btnHeight</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_marginStart">@dimen/size_pageContentMarginHor</item>
+        <item name="android:layout_marginEnd">@dimen/size_pageContentMarginHor</item>
+    </style>
+
+    <style name="InitBtnFull.Round">
+        <item name="qmui_radius">@dimen/size_btnHeightHalf</item>
+    </style>
 </resources>
