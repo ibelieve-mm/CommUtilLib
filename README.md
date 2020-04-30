@@ -15,7 +15,7 @@ allprojects {
 
 // 2. dependency
 dependencies {
-    implementation 'com.github.ibelieve-mm:CommUtilLib:{版本号}'
+    implementation "com.github.ibelieve-mm:CommUtilLib:{版本号}"
 }
 ```
 
