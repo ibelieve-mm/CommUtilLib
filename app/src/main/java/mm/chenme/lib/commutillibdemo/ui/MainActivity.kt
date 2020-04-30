@@ -5,7 +5,7 @@ import com.qmuiteam.qmui.arch.QMUIFragmentActivity
 import com.qmuiteam.qmui.kotlin.onClick
 import com.qmuiteam.qmui.util.QMUIStatusBarHelper
 import kotlinx.android.synthetic.main.activity_main.*
-import mm.chenme.lib.commutillib.utils.Lt
+import mm.chenme.lib.commutillib.utils.loge
 import mm.chenme.lib.commutillibdemo.R
 
 class MainActivity : QMUIFragmentActivity() {
@@ -19,8 +19,8 @@ class MainActivity : QMUIFragmentActivity() {
 
 
         tv_hw.onClick {
-            Lt.e("设置状态栏黑色字体")
-            Lt.e("设置状态栏黑色字体","ChenME")
+            loge("设置状态栏黑色字体")
+            loge("设置状态栏黑色字体","ChenME")
         }
     }
 }
