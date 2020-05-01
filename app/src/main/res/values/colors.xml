@@ -26,4 +26,7 @@
 
     <!-- 分割线 -->
     <color name="color_dividerLine">#D7D7D7</color>
+
+    <!-- 其他 -->
+    <color name="color_red_ff639b">#FF639B</color>
 </resources>

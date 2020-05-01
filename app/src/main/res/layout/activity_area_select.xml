@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.qmuiteam.qmui.widget.QMUIWindowInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.qmuiteam.qmui.widget.QMUITopBarLayout
+        android:layout_width="match_parent"
+        android:id="@+id/topBarLayout"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <com.qmuiteam.qmui.widget.QMUITopBar
+            android:id="@+id/topbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/qmui_topbar_height"
+            android:background="@color/qmui_config_color_transparent"
+            android:fitsSystemWindows="true"
+            app:qmui_layout_collapseMode="pin"
+            app:qmui_topbar_title_gravity="left_center" />
+    </com.qmuiteam.qmui.widget.QMUITopBarLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:fitsSystemWindows="true"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/qmui_topbar_height">
+
+
+        <!--        <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton-->
+        <!--            android:id="@+id/btn_printBean"-->
+        <!--            style="@style/InitBtnWrap"-->
+        <!--            android:layout_marginStart="@dimen/size_pageContentMarginHor"-->
+        <!--            android:layout_marginTop="10dp"-->
+        <!--            android:text="打印 Bean"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toStartOf="@+id/recyclerView2"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toStartOf="@+id/recyclerView3"
+            app:layout_constraintStart_toEndOf="@+id/recyclerView1" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/recyclerView2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</com.qmuiteam.qmui.widget.QMUIWindowInsetLayout>
+

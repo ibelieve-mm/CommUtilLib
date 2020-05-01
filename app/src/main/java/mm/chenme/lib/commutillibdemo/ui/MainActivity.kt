@@ -7,6 +7,7 @@ import mm.chenme.lib.commutillib.utils.loge
 import mm.chenme.lib.commutillibdemo.R
 import mm.chenme.lib.commutillibdemo.base.BaseFragmentActivity
 import mm.chenme.lib.commutillibdemo.utils.addQMUIBtnAlpha
+import org.jetbrains.anko.startActivity
 
 class MainActivity : BaseFragmentActivity() {
 
@@ -25,6 +26,8 @@ class MainActivity : BaseFragmentActivity() {
     override fun initListener() {
         btn_printLog.onClick {
             loge("打印 log 日志！")
+
+            startActivity<AreaSelectActivity>()
         }
         qmBtn_showToast.onClick {
             stoast("弹出 toast！")

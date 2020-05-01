@@ -45,4 +45,14 @@ dependencies {
     implementation rootProject.depsLibs.qmui
     implementation rootProject.depsLibs.qmuiArch
     kapt rootProject.depsLibs.qmuiArchCompiler
+
+    /**
+     * Gson
+     */
+    implementation rootProject.depsLibs.gson
+
+    /**
+     * anko
+     */
+    implementation rootProject.depsLibs.anko
 }
