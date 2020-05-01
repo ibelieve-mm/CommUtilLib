@@ -29,7 +29,6 @@ data class AreaBean(
 data class StreetBean(
     var name: String = "",
     var isSelected: Boolean = false,
-//    var selectCount: Int = 0,
     var value: Long = 0L
 )
 

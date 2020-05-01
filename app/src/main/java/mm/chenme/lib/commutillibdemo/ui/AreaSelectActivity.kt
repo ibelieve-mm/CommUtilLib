@@ -138,6 +138,10 @@ class AreaSelectActivity : BaseFragmentActivity() {
                 dataItem.isSelected = !dataItem.isSelected
                 mStreetAdapter.notifyItemChanged(pos)
 
+
+                /**
+                 * 打印结果
+                 */
                 mResult.forEach {
                     loge(it.value.toString())
                 }
