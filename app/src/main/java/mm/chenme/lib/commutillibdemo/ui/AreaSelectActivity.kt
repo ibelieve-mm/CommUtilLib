@@ -3,6 +3,7 @@ package mm.chenme.lib.commutillibdemo.ui
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.qmuiteam.qmui.kotlin.onClick
+import com.qmuiteam.qmui.util.QMUIKeyboardHelper
 import kotlinx.android.synthetic.main.activity_area_select.*
 import mm.chenme.lib.commutillib.pro.adapter.BaseRecyclerViewAdapter
 import mm.chenme.lib.commutillib.utils.loge
@@ -15,16 +16,13 @@ import java.io.IOException
 import java.io.InputStreamReader
 
 /**
- * Descriptions：
+ * Descriptions：城市选择页面
  * <p>
  * Author：ChenME
  * Date：2020/5/1
  * Email：ibelieve1210@163.com
  */
 class AreaSelectActivity : BaseFragmentActivity() {
-
-
-    override fun loadContentView(): Int = R.layout.activity_area_select
 
     private val mCityList = mutableListOf<CityBean>()
     private val mAreaList = mutableListOf<AreaBean>()
@@ -39,6 +37,8 @@ class AreaSelectActivity : BaseFragmentActivity() {
 
     private var mResult = mutableMapOf<Long, ResultBean>() // 用于保存结果
 
+    override fun loadContentView(): Int = R.layout.activity_area_select
+
     override fun initData() {
         val jsonRes = readJsonFromAssets("location.json")
         val bean = parseJson(jsonRes, DataBean::class.java)
@@ -47,10 +47,15 @@ class AreaSelectActivity : BaseFragmentActivity() {
         mAreaList.addAll(bean.data[0].value)
         mAreaList[0].isSelected = true
         mStreetList.addAll(bean.data[0].value[0].value)
-
     }
 
     override fun initView() {
+
+        topbar.setTitle("城市选择")
+        topbar.addLeftBackImageButton().onClick {
+            finish()
+        }
+
         recyclerView1.layoutManager = LinearLayoutManager(this)
         mCityAdapter = BaseRecyclerViewAdapter(this, mCityList, R.layout.list_city_item) { rootView, dataItem, pos ->
             val tv = (rootView as TextView)
@@ -73,6 +78,7 @@ class AreaSelectActivity : BaseFragmentActivity() {
                 mCityAdapter.notifyItemChanged(pos)
 
                 // 清除第二列上一位置的选中效果
+                mAreaList[mLastClickArea].isSelected = false
                 mLastClickArea = 0
 
                 mAreaList.clear()
@@ -172,5 +178,4 @@ class AreaSelectActivity : BaseFragmentActivity() {
         }
         return stringBuilder.toString()
     }
-
 }

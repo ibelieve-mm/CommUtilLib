@@ -14,11 +14,11 @@ import com.qmuiteam.qmui.util.QMUIStatusBarHelper
  */
 abstract class BaseFragmentActivity : QMUIFragmentActivity() {
 
-    abstract fun loadContentView(): Int
-    open fun initData() {}
-    open fun initView() {}
-    open fun initListener() {}
-    open fun loadData() {}
+    abstract fun loadContentView(): Int // 加载页面布局
+    open fun initData() {} // 初始化数据
+    open fun initView() {} // 初始化View
+    open fun initListener() {} // 初始化Listener
+    open fun loadData() {} // 请求数据
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

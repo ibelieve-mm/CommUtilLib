@@ -24,6 +24,9 @@
     <!-- 标题栏 -->
     <color name="color_titleBg">#F0F0F0</color>
 
+    <!-- 页面背景色 -->
+    <color name="color_pageBg">#EFF3F6</color>
+
     <!-- 分割线 -->
     <color name="color_dividerLine">#D7D7D7</color>
 

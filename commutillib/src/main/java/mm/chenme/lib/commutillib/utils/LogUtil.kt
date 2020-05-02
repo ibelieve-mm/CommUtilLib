@@ -17,35 +17,24 @@ import java.util.*
 //private const val DEBUG = BuildConfig.DEBUG
 
 private const val TAG = "---MMLib---"
-private const val DEBUG = true
 
 fun loge(content: String, tag: String = TAG) {
-        if (DEBUG) {
-            Log.e(tag, "（${Date().ymdhmsDot()}）>> $content")
-        }
-    }
+    Log.e(tag, "（${Date().ymdhmsDot()}）>> $content")
+}
 
-    fun logw(content: String, tag: String = TAG) {
-        if (DEBUG) {
-            Log.w(tag, "（${Date().ymdhmsDot()}）>> $content")
-        }
-    }
+fun logw(content: String, tag: String = TAG) {
+    Log.w(tag, "（${Date().ymdhmsDot()}）>> $content")
+}
 
-    fun logd(content: String, tag: String = TAG) {
-        if (DEBUG) {
-            Log.d(tag, "（${Date().ymdhmsDot()}）>> $content")
-        }
-    }
+fun logd(content: String, tag: String = TAG) {
+    Log.d(tag, "（${Date().ymdhmsDot()}）>> $content")
+}
 
-    fun logi(content: String, tag: String = TAG) {
-        if (DEBUG) {
-            Log.i(tag, "（${Date().ymdhmsDot()}）>> $content")
-        }
-    }
+fun logi(content: String, tag: String = TAG) {
+    Log.i(tag, "（${Date().ymdhmsDot()}）>> $content")
+}
 
 
-    fun logd(content: String, tr: Throwable, tag: String = TAG) {
-        if (DEBUG) {
-            Log.d(tag, "（${Date().ymdhmsDot()}）>> $content", tr)
-        }
-    }
+fun logd(content: String, tr: Throwable, tag: String = TAG) {
+    Log.d(tag, "（${Date().ymdhmsDot()}）>> $content", tr)
+}

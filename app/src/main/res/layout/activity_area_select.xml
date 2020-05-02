@@ -3,9 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <com.qmuiteam.qmui.widget.QMUITopBarLayout
-        android:layout_width="match_parent"
         android:id="@+id/topBarLayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fitsSystemWindows="true">
 
@@ -18,11 +19,12 @@
             app:qmui_layout_collapseMode="pin"
             app:qmui_topbar_title_gravity="left_center" />
     </com.qmuiteam.qmui.widget.QMUITopBarLayout>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:fitsSystemWindows="true"
         android:layout_height="match_parent"
-        android:layout_marginTop="?attr/qmui_topbar_height">
+        android:layout_marginTop="?attr/qmui_topbar_height"
+        android:fitsSystemWindows="true">
 
 
         <!--        <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton-->

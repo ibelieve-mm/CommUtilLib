@@ -24,7 +24,7 @@ class BaseRecyclerViewAdapter<T>(private val context: Context, private var data:
     private var clickPosition = -1
 
     override fun onBindViewHolder(holder: BaseViewHolder<T>, position: Int) {
-        holder.bindForest(data.get(position), position)
+        holder.bindForest(data[position], position)
         if (mOnItemClickListener != null) {
             holder.itemView.setOnClickListener { v ->
                 if (clickPosition != position) {
