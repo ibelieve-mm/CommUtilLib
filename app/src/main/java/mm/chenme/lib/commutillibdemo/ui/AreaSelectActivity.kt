@@ -5,12 +5,14 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.qmuiteam.qmui.kotlin.onClick
 import com.qmuiteam.qmui.util.QMUIKeyboardHelper
 import kotlinx.android.synthetic.main.activity_area_select.*
+import kotlinx.android.synthetic.main.menu_text_view.*
 import mm.chenme.lib.commutillib.pro.adapter.BaseRecyclerViewAdapter
 import mm.chenme.lib.commutillib.utils.loge
 import mm.chenme.lib.commutillibdemo.R
 import mm.chenme.lib.commutillibdemo.base.BaseFragmentActivity
 import mm.chenme.lib.commutillibdemo.model.*
 import mm.chenme.lib.commutillibdemo.utils.parseJson
+import org.jetbrains.anko.find
 import java.io.BufferedReader
 import java.io.IOException
 import java.io.InputStreamReader
@@ -55,6 +57,7 @@ class AreaSelectActivity : BaseFragmentActivity() {
         topbar.addLeftBackImageButton().onClick {
             finish()
         }
+        topbar.addRightTextButton("打印结果",R.id.tv_menuStyle)
 
         recyclerView1.layoutManager = LinearLayoutManager(this)
         mCityAdapter = BaseRecyclerViewAdapter(this, mCityList, R.layout.list_city_item) { rootView, dataItem, pos ->
@@ -136,7 +139,7 @@ class AreaSelectActivity : BaseFragmentActivity() {
                 } else {
                     mCityList[mLastClickCity].selectCount++
                     mAreaList[mLastClickArea].selectCount++
-                    mResult[dataItem.value] = ResultBean(mCityList[mLastClickCity].name, mAreaList[mLastClickArea].name, dataItem.name, dataItem.value)
+                    mResult[dataItem.value] = ResultBean(mCityList[mLastClickCity].name, mAreaList[mLastClickArea].name, dataItem.name, mLastClickCity, mLastClickArea, dataItem.value)
                 }
                 mAreaAdapter.notifyItemChanged(mLastClickArea)
                 mCityAdapter.notifyItemChanged(mLastClickCity)
@@ -145,16 +148,53 @@ class AreaSelectActivity : BaseFragmentActivity() {
                 mStreetAdapter.notifyItemChanged(pos)
 
 
-                /**
-                 * 打印结果
-                 */
-                mResult.forEach {
-                    loge(it.value.toString())
-                }
+
             }
         }
         recyclerView3.adapter = mStreetAdapter
     }
+
+
+    override fun initListener() {
+
+        /**
+         * 打印结果
+         */
+        tv_menuStyle.onClick {
+
+            loge("\n原始数据---------->")
+            mResult.forEach {
+                loge(it.value.toString())
+            }
+
+            val tmpMap = mutableMapOf<String,MutableList<ResultBean>>()
+            mResult.forEach {
+                var tmpList = tmpMap[it.value.city]
+                if(null==tmpList){
+                    tmpList= mutableListOf()
+                    tmpMap[it.value.city]=tmpList
+                }
+                tmpList.add(it.value)
+            }
+
+            loge("\n第一次整理结果---------->")
+            tmpMap.forEach {
+                loge(it.value.toString())
+            }
+
+            val resultList = mutableListOf<ResultParentBean>()
+            tmpMap.forEach {
+                resultList.add(ResultParentBean(it.key,it.value))
+            }
+            loge("\n第二次整理结果---------->")
+            loge(resultList.toString())
+        }
+    }
+
+    data class ResultParentBean(
+        var name:String="",
+        var list:MutableList<ResultBean>
+    )
 
     /**
      * 更新街道列表（第三列）

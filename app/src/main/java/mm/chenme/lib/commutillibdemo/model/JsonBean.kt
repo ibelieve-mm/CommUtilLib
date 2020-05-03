@@ -32,9 +32,12 @@ data class StreetBean(
     var value: Long = 0L
 )
 
+
 data class ResultBean(
     var city: String = "",
     var area: String = "",
     var street: String = "",
+    var cIndex: Int = -1,
+    var aIndex: Int = -1,
     var code: Long = 0L
 )

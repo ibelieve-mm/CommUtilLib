@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/tv_menuStyle"
+    android:textSize="13sp"
+    android:textColor="@color/color_red_ff639b"
+    android:layout_height="match_parent"/>
