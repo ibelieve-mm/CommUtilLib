@@ -32,6 +32,18 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/qmBtn_qmuiTest" />
 
+            <mm.chenme.lib.commutillib.pro.view_exts.ClipConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                android:background="@color/color_red_ff639b"
+                app:clip_radius="20dp"
+                app:clip_side="all"
+                app:layout_constraintTop_toBottomOf="@+id/qmBtn_citySelect" />
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 

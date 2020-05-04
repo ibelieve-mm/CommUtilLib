@@ -37,4 +37,5 @@ dependencies {
      * RecyclerView
      */
     api rootProject.depsLibs.recyclerView
+    api rootProject.depsLibs.constraintLayout
 }
