@@ -18,6 +18,7 @@ class MainActivity : BaseFragmentActivity() {
 
     override fun initListener() {
         qmBtn_qmuiTest.onClick {
+//            startActivity<FlutterDemoActivity>()
             startActivity<QMUIWidgetTestActivity>()
         }
 

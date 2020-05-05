@@ -42,8 +42,6 @@
                 app:clip_radius="20dp"
                 app:clip_side="all"
                 app:layout_constraintTop_toBottomOf="@+id/qmBtn_citySelect" />
-
-
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 

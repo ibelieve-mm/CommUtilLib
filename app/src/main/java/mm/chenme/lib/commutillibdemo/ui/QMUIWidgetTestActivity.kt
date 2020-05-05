@@ -1,6 +1,9 @@
 package mm.chenme.lib.commutillibdemo.ui
 
+import android.graphics.Color
+import android.provider.CalendarContract
 import com.qmuiteam.qmui.kotlin.onClick
+import com.qmuiteam.qmui.util.QMUIDisplayHelper
 import kotlinx.android.synthetic.main.activity_qmui_widget_test.*
 import mm.chenme.lib.commutillib.exts.stoast
 import mm.chenme.lib.commutillib.utils.loge
@@ -28,6 +31,9 @@ class QMUIWidgetTestActivity : BaseFragmentActivity() {
         }
 
         addQMUIBtnAlpha(btn_printLog, qmBtn_cannotUse, qmBtn_showToast, qmBtn_noEvent)
+
+        qmLl_test.setRadiusAndShadow(20, QMUIDisplayHelper.dp2px(this, 14), .7f)
+        qmLl_test.shadowColor = resources.getColor(R.color.color_red_ff639b)
     }
 
     override fun initListener() {

@@ -19,6 +19,7 @@
         </activity>
         <activity android:name=".ui.AreaSelectActivity" />
         <activity android:name=".ui.QMUIWidgetTestActivity" />
+<!--        <activity android:name=".ui.FlutterDemoActivity" />-->
     </application>
 
 </manifest>

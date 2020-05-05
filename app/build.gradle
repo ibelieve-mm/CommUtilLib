@@ -55,4 +55,9 @@ dependencies {
      * anko
      */
     implementation rootProject.depsLibs.anko
+
+//    /**
+//     * flutter 项目
+//     */
+//    implementation project(':flutter')
 }
