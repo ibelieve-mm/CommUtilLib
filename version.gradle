@@ -11,17 +11,16 @@ ext {
 
     depsVersion = [
 
+            /**
+             * 基本组件
+             */
             constraintLayout  : '1.1.3',
+            recyclerView      : '1.1.0',
 
             /**
              * 腾讯原生UI框架
              */
             qmui              : '2.0.0-alpha08',
-
-            /**
-             * RecyclerView
-             */
-            recyclerView      : '1.1.0',
 
             /**
              * Gson
@@ -35,7 +34,11 @@ ext {
     ]
 
     depsLibs = [
+            /**
+             * 基本组件
+             */
             constraintLayout   : "androidx.constraintlayout:constraintlayout:${depsVersion.constraintLayout}",
+            recyclerView       : "androidx.recyclerview:recyclerview:${depsVersion.recyclerView}",
 
             /**
              * 腾讯原生UI框架
@@ -43,11 +46,6 @@ ext {
             qmui               : "com.qmuiteam:qmui:${depsVersion.qmui}",
             qmuiArch           : "com.qmuiteam:arch:${depsVersion.qmui}",
             qmuiArchCompiler   : "com.qmuiteam:arch-compiler:${depsVersion.qmui}",
-
-            /**
-             * RecyclerView
-             */
-            recyclerView       : "androidx.recyclerview:recyclerview:${depsVersion.recyclerView}",
 
             /**
              * Gson

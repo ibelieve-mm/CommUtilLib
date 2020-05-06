@@ -34,8 +34,8 @@ dependencies {
 
 
     /**
-     * RecyclerView
+     * 基本组件
      */
-    api rootProject.depsLibs.recyclerView
     api rootProject.depsLibs.constraintLayout
+    api rootProject.depsLibs.recyclerView
 }
