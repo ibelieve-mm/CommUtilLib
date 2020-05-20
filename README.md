@@ -21,7 +21,7 @@ dependencies {
 
 ---
 
-### lib  已经依赖的三方库
+### lib  已经依赖的三方库（使用时需要排除）
 
 1. 基本组件
 
@@ -42,7 +42,24 @@ api "io.reactivex.rxjava2:rxandroid:2.1.0"
 api "android.arch.lifecycle:extensions:1.1.1"
 ```
 
+---
 
+### 关于 Proguard
+
+#### 1. 打包时删除 log 日志
+
+```proguard
+### --- start: 去除自定义的 Log 日志 ---------------------------------------------------------
+-assumenosideeffects class mm.chenme.lib.commutillib.utils.* {
+    # mm.chenme.lib.commutillib.utils.LogUtil
+    *** loge(...);
+    *** logw(...);
+    *** logd(...);
+    *** logi(...);
+    *** logd(...);
+}
+### --- end: 去除自定义的 Log 日志 -----------------------------------------------------------
+```
 
 ---
 

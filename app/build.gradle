@@ -19,11 +19,37 @@ android {
 //        resConfigs('zh-rCN', 'ko') // 只保留中文资源
     }
 
+//    signingConfigs {
+////        release {
+////            storeFile file('keystores/release/omegle.jks')
+////            storePassword project.hasProperty("KEYSTORE_PASS") ? KEYSTORE_PASS : System.getenv("KEYSTORE_PASS")
+////            keyAlias project.hasProperty("ALIAS_NAME") ? ALIAS_NAME : System.getenv("ALIAS_NAME")
+////            keyPassword project.hasProperty("ALIAS_PASS") ? ALIAS_PASS : System.getenv("ALIAS_PASS")
+////        }
+//        release {
+//            storeFile file('keystores/release/commutilcme1990')
+//            storePassword "commutilcme1990"
+//            keyAlias "commutil"
+//            keyPassword "commutilcme1990"
+//        }
+//        debug {
+//            storeFile file('keystores/debug/commutilcme1990')
+//            storePassword "commutilcme1990"
+//            keyAlias "commutil"
+//            keyPassword "commutilcme1990"
+//        }
+//    }
+
     buildTypes {
-        release {
+        debug {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+
+//        release {
+//            minifyEnabled true
+//            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+//        }
     }
 }
 
