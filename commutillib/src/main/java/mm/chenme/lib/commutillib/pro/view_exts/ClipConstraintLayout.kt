@@ -6,7 +6,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import mm.chenme.lib.commutillib.pro.view_exts.ViewClipHelper.setViewOutline
 
 /**
- * Descriptions：
+ * Descriptions：可裁剪为圆角的 ConstraintLayout 布局
  * <p>
  * Author：ChenME
  * Date：2020/5/4

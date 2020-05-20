@@ -1,8 +1,6 @@
 package mm.chenme.lib.commutillib.utils
 
 import android.util.Log
-import mm.chenme.lib.commutillib.BuildConfig
-import mm.chenme.lib.commutillib.exts.ymdhmsDot
 import java.util.*
 
 /**

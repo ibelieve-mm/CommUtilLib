@@ -10,7 +10,7 @@ import mm.chenme.lib.commutillib.R
 
 
 /**
- * Descriptions：
+ * Descriptions：用于裁剪圆角布局的 Helper
  * <p>
  * Author：ChenME
  * Date：2020/5/4
