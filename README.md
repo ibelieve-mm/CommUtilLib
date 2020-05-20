@@ -21,6 +21,31 @@ dependencies {
 
 ---
 
+### lib  已经依赖的三方库
+
+1. 基本组件
+
+```groovy
+api "androidx.constraintlayout:constraintlayout:1.1.3"
+api "androidx.recyclerview:recyclerview:1.1.0"
+```
+
+2. 网络框架
+
+```groovy
+api "com.squareup.retrofit2:retrofit:2.5.0"
+api "com.squareup.retrofit2:converter-gson:2.5.0"
+api "com.squareup.retrofit2:adapter-rxjava2:2.5.0"
+api "com.squareup.okhttp3:logging-interceptor:3.12.3"
+api "io.reactivex.rxjava2:rxjava:2.2.4"
+api "io.reactivex.rxjava2:rxandroid:2.1.0"
+api "android.arch.lifecycle:extensions:1.1.1"
+```
+
+
+
+---
+
 ### 历史版本
 
 #### 0.0.1.1 预览版
