@@ -8,7 +8,7 @@ import androidx.annotation.LayoutRes
 import androidx.annotation.StringRes
 
 /**
- * Descriptions：
+ * Descriptions：资源工具类
  * StartVersion：
  * <p>
  * Author：ChenME
@@ -25,7 +25,18 @@ import androidx.annotation.StringRes
 //fun Context.px2dp(value: Int): Float = value.toFloat() / resources.displayMetrics.density
 //fun Context.px2sp(value: Int): Float = value.toFloat() / resources.displayMetrics.scaledDensity
 
+/**
+ * 屏幕宽
+ * 2020/5/20，ChenME
+ * @return 屏幕宽 px
+ */
 val screenWidthPx get() = AppGlobals.application().resources.displayMetrics.widthPixels
+
+/**
+ * 屏幕高
+ * 2020/5/20，ChenME
+ * @return 屏幕高 px
+ */
 val screenHeightPx get() = AppGlobals.application().resources.displayMetrics.heightPixels
 
 fun inflate(@LayoutRes resId: Int, parent: ViewGroup? = null, attachToRoot: Boolean = false): View = LayoutInflater.from(AppGlobals.application()).inflate(resId, parent, attachToRoot)

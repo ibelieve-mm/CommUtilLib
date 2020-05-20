@@ -36,6 +36,6 @@ dependencies {
     /**
      * 基本组件
      */
-    api rootProject.depsLibs.constraintLayout
-    api rootProject.depsLibs.recyclerView
+    implementation rootProject.depsLibs.constraintLayout
+    implementation rootProject.depsLibs.recyclerView
 }

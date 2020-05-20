@@ -39,6 +39,9 @@ dependencies {
 
     implementation project(":commutillib")
 
+    implementation rootProject.depsLibs.constraintLayout
+    implementation rootProject.depsLibs.recyclerView
+
     /**
      * 腾讯原生UI框架
      */
