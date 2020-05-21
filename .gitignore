@@ -14,7 +14,7 @@
 .cxx
 
 # 安装包输出位置
-/apk
+/app/apk
 
 # 混淆日志
 proguardMapping.txt
