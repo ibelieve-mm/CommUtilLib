@@ -4,6 +4,10 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
+def keystorePropertiesFile = rootProject.file("keystore.properties") // 创建文件
+def keystoreProperties = new Properties() // 创建 Properties
+keystoreProperties.load(new FileInputStream(keystorePropertiesFile)) // 加载 Properties
+
 android {
     compileSdkVersion rootProject.android.compileSdkVersion
     defaultConfig {
@@ -19,37 +23,33 @@ android {
 //        resConfigs('zh-rCN', 'ko') // 只保留中文资源
     }
 
-//    signingConfigs {
-////        release {
-////            storeFile file('keystores/release/omegle.jks')
-////            storePassword project.hasProperty("KEYSTORE_PASS") ? KEYSTORE_PASS : System.getenv("KEYSTORE_PASS")
-////            keyAlias project.hasProperty("ALIAS_NAME") ? ALIAS_NAME : System.getenv("ALIAS_NAME")
-////            keyPassword project.hasProperty("ALIAS_PASS") ? ALIAS_PASS : System.getenv("ALIAS_PASS")
-////        }
-//        release {
-//            storeFile file('keystores/release/commutilcme1990')
-//            storePassword "commutilcme1990"
-//            keyAlias "commutil"
-//            keyPassword "commutilcme1990"
-//        }
+    signingConfigs {
+        release {
+            storeFile file('keystores/release/commutilcme1990')
+            storePassword keystoreProperties['KEY_PWD']
+            keyAlias keystoreProperties['KEY_ALIAS']
+            keyPassword keystoreProperties['KEY_PWD']
+        }
 //        debug {
 //            storeFile file('keystores/debug/commutilcme1990')
-//            storePassword "commutilcme1990"
-//            keyAlias "commutil"
-//            keyPassword "commutilcme1990"
+//            storePassword KEY_PWD
+//            keyAlias KEY_ALIAS
+//            keyPassword KEY_PWD
 //        }
-//    }
+    }
 
     buildTypes {
         debug {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
         }
 
-//        release {
-//            minifyEnabled true
-//            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-//        }
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
     }
 }
 

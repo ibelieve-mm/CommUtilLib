@@ -12,3 +12,9 @@
 /captures
 .externalNativeBuild
 .cxx
+
+# 安装包输出位置
+/apk
+
+# 混淆日志
+proguardMapping.txt

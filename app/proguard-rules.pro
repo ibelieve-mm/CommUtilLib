@@ -22,12 +22,12 @@
 
 ### --- start: 基本不动区域 -----------------------------------------------------------------
 # --- 基本指令区 ----------------------------------------------------------------------------
--optimizationpasses 5       # 指定代码的压缩级别
--dontusemixedcaseclassnames     # 是否使用大小写混合
+-optimizationpasses 5                   # 指定代码的压缩级别
+-dontusemixedcaseclassnames             # 是否使用大小写混合
 -dontskipnonpubliclibraryclasses        # 指定不去忽略非公共的库类
--dontskipnonpubliclibraryclassmembers       # 指定不去忽略包可见的库类的成员
--dontpreverify      # 混淆时是否做预校验
--verbose        # 混淆时是否记录日志
+-dontskipnonpubliclibraryclassmembers   # 指定不去忽略包可见的库类的成员
+-dontpreverify                          # 混淆时是否做预校验
+-verbose                                # 混淆时是否记录日志
 -printmapping proguardMapping.txt
 -optimizations !code/simplification/cast,!field/*,!class/merging/*      # 混淆时所采用的算法
 -keepattributes *Annotation*,InnerClasses
