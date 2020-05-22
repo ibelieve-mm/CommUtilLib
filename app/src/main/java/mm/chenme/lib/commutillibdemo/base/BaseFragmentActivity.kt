@@ -37,4 +37,8 @@ abstract class BaseFragmentActivity : QMUIFragmentActivity() {
         initListener()
         loadData()
     }
+
+    fun closePage(){
+        onBackPressed()
+    }
 }

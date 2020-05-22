@@ -1,9 +1,8 @@
-package mm.chenme.lib.commutillibdemo.ui
+package mm.chenme.lib.commutillibdemo.ui.other
 
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.qmuiteam.qmui.kotlin.onClick
-import com.qmuiteam.qmui.util.QMUIKeyboardHelper
 import kotlinx.android.synthetic.main.activity_area_select.*
 import kotlinx.android.synthetic.main.menu_text_view.*
 import mm.chenme.lib.commutillib.pro.adapter.BaseRecyclerViewAdapter
@@ -12,7 +11,6 @@ import mm.chenme.lib.commutillibdemo.R
 import mm.chenme.lib.commutillibdemo.base.BaseFragmentActivity
 import mm.chenme.lib.commutillibdemo.model.*
 import mm.chenme.lib.commutillibdemo.utils.parseJson
-import org.jetbrains.anko.find
 import java.io.BufferedReader
 import java.io.IOException
 import java.io.InputStreamReader
@@ -54,9 +52,7 @@ class AreaSelectActivity : BaseFragmentActivity() {
     override fun initView() {
 
         topbar.setTitle("城市选择")
-        topbar.addLeftBackImageButton().onClick {
-            finish()
-        }
+        topbar.addLeftBackImageButton().onClick { closePage() }
         topbar.addRightTextButton("打印结果",R.id.tv_menuStyle)
 
         recyclerView1.layoutManager = LinearLayoutManager(this)
@@ -184,7 +180,7 @@ class AreaSelectActivity : BaseFragmentActivity() {
 
             val resultList = mutableListOf<ResultParentBean>()
             tmpMap.forEach {
-                resultList.add(ResultParentBean(it.key,it.value))
+                resultList.add(ResultParentBean(it.key, it.value))
             }
             loge("\n第二次整理结果---------->")
             loge(resultList.toString())

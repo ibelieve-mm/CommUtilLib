@@ -32,16 +32,30 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/qmBtn_qmuiTest" />
 
-            <mm.chenme.lib.commutillib.pro.view_exts.ClipConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginEnd="30dp"
-                android:background="@color/color_red_ff639b"
-                app:clip_radius="20dp"
-                app:clip_side="all"
+
+            <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                android:id="@+id/qmBtn_selfClipLayout"
+                style="@style/InitBtnFull.Round"
+                android:layout_marginTop="10dp"
+                android:text="自定义 ClipLayout Demo"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/qmBtn_citySelect" />
+
+            <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                android:id="@+id/qmBtn_clipToPadding"
+                style="@style/InitBtnFull.Round"
+                android:layout_marginTop="10dp"
+                android:text="ClipToPadding"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/qmBtn_selfClipLayout" />
+
+            <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                android:id="@+id/qmBtn_clipChildren"
+                style="@style/InitBtnFull.Round"
+                android:layout_marginTop="10dp"
+                android:text="ClipChildren"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/qmBtn_clipToPadding" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 

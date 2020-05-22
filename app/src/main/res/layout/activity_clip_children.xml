@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.qmuiteam.qmui.widget.QMUIWindowInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+            android:clipChildren="false"
+        android:fitsSystemWindows="true"
+        android:layout_marginTop="?attr/qmui_topbar_height">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom"
+            android:background="@color/color_theme_t10"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:srcCompat="@mipmap/ic_launcher_round" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:srcCompat="@mipmap/ic_launcher_round" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:layout_gravity="bottom"
+                app:srcCompat="@mipmap/ic_launcher_round" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:srcCompat="@mipmap/ic_launcher_round" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:srcCompat="@mipmap/ic_launcher_round" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </FrameLayout>
+
+
+    <com.qmuiteam.qmui.widget.QMUITopBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <com.qmuiteam.qmui.widget.QMUITopBar
+            android:id="@+id/topbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/qmui_topbar_height"
+            android:background="@color/qmui_config_color_transparent"
+            android:fitsSystemWindows="true"
+            app:qmui_bottomDividerHeight="0dp"
+            app:qmui_layout_collapseMode="pin"
+            app:qmui_topbar_title_gravity="left_center" />
+    </com.qmuiteam.qmui.widget.QMUITopBarLayout>
+</com.qmuiteam.qmui.widget.QMUIWindowInsetLayout>
+

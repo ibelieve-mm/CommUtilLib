@@ -1,4 +1,4 @@
-package mm.chenme.lib.commutillibdemo.ui
+package mm.chenme.lib.commutillibdemo.ui.qmui
 
 import com.qmuiteam.qmui.kotlin.onClick
 import com.qmuiteam.qmui.util.QMUIDisplayHelper
@@ -24,9 +24,7 @@ class QMUIWidgetTestActivity : BaseFragmentActivity() {
 
         topbar.setTitle("QMUI 控件测试")
         topbar.setSubTitle("这里是副标题")
-        topbar.addLeftBackImageButton().onClick {
-            finish()
-        }
+        topbar.addLeftBackImageButton().onClick { closePage() }
 
         addQMUIBtnAlpha(btn_printLog, qmBtn_cannotUse, qmBtn_showToast, qmBtn_noEvent)
 

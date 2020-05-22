@@ -17,8 +17,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.AreaSelectActivity" />
-        <activity android:name=".ui.QMUIWidgetTestActivity" />
+
+        <activity android:name=".ui.other.AreaSelectActivity" />
+        <activity android:name=".ui.other.SelfClipLayoutTestActivity" />
+
+        <activity android:name=".ui.rare.ClipToPaddingTestActivity" />
+        <activity android:name=".ui.rare.ClipChildrenTestActivity" />
+
+        <activity android:name=".ui.qmui.QMUIWidgetTestActivity" />
 <!--        <activity android:name=".ui.FlutterDemoActivity" />-->
     </application>
 

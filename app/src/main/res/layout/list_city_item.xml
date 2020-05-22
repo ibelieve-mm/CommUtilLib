@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/tv_item"
     android:layout_width="match_parent"
     android:layout_height="40dp"
     android:gravity="center_vertical"
     android:paddingStart="10dp"
+    tools:text="测试文字 text placeholder"
     android:paddingEnd="10dp"
     android:textColor="@color/color_theme"
     android:textSize="14sp" />
