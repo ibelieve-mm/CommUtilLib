@@ -1,8 +1,11 @@
 package mm.chenme.lib.commutillibdemo.ui.qmui
 
+import com.qmuiteam.qmui.kotlin.dip
 import com.qmuiteam.qmui.kotlin.onClick
+import com.qmuiteam.qmui.kotlin.sp
 import com.qmuiteam.qmui.util.QMUIDisplayHelper
 import kotlinx.android.synthetic.main.activity_qmui_widget_test.*
+import mm.chenme.lib.commutillib.utils.color
 import mm.chenme.lib.commutillib.utils.stoast
 import mm.chenme.lib.commutillib.utils.loge
 import mm.chenme.lib.commutillibdemo.R
@@ -28,8 +31,11 @@ class QMUIWidgetTestActivity : BaseFragmentActivity() {
 
         addQMUIBtnAlpha(btn_printLog, qmBtn_cannotUse, qmBtn_showToast, qmBtn_noEvent)
 
-        qmLl_test.setRadiusAndShadow(20, QMUIDisplayHelper.dp2px(this, 14), .7f)
-        qmLl_test.shadowColor = resources.getColor(R.color.color_red_ff639b)
+        qmll_test.setRadiusAndShadow(dip(10), dip(14), .7f)
+        qmll_test.shadowColor = color(R.color.color_red_ff639b)
+
+        qmcl_test.setRadiusAndShadow(dip(20), dip(14), .7f)
+        qmcl_test.shadowColor = color(R.color.color_theme)
     }
 
     override fun initListener() {

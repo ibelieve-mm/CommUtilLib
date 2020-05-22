@@ -55,12 +55,23 @@
 
             <com.qmuiteam.qmui.layout.QMUILinearLayout
                 android:layout_width="match_parent"
-                android:id="@+id/qmLl_test"
+                android:id="@+id/qmll_test"
+                android:layout_height="200dp"
+                android:layout_margin="20dp"
+                android:background="@android:color/white"
+                app:layout_constraintTop_toBottomOf="@+id/qmBtn_noEvent"
+                app:qmui_outerNormalColor="#00f"
+                app:qmui_borderColor="#987"
+                app:qmui_showBorderOnlyBeforeL="true" />
+
+ <com.qmuiteam.qmui.layout.QMUIConstraintLayout
+                android:layout_width="match_parent"
+                android:id="@+id/qmcl_test"
                 android:layout_height="200dp"
                 android:layout_margin="20dp"
                 android:background="@android:color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/qmBtn_noEvent"
+                app:layout_constraintTop_toBottomOf="@+id/qmll_test"
                 app:qmui_outerNormalColor="#00f"
                 app:qmui_borderColor="#987"
                 app:qmui_showBorderOnlyBeforeL="true" />
