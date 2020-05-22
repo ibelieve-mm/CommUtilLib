@@ -21,17 +21,19 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginEnd="30dp"
-                android:background="@color/color_red_ff639b"
+                android:background="@android:color/white"
+                android:elevation="5dp"
                 app:clip_radius="20dp"
                 app:clip_side="all"
                 app:layout_constraintTop_toTopOf="parent">
+                <!--                android:outlineSpotShadowColor="@color/color_theme"-->
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="radius:20dp\nside:all"
-                    android:textColor="@android:color/white"
+                    android:textColor="@color/color_theme"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -45,7 +47,7 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginEnd="30dp"
-                android:background="@color/color_red_ff639b"
+                android:background="@android:color/white"
                 app:clip_radius="20dp"
                 app:clip_side="left"
                 app:layout_constraintTop_toBottomOf="@+id/ccl_1">
@@ -55,7 +57,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="radius:20dp\nside:left"
-                    android:textColor="@android:color/white"
+                    android:textColor="@color/color_theme"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -80,4 +82,3 @@
             app:qmui_topbar_title_gravity="left_center" />
     </com.qmuiteam.qmui.widget.QMUITopBarLayout>
 </com.qmuiteam.qmui.widget.QMUIWindowInsetLayout>
-

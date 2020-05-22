@@ -2,11 +2,17 @@ package mm.chenme.lib.commutillib.pro.view_exts
 
 import android.annotation.TargetApi
 import android.content.res.TypedArray
+import android.graphics.Color
 import android.graphics.Outline
+import android.graphics.Path
+import android.os.Build
+import android.provider.CalendarContract
 import android.util.AttributeSet
 import android.view.View
 import android.view.ViewOutlineProvider
+import androidx.annotation.RequiresApi
 import mm.chenme.lib.commutillib.R
+import mm.chenme.lib.commutillib.utils.color
 
 
 /**
@@ -70,6 +76,16 @@ object  ViewClipHelper {
                 } else {
                     outline.setRoundRect(left, top, w, h, radius.toFloat())
                 }
+
+//                val path = Path()
+//                val width = view.width.toFloat()
+//                val height = view.height.toFloat()
+//                path.moveTo(-1f, -1f)
+//                path.lineTo(-1f, height+1f)
+//                path.lineTo(width+1f, height+1f)
+//                path.lineTo(width+1f, -1f)
+//                path.close()
+//                outline.setConvexPath(path)
             }
         }
         owner.clipToOutline = radius > 0

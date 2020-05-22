@@ -19,7 +19,7 @@ class ClipConstraintLayout @JvmOverloads constructor(
 ) : ConstraintLayout(context, attrs, defStyleAttr) {
 
     init {
-        ViewClipHelper.setViewOutline(this, attrs, defStyleAttr, 0);
+        ViewClipHelper.setViewOutline(this, attrs, defStyleAttr, 0)
     }
 
     fun setViewOutline(radius: Int, radiusSide: Int) {
