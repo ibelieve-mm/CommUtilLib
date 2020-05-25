@@ -1,10 +1,7 @@
 package mm.chenme.lib.commutillibdemo
 
-import com.google.gson.Gson
 import org.junit.Test
-
-import org.junit.Assert.*
-import java.io.*
+import java.util.*
 
 /**
  * Example local unit test, which will execute on the development machine (host).
@@ -13,80 +10,130 @@ import java.io.*
  */
 class ExampleUnitTest {
 
+    data class User(
+        var name: String = "",
+        var nickName: String = "",
+        var gender: String = "",
+        var age: Int = 18
+    )
+
     @Test
-    fun reBuildJsonString() {
+    fun ktWithTest() {
 
-        try { // 防止文件建立或读取失败，用catch捕捉错误并打印，也可以throw
+        println(with(User()) {
+            println(this)
+            name = "小麦"
+            nickName = "麦子"
+            gender = "f"
+            age = 18
+        })
 
-            // implementation 'com.google.code.gson:gson:2.6.2'
-            /**
-             * 读取文件中字符串
-             */
-            val pathname = "location.json" // 相对路径，即项目app文件夹下（在 Java 的单元测试的情况下）
-            val filename = File(pathname) // 要读取以上路径的文件
-            val reader = InputStreamReader(FileInputStream(filename)) // 建立一个输入流对象reader
-            val br = BufferedReader(reader) // 建立一个对象，它把文件内容转成计算机能读懂的语言
-            val sb = StringBuilder()
-            var line: String? = null
-            while (br.readLine().also { line = it } != null) {
-                sb.append(line)
-            }
-
-            /**
-             * 数据处理
-             */
-            val location = Gson().fromJson(sb.toString(), LocationData::class.java) // 将json字符串转换成实体类
-            // 使用循环添加数据
-            location.result.geoLocations.forEach {
-                it.value.forEach { city ->
-                    city.value.add(0, District("全选"))
-                }
-            }
-            val result = Gson().toJson(location) // 将实体类还原成json字符串
-
-            /**
-             * 写出数据
-             */
-            val writeName = File("output.json") // 相对路径，如果没有则要建立一个新的output.json
-            writeName.createNewFile() // 创建新文件
-            val out = BufferedWriter(FileWriter(writeName))
-            out.write(result)
-            out.flush() // 把缓存区内容压入文件
-            out.close() // 最后记得关闭文件
-        } catch (e: Exception) {
-            e.printStackTrace()
-        }
+//        with(mutableListOf<Int>()) {
+//            add(1)
+//            add(2)
+//            add(3)
+//            println(this)
+//        }
     }
 
-    data class LocationData(
-        var code: Int,
-        var result: LocationResult
-    )
+    @Test
+    fun ktLetTest() {
 
-    data class LocationResult(
-        var geoLocations: List<Province>,
-        var district: List<Province>,
-        var rbd: MutableList<Province>
-    )
+        println(User().let {
+            println(this)
+            it.name = "小麦"
+            it.nickName = "麦子"
+            it.gender = "f"
+            it.age = 18
+        })
+//        println("asd".let {
+//            println(it)
+//            1 + 1
+//        })
+    }
 
-    data class Province(
-        var name: String = "",
-        var value: MutableList<City>
-    )
+    @Test
+    fun ktRunTest() {
+        println(User().run {
+            println(this)
+            name = "小麦"
+            nickName = "麦子"
+            gender = "f"
+            age = 18
+        })
+//        println(mutableListOf<Int>().run {
+//            add(101)
+//            add(102)
+//            add(103)
+//            add(104)
+//            println(this)
+//            Date()
+//        })
+    }
 
-    data class City(
-        var name: String = "",
-        var value: MutableList<District>
-    )
+    @Test
+    fun ktApplyTest() {
+        println(User().apply {
+            println(this)
+            name = "小麦"
+            nickName = "麦子"
+            gender = "f"
+            age = 18
+        })
+//        println(mutableListOf<Int>().apply {
+//            add(101)
+//            add(102)
+//            add(103)
+//            add(104)
+//        })
+    }
 
-    data class District(
-        var name: String = "",
-        var value: String = ""
-    )
+    @Test
+    fun ktAlsoTest() {
+        println(User().also {
+            println(this)
+            it.name = "小麦"
+            it.nickName = "麦子"
+            it.gender = "f"
+            it.age = 18
+        })
+//        val also = Date().also {
+//            println("in also time = " + it.time)
+//        }
+//        println("also = $also")
+    }
+
+    @Test
+    fun ktTakeIfTest() {
+        val date = Date().takeIf {
+            // 是否在2018年元旦后
+            val data2 = Date(2018 - 1900, 0, 1)
+            println(data2)
+            val result = it.after(data2)
+            println(result)
+            result
+        }
+        println("date = $date")
+    }
+
+    @Test
+    fun ktTakeUnlessTest() {
+        val date = Date().takeUnless {
+            // 是否在2018年元旦后
+            val data2 = Date(2018 - 1900, 0, 1)
+            println(data2)
+            val result = it.after(data2)
+            println(result)
+            result
+        }
+        println("date = $date")
+    }
 
 
     @Test
-    fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+    fun ktRepeatTest() {
+        repeat(3) {
+            println(it)
+        }
     }
 }
