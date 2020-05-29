@@ -16,7 +16,6 @@
     -->
     <style name="BThemeNoActionBar" parent="QMUI.Compat.NoActionBar">
 
-
         <item name="qmui_alpha_pressed">0.7</item> <!-- QMUIAlphaButton 按钮按下时的透明度 -->
         <item name="qmui_alpha_disabled">0.5</item> <!-- QMUIAlphaButton 按钮不可用时的透明度 -->
 
@@ -88,5 +87,13 @@
 
     <style name="InitBtnFull.Round">
         <item name="qmui_radius">@dimen/size_btnHeightHalf</item>
+    </style>
+
+    <!-- 自定义按钮样式 -->
+    <style name="CommonShapeButtonStyle" parent="@style/Widget.AppCompat.Button">
+        <item name="android:minWidth">0dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
     </style>
 </resources>

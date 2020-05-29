@@ -1,10 +1,12 @@
 package mm.chenme.lib.commutillibdemo.netdemo
 
 import androidx.lifecycle.Observer
+import com.qmuiteam.qmui.kotlin.onClick
 import com.qmuiteam.qmui.widget.dialog.QMUITipDialog
 import kotlinx.android.synthetic.main.act_aaa.*
 import mm.chenme.lib.commutillib.BaseActivity
 import mm.chenme.lib.commutillib.utils.bindViewModel
+import mm.chenme.lib.commutillib.utils.loge
 import mm.chenme.lib.commutillibdemo.R
 
 
@@ -30,15 +32,18 @@ class DemoActivity(override val layoutResId: Int = R.layout.act_aaa) : BaseActiv
         mLoadingDialog = QMUITipDialog.Builder(this).setIconType(QMUITipDialog.Builder.ICON_TYPE_LOADING).setTipWord("加载中...").create()
     }
 
-    override fun loadData() {
-        mLoadingDialog.show()
+    override fun initListener() {
+        btn_teset.onClick { loge("asdsadasd") }
+    }
 
-        mViewModel.queryWeather().observe(this, Observer {
-            mLoadingDialog.dismiss()
-            it?.apply {
-                tv_label.text = this.toString()
-            }
-        })
+    override fun loadData() {
+//        mLoadingDialog.show()
+//        mViewModel.queryWeather().observe(this, Observer {
+//            mLoadingDialog.dismiss()
+//            it?.apply {
+//                tv_label.text = this.toString()
+//            }
+//        })
     }
 }
 

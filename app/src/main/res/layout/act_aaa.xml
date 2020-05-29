@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent">
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -11,4 +12,40 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <mm.chenme.lib.commutillib.pro.view.Btn
+        style="@style/CommonShapeButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_teset"
+        android:text="按钮样式+水波纹+填充颜色+圆角"
+        android:textColor="#fff"
+        app:csb_activeEnable="true"
+        app:csb_cornerRadius="50dp"
+        app:csb_fillColor="#00bc71" />
+
+    <mm.chenme.lib.commutillib.pro.view.Btn
+        style="@style/CommonShapeButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:text="按钮样式+水波纹+填充颜色+圆角"
+        android:textColor="#fff"
+        app:csb_shapeMode="line"
+        app:csb_activeEnable="true"
+        app:csb_cornerRadius="50dp"
+        app:csb_fillColor="#00bc71" />
+
+    <mm.chenme.lib.commutillib.pro.view.Btn
+        style="@style/CommonShapeButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_height="40dp"
+        android:text="按钮样式+水波纹+填充颜色+圆角"
+        android:textColor="#fff"
+        app:csb_cornerPosition="bottomLeft|bottomRight"
+        app:csb_activeEnable="true"
+        app:csb_cornerRadius="20dp"
+        app:csb_fillColor="#00bc71" />
+
+</LinearLayout>
