@@ -1,6 +1,6 @@
 ## 基于 Kotlin 以及 AndroidX 封装的一个常用的工具库
 
-### 1. 当前版本：`0.0.1.1`
+### 1. 当前版本：`0.1.0`
 
 ### 2. 使用步骤：
 
@@ -26,21 +26,34 @@ dependencies {
 1. 基本组件
 
 ```groovy
-api "androidx.constraintlayout:constraintlayout:1.1.3"
-api "androidx.recyclerview:recyclerview:1.1.0"
+constraintLayout      : "androidx.constraintlayout:constraintlayout:${depsVersion.constraintLayout}",
+recyclerView          : "androidx.recyclerview:recyclerview:${depsVersion.recyclerView}",
 ```
 
 2. 网络框架
 
 ```groovy
-api "com.squareup.retrofit2:retrofit:2.5.0"
-api "com.squareup.retrofit2:converter-gson:2.5.0"
-api "com.squareup.retrofit2:adapter-rxjava2:2.5.0"
-api "com.squareup.okhttp3:logging-interceptor:3.12.3"
-api "io.reactivex.rxjava2:rxjava:2.2.4"
-api "io.reactivex.rxjava2:rxandroid:2.1.0"
-api "android.arch.lifecycle:extensions:1.1.1"
+retrofit              : "com.squareup.retrofit2:retrofit:${depsVersion.retrofit2}",
+retrofitConvertGson   : "com.squareup.retrofit2:converter-gson:${depsVersion.retrofit2}",
+retrofitAdapterRxjava2: "com.squareup.retrofit2:adapter-rxjava2:${depsVersion.retrofit2}",
+okhttp3Logging        : "com.squareup.okhttp3:logging-interceptor:${depsVersion.okhttp3Logging}",
 ```
+
+3. QMUI
+
+```groovy
+qmui                  : "com.qmuiteam:qmui:${depsVersion.qmui}",
+qmuiArch              : "com.qmuiteam:arch:${depsVersion.qmui}",
+qmuiArchCompiler      : "com.qmuiteam:arch-compiler:${depsVersion.qmui}",
+```
+
+4. lifecycle
+
+```groovy
+lifecycleExtensions   : "android.arch.lifecycle:extensions:${depsVersion.lifecycleExtensions}",
+```
+
+
 
 ---
 
@@ -68,3 +81,11 @@ api "android.arch.lifecycle:extensions:1.1.1"
 #### 0.0.1.1 预览版
 > 1. 扩展 Date(日期)类 的方法；
 > 2. 加入自定义 Log 工具；
+
+#### 0.1.0 预览版
+
+> 1. 加入网络请求；
+> 2. 使用了 `lifecycle`；
+> 3. 引入了[ `QMUI`](https://qmuiteam.com/android);
+> 4. `BaseActivity` 继承自 `QMUIFragmentActivity`；
+> 5. 提供了网络请求 Demo；
