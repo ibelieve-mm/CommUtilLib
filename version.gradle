@@ -1,6 +1,7 @@
 ext {
     android = [
             compileSdkVersion: 29,
+            buildToolsVersion: '29.0.3',
             minSdkVersion    : 21,
             targetSdkVersion : 29,
             applicationId    : 'com.dahu.app',
@@ -14,47 +15,72 @@ ext {
             /**
              * 基本组件
              */
-            constraintLayout  : '1.1.3',
-            recyclerView      : '1.1.0',
+            androidxCoreKtx    : '1.2.0',
+            appcompat          : '1.1.0',
+            constraintLayout   : '1.1.3',
+            recyclerView       : '1.1.0',
 
             /**
              * 腾讯原生UI框架
              */
-            qmui              : '2.0.0-alpha08',
+            qmui               : '2.0.0-alpha08',
 
             /**
              * Gson
              */
-            gson              : '2.6.2',
+            gson               : '2.8.6',
+//            gson               : '2.6.2',
 
             /**
              * Anko
              */
-            anko              : '0.10.8',
+            anko               : '0.10.8',
+
+            /**
+             * net
+             */
+            retrofit2          : '2.9.0',
+            okhttp3Logging     : '4.7.2',
+//            rxjava             : '2.2.4',
+//            rxandroid          : '2.1.0',
+            lifecycleExtensions: '1.1.1',
     ]
 
     depsLibs = [
             /**
              * 基本组件
              */
-            constraintLayout   : "androidx.constraintlayout:constraintlayout:${depsVersion.constraintLayout}",
-            recyclerView       : "androidx.recyclerview:recyclerview:${depsVersion.recyclerView}",
+            androidxCoreKtx       : "androidx.core:core-ktx:${depsVersion.androidxCoreKtx}",
+            appcompat             : "androidx.appcompat:appcompat:${depsVersion.appcompat}",
+            constraintLayout      : "androidx.constraintlayout:constraintlayout:${depsVersion.constraintLayout}",
+            recyclerView          : "androidx.recyclerview:recyclerview:${depsVersion.recyclerView}",
 
             /**
              * 腾讯原生UI框架
              */
-            qmui               : "com.qmuiteam:qmui:${depsVersion.qmui}",
-            qmuiArch           : "com.qmuiteam:arch:${depsVersion.qmui}",
-            qmuiArchCompiler   : "com.qmuiteam:arch-compiler:${depsVersion.qmui}",
+            qmui                  : "com.qmuiteam:qmui:${depsVersion.qmui}",
+            qmuiArch              : "com.qmuiteam:arch:${depsVersion.qmui}",
+            qmuiArchCompiler      : "com.qmuiteam:arch-compiler:${depsVersion.qmui}",
 
             /**
              * Gson
              */
-            gson               : "com.google.code.gson:gson:${depsVersion.gson}",
+            gson                  : "com.google.code.gson:gson:${depsVersion.gson}",
 
             /**
              * Anko
              */
-            anko               : "org.jetbrains.anko:anko-commons:${depsVersion.anko}",
+            anko                  : "org.jetbrains.anko:anko-commons:${depsVersion.anko}",
+
+            /**
+             * net
+             */
+            retrofit              : "com.squareup.retrofit2:retrofit:${depsVersion.retrofit2}",
+            retrofitConvertGson   : "com.squareup.retrofit2:converter-gson:${depsVersion.retrofit2}",
+            retrofitAdapterRxjava2: "com.squareup.retrofit2:adapter-rxjava2:${depsVersion.retrofit2}",
+            okhttp3Logging        : "com.squareup.okhttp3:logging-interceptor:${depsVersion.okhttp3Logging}",
+//            rxjava                : "io.reactivex.rxjava2:rxjava:${depsVersion.rxjava}",
+//            rxandroid             : "io.reactivex.rxjava2:rxandroid:${depsVersion.rxandroid}",
+            lifecycleExtensions   : "android.arch.lifecycle:extensions:${depsVersion.lifecycleExtensions}",
     ]
 }

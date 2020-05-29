@@ -14,7 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <mm.chenme.lib.commutillib.pro.view_exts.ClipConstraintLayout
+            <mm.chenme.lib.commutillib.pro.view.ClipConstraintLayout
                 android:id="@+id/ccl_1"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
@@ -38,9 +38,9 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
-            </mm.chenme.lib.commutillib.pro.view_exts.ClipConstraintLayout>
+            </mm.chenme.lib.commutillib.pro.view.ClipConstraintLayout>
 
-            <mm.chenme.lib.commutillib.pro.view_exts.ClipConstraintLayout
+            <mm.chenme.lib.commutillib.pro.view.ClipConstraintLayout
                 android:id="@+id/ccl_2"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
@@ -62,7 +62,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
-            </mm.chenme.lib.commutillib.pro.view_exts.ClipConstraintLayout>
+            </mm.chenme.lib.commutillib.pro.view.ClipConstraintLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 

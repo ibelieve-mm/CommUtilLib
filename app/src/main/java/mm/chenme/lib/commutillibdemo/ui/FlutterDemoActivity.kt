@@ -1,6 +1,5 @@
 package mm.chenme.lib.commutillibdemo.ui
 
-import android.os.Bundle
 //import io.flutter.embedding.android.FlutterActivity
 
 /**

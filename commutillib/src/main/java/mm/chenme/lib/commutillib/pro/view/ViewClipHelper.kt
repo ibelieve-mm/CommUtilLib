@@ -1,18 +1,12 @@
-package mm.chenme.lib.commutillib.pro.view_exts
+package mm.chenme.lib.commutillib.pro.view
 
 import android.annotation.TargetApi
 import android.content.res.TypedArray
-import android.graphics.Color
 import android.graphics.Outline
-import android.graphics.Path
-import android.os.Build
-import android.provider.CalendarContract
 import android.util.AttributeSet
 import android.view.View
 import android.view.ViewOutlineProvider
-import androidx.annotation.RequiresApi
 import mm.chenme.lib.commutillib.R
-import mm.chenme.lib.commutillib.utils.color
 
 
 /**

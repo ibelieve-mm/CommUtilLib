@@ -1,0 +1,60 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion rootProject.android.compileSdkVersion
+    buildToolsVersion rootProject.android.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.android.minSdkVersion
+        targetSdkVersion rootProject.android.targetSdkVersion
+        versionCode rootProject.android.versionCode
+        versionName rootProject.android.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    compileOptions {
+        targetCompatibility = "8"
+        sourceCompatibility = "8"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    testImplementation 'junit:junit:4.13'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    implementation project(':commutillib')
+
+    implementation rootProject.depsLibs.androidxCoreKtx
+    implementation rootProject.depsLibs.appcompat
+
+    /**
+     * net
+     */
+    api rootProject.depsLibs.retrofit
+    api rootProject.depsLibs.retrofitConvertGson
+    api rootProject.depsLibs.retrofitAdapterRxjava2
+    api rootProject.depsLibs.okhttp3Logging
+//    api rootProject.depsLibs.rxjava
+//    api rootProject.depsLibs.rxandroid
+
+
+
+    debugImplementation 'com.readystatesoftware.chuck:library:1.1.0' // 调试时使用
+    releaseImplementation 'com.readystatesoftware.chuck:library-no-op:1.1.0'
+}

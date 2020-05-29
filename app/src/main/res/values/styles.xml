@@ -16,7 +16,12 @@
     -->
     <style name="BThemeNoActionBar" parent="QMUI.Compat.NoActionBar">
 
+
+        <item name="qmui_alpha_pressed">0.7</item> <!-- QMUIAlphaButton 按钮按下时的透明度 -->
+        <item name="qmui_alpha_disabled">0.5</item> <!-- QMUIAlphaButton 按钮不可用时的透明度 -->
+
         <item name="android:windowBackground">@color/color_pageBg</item> <!-- 页面背景色 -->
+
         <!-- 标题栏（通过 BaseTopBar 配置） -->
         <!--        <item name="qmui_skin_support_topbar_bg">@color/color_titleBg</item> &lt;!&ndash; 标题栏背景色 &ndash;&gt;-->
         <!--        <item name="qmui_skin_support_topbar_title_color">@color/color_theme</item> &lt;!&ndash; 标题文字颜色 &ndash;&gt;-->
@@ -39,6 +44,7 @@
         <item name="qmui_backgroundColor">@color/color_theme</item> <!-- 背景色 -->
         <item name="android:textColor">@android:color/white</item> <!-- 文字颜色 -->
         <item name="qmui_borderColor">@color/color_theme</item> <!-- 边框颜色 -->
+
         <item name="qmui_borderWidth">0dp</item>
         <item name="android:textSize">15sp</item>
         <item name="android:paddingTop">7dp</item>

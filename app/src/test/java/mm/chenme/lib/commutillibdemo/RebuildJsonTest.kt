@@ -1,7 +1,6 @@
 package mm.chenme.lib.commutillibdemo
 
 import com.google.gson.Gson
-import org.junit.Assert
 import org.junit.Test
 import java.io.*
 

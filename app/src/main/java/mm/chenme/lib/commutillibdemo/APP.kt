@@ -12,6 +12,7 @@ import com.qmuiteam.qmui.arch.QMUISwipeBackActivityManager
  * Email：ibelieve1210@163.com
  */
 class APP : Application() {
+
     override fun onCreate() {
         super.onCreate()
         QMUISwipeBackActivityManager.init(this)

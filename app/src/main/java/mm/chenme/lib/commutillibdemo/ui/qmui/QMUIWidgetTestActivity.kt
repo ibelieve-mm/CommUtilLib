@@ -1,16 +1,14 @@
 package mm.chenme.lib.commutillibdemo.ui.qmui
 
-import com.qmuiteam.qmui.kotlin.dip
 import com.qmuiteam.qmui.kotlin.onClick
-import com.qmuiteam.qmui.kotlin.sp
-import com.qmuiteam.qmui.util.QMUIDisplayHelper
 import kotlinx.android.synthetic.main.activity_qmui_widget_test.*
 import mm.chenme.lib.commutillib.utils.color
-import mm.chenme.lib.commutillib.utils.stoast
 import mm.chenme.lib.commutillib.utils.loge
 import mm.chenme.lib.commutillibdemo.R
-import mm.chenme.lib.commutillibdemo.base.BaseFragmentActivity
+import mm.chenme.lib.commutillib.BaseActivity
+import mm.chenme.lib.commutillib.utils.stoast
 import mm.chenme.lib.commutillibdemo.utils.addQMUIBtnAlpha
+import org.jetbrains.anko.dip
 
 /**
  * Descriptions：QMUI 控件测试
@@ -19,9 +17,9 @@ import mm.chenme.lib.commutillibdemo.utils.addQMUIBtnAlpha
  * Date：2020/5/2
  * Email：ibelieve1210@163.com
  */
-class QMUIWidgetTestActivity : BaseFragmentActivity() {
+class QMUIWidgetTestActivity : BaseActivity() {
 
-    override fun loadContentView(): Int = R.layout.activity_qmui_widget_test
+    override val layoutResId: Int = R.layout.activity_qmui_widget_test
 
     override fun initView() {
 

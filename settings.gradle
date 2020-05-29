@@ -1,5 +1,7 @@
-include ':app', ':commutillib'
-rootProject.name='CommUtilLibDemo'
+include ':app'
+include ':commutillib'
+include ':commnetlib'
+rootProject.name = 'CommUtilLibDemo'
 
 ///**
 // * Flutter 项目配置
@@ -11,3 +13,4 @@ rootProject.name='CommUtilLibDemo'
 //))
 //include ':flutter_module'
 //project(':flutter_module').projectDir = new File('../flutter_module')
+

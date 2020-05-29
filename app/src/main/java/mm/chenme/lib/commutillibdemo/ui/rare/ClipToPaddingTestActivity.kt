@@ -7,7 +7,7 @@ import kotlinx.android.synthetic.main.activity_clip_to_padding.*
 import mm.chenme.lib.commutillib.pro.adapter.BaseRecyclerViewAdapter
 import mm.chenme.lib.commutillib.utils.color
 import mm.chenme.lib.commutillibdemo.R
-import mm.chenme.lib.commutillibdemo.base.BaseFragmentActivity
+import mm.chenme.lib.commutillib.BaseActivity
 
 /**
  * Descriptions：
@@ -17,8 +17,8 @@ import mm.chenme.lib.commutillibdemo.base.BaseFragmentActivity
  * Date：2020/5/22
  * Email：ibelieve1210@163.com
  */
-class ClipToPaddingTestActivity : BaseFragmentActivity() {
-    override fun loadContentView(): Int = R.layout.activity_clip_to_padding
+class ClipToPaddingTestActivity : BaseActivity() {
+    override val layoutResId: Int = R.layout.activity_clip_to_padding
 
     override fun initView() {
 

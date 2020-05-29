@@ -20,35 +20,35 @@ private val handler = Handler(Looper.getMainLooper())
 /**
  * 短 Toast
  */
-fun Context.stoast(messageRes: Int) {
-    this.mtoast(this.getString(messageRes).toString())
+fun stoast(messageRes: Int) {
+    mtoast(string(messageRes))
 }
 
-fun Context.stoast(message: String) {
-    this.mtoast(message)
+fun stoast(message: String) {
+    mtoast(message)
 }
 
 /**
  * 长 Toast
  */
-fun Context.ltoast(messageRes: Int) {
-    this.mtoast(this.getString(messageRes).toString(), true)
+fun ltoast(messageRes: Int) {
+    mtoast(string(messageRes), true)
 }
 
-fun Context.ltoast(message: String) {
-    this.mtoast(message, true)
+fun ltoast(message: String) {
+    mtoast(message, true)
 }
 
-fun Context.mtoast(msg: String, isLongToast: Boolean = false) {
+fun mtoast(msg: String, isLongToast: Boolean = false) {
     Thread(Runnable {
         run {
             handler.post {
-                synchronized(this) {
+                synchronized(AppGlobals.application()) {
                     if (toast != null) {
                         toast!!.cancel()
                         toast = null
                     }
-                    toast = Toast.makeText(this, msg, if (isLongToast) Toast.LENGTH_LONG else Toast.LENGTH_SHORT)
+                    toast = Toast.makeText(AppGlobals.application(), msg, if (isLongToast) Toast.LENGTH_LONG else Toast.LENGTH_SHORT)
                     toast!!.show()
                 }
             }

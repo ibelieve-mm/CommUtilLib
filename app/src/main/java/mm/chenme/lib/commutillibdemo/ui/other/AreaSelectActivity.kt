@@ -3,17 +3,17 @@ package mm.chenme.lib.commutillibdemo.ui.other
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.qmuiteam.qmui.kotlin.onClick
-import kotlinx.android.synthetic.main.activity_area_select.*
-import kotlinx.android.synthetic.main.menu_text_view.*
 import mm.chenme.lib.commutillib.pro.adapter.BaseRecyclerViewAdapter
 import mm.chenme.lib.commutillib.utils.loge
 import mm.chenme.lib.commutillibdemo.R
-import mm.chenme.lib.commutillibdemo.base.BaseFragmentActivity
+import mm.chenme.lib.commutillib.BaseActivity
 import mm.chenme.lib.commutillibdemo.model.*
 import mm.chenme.lib.commutillibdemo.utils.parseJson
 import java.io.BufferedReader
 import java.io.IOException
 import java.io.InputStreamReader
+import kotlinx.android.synthetic.main.activity_area_select.*
+import kotlinx.android.synthetic.main.menu_text_view.*
 
 /**
  * Descriptions：城市选择页面
@@ -22,7 +22,7 @@ import java.io.InputStreamReader
  * Date：2020/5/1
  * Email：ibelieve1210@163.com
  */
-class AreaSelectActivity : BaseFragmentActivity() {
+class AreaSelectActivity : BaseActivity() {
 
     private val mCityList = mutableListOf<CityBean>()
     private val mAreaList = mutableListOf<AreaBean>()
@@ -37,7 +37,7 @@ class AreaSelectActivity : BaseFragmentActivity() {
 
     private var mResult = mutableMapOf<Long, ResultBean>() // 用于保存结果
 
-    override fun loadContentView(): Int = R.layout.activity_area_select
+    override val layoutResId: Int = R.layout.activity_area_select
 
     override fun initData() {
         val jsonRes = readJsonFromAssets("location.json")
@@ -53,7 +53,7 @@ class AreaSelectActivity : BaseFragmentActivity() {
 
         topbar.setTitle("城市选择")
         topbar.addLeftBackImageButton().onClick { closePage() }
-        topbar.addRightTextButton("打印结果",R.id.tv_menuStyle)
+        topbar.addRightTextButton("打印结果", R.id.tv_menuStyle)
 
         recyclerView1.layoutManager = LinearLayoutManager(this)
         mCityAdapter = BaseRecyclerViewAdapter(this, mCityList, R.layout.list_city_item) { rootView, dataItem, pos ->
@@ -144,7 +144,6 @@ class AreaSelectActivity : BaseFragmentActivity() {
                 mStreetAdapter.notifyItemChanged(pos)
 
 
-
             }
         }
         recyclerView3.adapter = mStreetAdapter
@@ -163,12 +162,12 @@ class AreaSelectActivity : BaseFragmentActivity() {
                 loge(it.value.toString())
             }
 
-            val tmpMap = mutableMapOf<String,MutableList<ResultBean>>()
+            val tmpMap = mutableMapOf<String, MutableList<ResultBean>>()
             mResult.forEach {
                 var tmpList = tmpMap[it.value.city]
-                if(null==tmpList){
-                    tmpList= mutableListOf()
-                    tmpMap[it.value.city]=tmpList
+                if (null == tmpList) {
+                    tmpList = mutableListOf()
+                    tmpMap[it.value.city] = tmpList
                 }
                 tmpList.add(it.value)
             }
@@ -188,8 +187,8 @@ class AreaSelectActivity : BaseFragmentActivity() {
     }
 
     data class ResultParentBean(
-        var name:String="",
-        var list:MutableList<ResultBean>
+        var name: String = "",
+        var list: MutableList<ResultBean>
     )
 
     /**

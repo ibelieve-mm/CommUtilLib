@@ -1,9 +1,9 @@
-package mm.chenme.lib.commutillib.pro.view_exts
+package mm.chenme.lib.commutillib.pro.view
 
 import android.content.Context
 import android.util.AttributeSet
 import androidx.constraintlayout.widget.ConstraintLayout
-import mm.chenme.lib.commutillib.pro.view_exts.ViewClipHelper.setViewOutline
+import mm.chenme.lib.commutillib.pro.view.ViewClipHelper.setViewOutline
 
 /**
  * Descriptions：可裁剪为圆角的 ConstraintLayout 布局
