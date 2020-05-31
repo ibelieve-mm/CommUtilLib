@@ -55,6 +55,33 @@
                 android:text="ClipChildren"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/qmBtn_clipToPadding" />
+
+            <mm.chenme.lib.commutillib.pro.view.ShapeRippleButton
+                android:id="@+id/srb_netDemo"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginStart="@dimen/size_pageContentMarginHor"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="@dimen/size_pageContentMarginHor"
+                android:text="Net Demo"
+                android:textColor="@android:color/white"
+                app:layout_constraintTop_toBottomOf="@+id/qmBtn_clipChildren"
+                app:srb_cornerRadius="20dp"
+                app:srb_fillColor="@color/color_theme" />
+
+            <mm.chenme.lib.commutillib.pro.view.ShapeRippleButton
+                android:id="@+id/srb_shapeRippleButton"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginStart="@dimen/size_pageContentMarginHor"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="@dimen/size_pageContentMarginHor"
+                android:text="ShapeRippleButton"
+                android:textColor="@android:color/white"
+                app:layout_constraintTop_toBottomOf="@+id/srb_netDemo"
+                app:srb_cornerRadius="20dp"
+                app:srb_fillColor="@color/color_theme" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 

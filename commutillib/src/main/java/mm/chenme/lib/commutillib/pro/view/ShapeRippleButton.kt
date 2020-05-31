@@ -23,32 +23,35 @@ import mm.chenme.lib.commutillib.R
  * Date：2020/5/29
  * Email：ibelieve1210@163.com
  */
-class Btn @JvmOverloads constructor(
+class ShapeRippleButton @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 ) : AppCompatButton(context, attrs, defStyleAttr) {
 
     private companion object {
-        val TOP_LEFT = 1
-        val TOP_RIGHT = 2
-        val BOTTOM_RIGHT = 4
-        val BOTTOM_LEFT = 8
+        const val TOP_LEFT = 1
+        const val TOP_RIGHT = 2
+        const val BOTTOM_RIGHT = 4
+        const val BOTTOM_LEFT = 8
     }
 
     /**
      * shape模式
-     * 矩形（rectangle）、椭圆形(oval)、线形(line)、环形(ring)
+     * 0 矩形（rectangle）
+     * 1 椭圆形(oval)
+     * 2 线形(line)
+     * 3 环形(ring)
      */
     private var mShapeMode = 0
 
     /**
      * 填充颜色
      */
-    private var mFillColor = 0
+    private var mFillColor = 0xFFFFFFFF.toInt()
 
     /**
      * 按压颜色
      */
-    private var mPressedColor = 0
+    private var mPressedColor = 0xFF666666.toInt()
 
     /**
      * 描边颜色
@@ -64,36 +67,47 @@ class Btn @JvmOverloads constructor(
      * 圆角半径
      */
     private var mCornerRadius = 0
+
     /**
      * 圆角位置
+     * 1 topLeft
+     * 2 topRight
+     * 4 bottomRight
+     * 8 bottomLeft
      */
-    private var mCornerPosition = 0
+    private var mCornerPosition = -1
 
     /**
      * 点击动效
      */
-    private var mActiveEnable = false
+    private var mActiveEnable = true
 
     /**
      * 起始颜色
      */
-    private var mStartColor = 0
+    private var mStartColor = 0xFFFFFFFF.toInt()
 
     /**
      * 结束颜色
      */
-    private var mEndColor = 0
+    private var mEndColor = 0xFFFFFFFF.toInt()
 
     /**
      * 渐变方向
-     * 0-GradientDrawable.Orientation.TOP_BOTTOM
-     * 1-GradientDrawable.Orientation.LEFT_RIGHT
+     * 0 GradientDrawable.Orientation.TOP_BOTTOM
+     * 1 GradientDrawable.Orientation.LEFT_RIGHT
+     * 2 GradientDrawable.Orientation.TL_BR
+     * 3 GradientDrawable.Orientation.BL_TR
      */
-    private var mOrientation = 0
+    private var mOrientation = 1
 
     /**
      * drawable位置
-     * -1-null、0-left、1-top、2-right、3-bottom
+     * -1 null
+     * 0  left
+     * 1  top
+     * 2  right
+     * 3  bottom
      */
     private var mDrawablePosition = -1
 
@@ -101,33 +115,37 @@ class Btn @JvmOverloads constructor(
      * 普通shape样式
      */
     private val normalGradientDrawable: GradientDrawable by lazy { GradientDrawable() }
+
     /**
      * 按压shape样式
      */
     private val pressedGradientDrawable: GradientDrawable by lazy { GradientDrawable() }
+
     /**
      * shape样式集合
      */
     private val stateListDrawable: StateListDrawable by lazy { StateListDrawable() }
+
     // button内容总宽度
     private var contentWidth = 0f
+
     // button内容总高度
     private var contentHeight = 0f
 
     init {
-        context.obtainStyledAttributes(attrs, R.styleable.CommonShapeButton).apply {
-            mShapeMode = getInt(R.styleable.CommonShapeButton_csb_shapeMode, 0)
-            mFillColor = getColor(R.styleable.CommonShapeButton_csb_fillColor, 0xFFFFFFFF.toInt())
-            mPressedColor = getColor(R.styleable.CommonShapeButton_csb_pressedColor, 0xFF666666.toInt())
-            mStrokeColor = getColor(R.styleable.CommonShapeButton_csb_strokeColor, 0)
-            mStrokeWidth = getDimensionPixelSize(R.styleable.CommonShapeButton_csb_strokeWidth, 0)
-            mCornerRadius = getDimensionPixelSize(R.styleable.CommonShapeButton_csb_cornerRadius, 0)
-            mCornerPosition = getInt(R.styleable.CommonShapeButton_csb_cornerPosition, -1)
-            mActiveEnable = getBoolean(R.styleable.CommonShapeButton_csb_activeEnable, false)
-            mDrawablePosition = getInt(R.styleable.CommonShapeButton_csb_drawablePosition, -1)
-            mStartColor = getColor(R.styleable.CommonShapeButton_csb_startColor, 0xFFFFFFFF.toInt())
-            mEndColor = getColor(R.styleable.CommonShapeButton_csb_endColor, 0xFFFFFFFF.toInt())
-            mOrientation = getColor(R.styleable.CommonShapeButton_csb_orientation, 0)
+        context.obtainStyledAttributes(attrs, R.styleable.ShapeRippleButton).apply {
+            mShapeMode = getInt(R.styleable.ShapeRippleButton_srb_shapeMode, mShapeMode)
+            mFillColor = getColor(R.styleable.ShapeRippleButton_srb_fillColor, mFillColor)
+            mPressedColor = getColor(R.styleable.ShapeRippleButton_srb_pressedColor, mPressedColor)
+            mStrokeColor = getColor(R.styleable.ShapeRippleButton_srb_strokeColor, mStrokeColor)
+            mStrokeWidth = getDimensionPixelSize(R.styleable.ShapeRippleButton_srb_strokeWidth, mStrokeWidth)
+            mCornerRadius = getDimensionPixelSize(R.styleable.ShapeRippleButton_srb_cornerRadius, mCornerRadius)
+            mCornerPosition = getInt(R.styleable.ShapeRippleButton_srb_cornerPosition, mCornerPosition)
+            mActiveEnable = getBoolean(R.styleable.ShapeRippleButton_srb_activeEnable, mActiveEnable)
+            mDrawablePosition = getInt(R.styleable.ShapeRippleButton_srb_drawablePosition, mDrawablePosition)
+            mStartColor = getColor(R.styleable.ShapeRippleButton_srb_startColor, mStartColor)
+            mEndColor = getColor(R.styleable.ShapeRippleButton_srb_endColor, mEndColor)
+            mOrientation = getColor(R.styleable.ShapeRippleButton_srb_orientation, mOrientation)
             recycle()
         }
     }
@@ -142,6 +160,8 @@ class Btn @JvmOverloads constructor(
                 when (mOrientation) {
                     0 -> orientation = GradientDrawable.Orientation.TOP_BOTTOM
                     1 -> orientation = GradientDrawable.Orientation.LEFT_RIGHT
+                    2 -> orientation = GradientDrawable.Orientation.TL_BR
+                    3 -> orientation = GradientDrawable.Orientation.BL_TR
                 }
             }
             // 填充色
@@ -336,5 +356,4 @@ class Btn @JvmOverloads constructor(
     private fun containsFlag(flagSet: Int, flag: Int): Boolean {
         return flagSet or flag == flagSet
     }
-
 }

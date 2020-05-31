@@ -23,11 +23,13 @@
 
         <activity android:name="mm.chenme.lib.commutillibdemo.ui.other.AreaSelectActivity" />
         <activity android:name="mm.chenme.lib.commutillibdemo.ui.other.SelfClipLayoutTestActivity" />
+        <activity android:name="mm.chenme.lib.commutillibdemo.ui.other.ShapeRippleButtonActivity" />
 
         <activity android:name="mm.chenme.lib.commutillibdemo.ui.rare.ClipToPaddingTestActivity" />
         <activity android:name="mm.chenme.lib.commutillibdemo.ui.rare.ClipChildrenTestActivity" />
 
         <activity android:name="mm.chenme.lib.commutillibdemo.ui.qmui.QMUIWidgetTestActivity" />
+
         <activity android:name="mm.chenme.lib.commutillibdemo.netdemo.DemoActivity" />
 <!--        <activity android:name=".ui.FlutterDemoActivity" />-->
     </application>

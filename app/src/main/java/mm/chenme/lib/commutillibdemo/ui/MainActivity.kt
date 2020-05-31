@@ -11,6 +11,8 @@ import mm.chenme.lib.commutillibdemo.ui.rare.ClipToPaddingTestActivity
 import mm.chenme.lib.commutillib.BaseActivity
 import mm.chenme.lib.commutillib.utils.color
 import mm.chenme.lib.commutillibdemo.netdemo.DemoActivity
+import mm.chenme.lib.commutillibdemo.ui.other.ShapeRippleButtonActivity
+import mm.chenme.lib.commutillibdemo.ui.rare.ClipChildrenTestActivity
 import org.jetbrains.anko.startActivity
 
 class MainActivity(
@@ -31,7 +33,8 @@ class MainActivity(
         qmBtn_citySelect.onClick { startActivity<AreaSelectActivity>() }
         qmBtn_selfClipLayout.onClick { startActivity<SelfClipLayoutTestActivity>() }
         qmBtn_clipToPadding.onClick { startActivity<ClipToPaddingTestActivity>() }
-//        qmBtn_clipChildren.onClick { startActivity<ClipChildrenTestActivity>() }
-        qmBtn_clipChildren.onClick { startActivity<DemoActivity>() }
+        qmBtn_clipChildren.onClick { startActivity<ClipChildrenTestActivity>() }
+        srb_netDemo.onClick { startActivity<DemoActivity>() }
+        srb_shapeRippleButton.onClick { startActivity<ShapeRippleButtonActivity>() }
     }
 }
