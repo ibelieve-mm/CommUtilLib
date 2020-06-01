@@ -22,7 +22,6 @@
             android:text="圆形按钮"
             android:textColor="#fff"
             app:srb_activeEnable="true"
-            app:srb_cornerRadius="30dp"
             app:srb_fillColor="#00bc71"
             app:srb_shapeMode="oval" />
 
@@ -43,6 +42,19 @@
             android:layout_height="40dp"
             android:layout_marginTop="10dp"
             android:text="部分圆角"
+            android:textColor="#fff"
+            app:srb_activeEnable="true"
+            app:srb_cornerPosition="bottomLeft|topRight"
+            app:srb_cornerRadius="20dp"
+            app:srb_fillColor="#00bc71" />
+
+        <mm.chenme.lib.commutillib.pro.view.ShapeRippleButton
+            style="@style/CommonShapeButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:stateListAnimator="@null"
+            android:text="去除阴影效果"
             android:textColor="#fff"
             app:srb_activeEnable="true"
             app:srb_cornerPosition="bottomLeft|topRight"
@@ -88,7 +100,7 @@
             android:textColor="@color/color_theme"
             app:srb_activeEnable="true"
             app:srb_cornerRadius="20dp"
-            app:srb_fillColor="@android:color/transparent"
+            app:srb_fillColor="@color/color_pageBg"
             app:srb_strokeColor="@color/color_theme"
             app:srb_strokeWidth="1dp" />
     </LinearLayout>
