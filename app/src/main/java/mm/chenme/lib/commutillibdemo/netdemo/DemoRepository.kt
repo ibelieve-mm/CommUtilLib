@@ -1,6 +1,7 @@
 package mm.chenme.lib.commutillibdemo.netdemo
 
 import androidx.lifecycle.MutableLiveData
+import mm.chenme.lib.commutillibdemo.utils.createService
 import mm.cme.commnetlib.RetrofitClient
 import mm.cme.commnetlib.impl.DefaultCallback
 import mm.cme.commnetlib.resp.BaseResponse
@@ -15,7 +16,7 @@ import mm.cme.commnetlib.resp.BaseResponse
  */
 class DemoRepository {
 
-    private val mApi = RetrofitClient.build().create(DemoApi::class.java)
+    private val mApi = createService(DemoApi::class.java)
 
     fun queryWeather(): MutableLiveData<BaseResponse<Weather?>> {
         val respLiveData = MutableLiveData<BaseResponse<Weather?>>()

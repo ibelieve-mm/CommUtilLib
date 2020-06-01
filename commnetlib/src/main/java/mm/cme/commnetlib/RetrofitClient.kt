@@ -54,8 +54,8 @@ object RetrofitClient {
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .build()
     }
-    private lateinit var retrofit: Retrofit
-    fun <T> getService(clazz: Class<T>): T = retrofit.create(clazz)
+//    private lateinit var retrofit: Retrofit
+//    fun <T> getService(clazz: Class<T>): T = retrofit.create(clazz)
 //    fun build(baseUrl: String) {
 //        val sslSocketFactory = getSSLContext()
 //        if (sslSocketFactory != null) {
