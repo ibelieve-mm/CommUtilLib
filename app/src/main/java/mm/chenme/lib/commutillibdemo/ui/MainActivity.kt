@@ -30,6 +30,7 @@ class MainActivity(
 //            startActivity<FlutterDemoActivity>()
             startActivity<QMUIWidgetTestActivity>()
         }
+
         qmBtn_citySelect.onClick { startActivity<AreaSelectActivity>() }
         qmBtn_selfClipLayout.onClick { startActivity<SelfClipLayoutTestActivity>() }
         qmBtn_clipToPadding.onClick { startActivity<ClipToPaddingTestActivity>() }

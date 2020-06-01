@@ -8,6 +8,14 @@ def keystorePropertiesFile = rootProject.file("keystore.properties") // 创建�
 def keystoreProperties = new Properties() // 创建 Properties
 keystoreProperties.load(new FileInputStream(keystorePropertiesFile)) // 加载 Properties
 
+def AppName_Sit = "ULib-Sit"
+def AppName_Alpha = "ULib-Alpha"
+def AppName_Product = "ULib"
+
+def ApiHost_Sit = '"http://api.d-hu.cn:8100/"'
+def ApiHost_Alpha = '"http://alpha.api.d-hu.cn:8100/"'
+def ApiHost_Product = '"https://native_api.d-hu.cn/"'
+
 android {
     compileSdkVersion rootProject.android.compileSdkVersion
     defaultConfig {
@@ -24,8 +32,8 @@ android {
     }
 
     compileOptions {
-        targetCompatibility = "8"
-        sourceCompatibility = "8"
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 
     signingConfigs {
@@ -56,11 +64,46 @@ android {
             signingConfig signingConfigs.release
         }
     }
+
+    android.applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            def outputFile = output.outputFile
+            if (null != outputFile && outputFile.name.endsWith('.apk')) {
+                def fileName = "ULib_" + variant.productFlavors[0].name + "_v" + versionName + "_c" + versionCode + ".apk"
+                output.apkData.outputFileName = fileName
+            }
+        }
+    }
+
+    flavorDimensions "default"
+    productFlavors {
+        sit {
+            dimension "default"
+            buildConfigField "String", "API_HOST", "${ApiHost_Sit}"
+            manifestPlaceholders = [
+                    APP_NAME: "${AppName_Sit}"
+            ]
+        }
+        alpha {
+            dimension "default"
+            buildConfigField "String", "API_HOST", "${ApiHost_Alpha}"
+            manifestPlaceholders = [
+                    APP_NAME: "${AppName_Alpha}"
+            ]
+        }
+        product {
+            dimension "default"
+            buildConfigField "String", "API_HOST", "${ApiHost_Product}"
+            manifestPlaceholders = [
+                    APP_NAME: "${AppName_Product}"
+            ]
+        }
+    }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
