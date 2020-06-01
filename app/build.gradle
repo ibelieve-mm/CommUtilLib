@@ -12,9 +12,9 @@ def AppName_Sit = "ULib-Sit"
 def AppName_Alpha = "ULib-Alpha"
 def AppName_Product = "ULib"
 
-def ApiHost_Sit = '"http://api.d-hu.cn:8100/"'
-def ApiHost_Alpha = '"http://alpha.api.d-hu.cn:8100/"'
-def ApiHost_Product = '"https://native_api.d-hu.cn/"'
+def ApiHost_Sit = '"http://api.cme.cn:8100/"'
+def ApiHost_Alpha = '"http://alpha.api.cme.cn:8100/"'
+def ApiHost_Product = '"https://native_api.cme.cn/"'
 
 android {
     compileSdkVersion rootProject.android.compileSdkVersion
