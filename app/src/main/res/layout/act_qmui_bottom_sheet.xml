@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.qmuiteam.qmui.widget.QMUIWindowInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/qmui_topbar_height"
+        android:fitsSystemWindows="true">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_gridSheet"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="?android:selectableItemBackground"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/size_pageContentMarginHor"
+                android:paddingEnd="@dimen/size_pageContentMarginHor"
+                android:text="宫格样式"
+                android:textColor="@color/color_theme" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_gridSheet2"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/size_pageContentMarginHor"
+                android:paddingEnd="@dimen/size_pageContentMarginHor"
+                android:text="宫格样式"
+                android:textColor="@color/color_theme" />
+            <mm.chenme.lib.commutillib.ErrorEmptyWidget
+                android:id="@+id/errView"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"/>
+
+            <FrameLayout
+                android:id="@+id/fl"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="#123" />
+            <!--            <mm.chenme.lib.commutillib.pro.view.ShapeRippleButton-->
+            <!--                android:id="@+id/srb_item"-->
+            <!--                android:gravity="left"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="40dp"-->
+            <!--                android:text="宫格样式" />-->
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </ScrollView>
+
+    <com.qmuiteam.qmui.widget.QMUITopBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+        <!--        android:background="#ff639b"-->
+
+        <!--            app:qmui_bottomDividerColor="#FF0000"-->
+        <!--            app:qmui_bottomDividerHeight="10dp"-->
+        <!--            app:qmui_topbar_title_color="@android:color/white"-->
+        <com.qmuiteam.qmui.widget.QMUITopBar
+            android:id="@+id/topbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/qmui_topbar_height"
+            android:background="@color/qmui_config_color_transparent"
+            android:fitsSystemWindows="true"
+            app:qmui_layout_collapseMode="pin"
+            app:qmui_topbar_title_gravity="left_center" />
+    </com.qmuiteam.qmui.widget.QMUITopBarLayout>
+</com.qmuiteam.qmui.widget.QMUIWindowInsetLayout>
+

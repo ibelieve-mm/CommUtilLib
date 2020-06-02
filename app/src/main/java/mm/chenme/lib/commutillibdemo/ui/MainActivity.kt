@@ -12,6 +12,7 @@ import mm.chenme.lib.commutillib.BaseActivity
 import mm.chenme.lib.commutillib.utils.color
 import mm.chenme.lib.commutillibdemo.netdemo.DemoActivity
 import mm.chenme.lib.commutillibdemo.ui.other.ShapeRippleButtonActivity
+import mm.chenme.lib.commutillibdemo.ui.qmui.QMUIBottomSheetActivity
 import mm.chenme.lib.commutillibdemo.ui.rare.ClipChildrenTestActivity
 import org.jetbrains.anko.startActivity
 
@@ -28,7 +29,8 @@ class MainActivity(
     override fun initListener() {
         qmBtn_qmuiTest.onClick {
 //            startActivity<FlutterDemoActivity>()
-            startActivity<QMUIWidgetTestActivity>()
+//            startActivity<QMUIWidgetTestActivity>()
+            startActivity<QMUIBottomSheetActivity>()
         }
 
         qmBtn_citySelect.onClick { startActivity<AreaSelectActivity>() }

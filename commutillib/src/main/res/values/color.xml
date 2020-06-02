@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 透明度百分值对照表
+     10 : 19
+     20 : 33
+     30 : 4C
+     40 : 66
+     50 : 7F
+     60 : 99
+     70 : B2
+     80 : CC
+     90 : E6
+     -->
+
+    <!-- 主题色 -->
+    <color name="color_theme">#1B85ED</color>
+
+    <!-- 标题栏 -->
+    <color name="color_titleBg">#F0F0F0</color>
+
+    <!-- 页面背景色 -->
+    <color name="color_pageBg">#EFF3F6</color>
+</resources>
