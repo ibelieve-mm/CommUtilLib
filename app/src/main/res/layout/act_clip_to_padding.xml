@@ -5,11 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="?attr/qmui_topbar_height"
-        android:fitsSystemWindows="true">
+    <FrameLayout style="@style/QMTopBarLayoutBrother">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
@@ -22,20 +18,11 @@
     </FrameLayout>
 
 
-    <com.qmuiteam.qmui.widget.QMUITopBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fitsSystemWindows="true">
+    <com.qmuiteam.qmui.widget.QMUITopBarLayout style="@style/QMTopBarLayout">
 
         <com.qmuiteam.qmui.widget.QMUITopBar
             android:id="@+id/topbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/qmui_topbar_height"
-            android:background="@color/qmui_config_color_transparent"
-            android:fitsSystemWindows="true"
-            app:qmui_bottomDividerHeight="0dp"
-            app:qmui_layout_collapseMode="pin"
-            app:qmui_topbar_title_gravity="left_center" />
+            style="@style/QMTopBar"  />
     </com.qmuiteam.qmui.widget.QMUITopBarLayout>
 </com.qmuiteam.qmui.widget.QMUIWindowInsetLayout>
 

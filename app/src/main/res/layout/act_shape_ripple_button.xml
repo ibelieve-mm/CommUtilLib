@@ -5,17 +5,14 @@
     android:layout_height="match_parent">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="?attr/qmui_topbar_height"
-        android:fitsSystemWindows="true"
+        style="@style/QMTopBarLayoutBrother"
         android:gravity="center_horizontal"
         android:orientation="vertical">
 
 
         <mm.chenme.lib.commutillib.pro.view.ShapeRippleButton
             android:id="@+id/btn_teset"
-            style="@style/CommonShapeButtonStyle"
+            style="@style/SRBNoPadding"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginTop="30dp"
@@ -26,7 +23,7 @@
             app:srb_shapeMode="oval" />
 
         <mm.chenme.lib.commutillib.pro.view.ShapeRippleButton
-            style="@style/CommonShapeButtonStyle"
+            style="@style/SRBNoPadding"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:layout_marginTop="10dp"
@@ -37,7 +34,7 @@
             app:srb_fillColor="#00bc71" />
 
         <mm.chenme.lib.commutillib.pro.view.ShapeRippleButton
-            style="@style/CommonShapeButtonStyle"
+            style="@style/SRBNoPadding"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:layout_marginTop="10dp"
@@ -49,7 +46,7 @@
             app:srb_fillColor="#00bc71" />
 
         <mm.chenme.lib.commutillib.pro.view.ShapeRippleButton
-            style="@style/CommonShapeButtonStyle"
+            style="@style/SRBNoPadding"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:layout_marginTop="10dp"
@@ -62,7 +59,7 @@
             app:srb_fillColor="#00bc71" />
 
         <mm.chenme.lib.commutillib.pro.view.ShapeRippleButton
-            style="@style/CommonShapeButtonStyle"
+            style="@style/SRBNoPadding"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:layout_marginTop="10dp"
@@ -76,7 +73,7 @@
             app:srb_startColor="#00bc71" />
 
         <mm.chenme.lib.commutillib.pro.view.ShapeRippleButton
-            style="@style/CommonShapeButtonStyle"
+            style="@style/SRBNoPadding"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:layout_marginTop="10dp"
@@ -92,7 +89,7 @@
             app:srb_strokeWidth="1dp" />
 
         <mm.chenme.lib.commutillib.pro.view.ShapeRippleButton
-            style="@style/CommonShapeButtonStyle"
+            style="@style/SRBNoPadding"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:layout_marginTop="10dp"
@@ -105,23 +102,10 @@
             app:srb_strokeWidth="1dp" />
     </LinearLayout>
 
-    <com.qmuiteam.qmui.widget.QMUITopBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fitsSystemWindows="true">
-
-        <!--
-            QMUITopBarLayout 中的 background：控制状态栏颜色
-            QMUITopBar 中的 background：控制标题栏的颜色
-        -->
+    <com.qmuiteam.qmui.widget.QMUITopBarLayout style="@style/QMTopBarLayout">
 
         <com.qmuiteam.qmui.widget.QMUITopBar
             android:id="@+id/topbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/qmui_topbar_height"
-            android:fitsSystemWindows="true"
-            app:qmui_bottomDividerHeight="0dp"
-            app:qmui_layout_collapseMode="pin"
-            app:qmui_topbar_title_gravity="center" />
+            style="@style/QMTopBar" />
     </com.qmuiteam.qmui.widget.QMUITopBarLayout>
 </com.qmuiteam.qmui.widget.QMUIWindowInsetLayout>

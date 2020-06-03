@@ -4,27 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.qmuiteam.qmui.widget.QMUITopBarLayout
-        android:id="@+id/topBarLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fitsSystemWindows="true">
+    <com.qmuiteam.qmui.widget.QMUITopBarLayout style="@style/QMTopBarLayout">
 
         <com.qmuiteam.qmui.widget.QMUITopBar
             android:id="@+id/topbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/qmui_topbar_height"
-            android:background="@color/qmui_config_color_transparent"
-            android:fitsSystemWindows="true"
-            app:qmui_layout_collapseMode="pin"
-            app:qmui_topbar_title_gravity="left_center" />
+            style="@style/QMTopBar" />
     </com.qmuiteam.qmui.widget.QMUITopBarLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="?attr/qmui_topbar_height"
-        android:fitsSystemWindows="true">
+    <androidx.constraintlayout.widget.ConstraintLayout style="@style/QMTopBarLayoutBrother">
 
 
         <!--        <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton-->
@@ -58,7 +45,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/recyclerView2" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 </com.qmuiteam.qmui.widget.QMUIWindowInsetLayout>
 

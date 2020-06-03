@@ -4,10 +4,6 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.View
 import android.widget.FrameLayout
-import androidx.annotation.ColorInt
-import com.airbnb.lottie.LottieComposition
-import com.airbnb.lottie.LottieCompositionFactory
-import com.airbnb.lottie.OnCompositionLoadedListener
 import com.qmuiteam.qmui.kotlin.dip
 import com.qmuiteam.qmui.kotlin.onClick
 import kotlinx.android.synthetic.main.ui_error_empty.view.*
@@ -49,7 +45,7 @@ class ErrorEmptyWidget @JvmOverloads constructor(
     }
 
     private fun showErrorEmptyView(tipsTitle: String, tipsSubTitle: String, animPath: String, reSizeDp: Int = 100) {
-        if (mReSizeDp != reSizeDp) {
+        if (mReSizeDp != reSizeDp) { // 如果本次设置的尺寸和上次一样，则没必要重新设置
             mReSizeDp = reSizeDp
             val lp = lav_loading.layoutParams
             lp.width = dip(mReSizeDp)

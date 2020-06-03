@@ -8,12 +8,11 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-
     <!--
-      *
-      * 主题
-      *
-    -->
+     * ********************************************************************************************
+     * 主题
+     * ********************************************************************************************
+   -->
     <style name="BThemeNoActionBar" parent="QMUI.Compat.NoActionBar">
 
         <item name="qmui_alpha_pressed">0.7</item> <!-- QMUIAlphaButton 按钮按下时的透明度 -->
@@ -63,21 +62,32 @@
     </style>
 
     <!--
-      *
+      * ********************************************************************************************
       * 按钮
-      *
+      * ********************************************************************************************
     -->
-    <!-- 初始化 wrap_content Button -->
-    <style name="InitBtnWrap">
+    <!-- 宽高均为 wrap_content -->
+    <style name="InitWrap">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
 
-    <style name="InitBtnWrap.Round">
+    <!--
+        QMUIBtn
+            宽高均为 wrap_content
+            4圆角 全圆角
+    -->
+    <style name="InitWrap.Round">
         <item name="qmui_isRadiusAdjustBounds">true</item>
     </style>
 
-    <style name="InitBtnFull">
+    <!--
+        QMUIBtn
+            宽 match_parent
+            高 size_btnHeight
+            4圆角 5dp
+    -->
+    <style name="QMBtnFull">
         <item name="qmui_radius">5dp</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/size_btnHeight</item>
@@ -85,15 +95,58 @@
         <item name="android:layout_marginEnd">@dimen/size_pageContentMarginHor</item>
     </style>
 
-    <style name="InitBtnFull.Round">
+    <!--
+        QMUIBtn
+            宽 match_parent
+            高 size_btnHeight
+            4圆角 全圆角
+    -->
+    <style name="QMBtnFull.Round">
         <item name="qmui_radius">@dimen/size_btnHeightHalf</item>
     </style>
 
-    <!-- 自定义按钮样式 -->
-    <style name="CommonShapeButtonStyle" parent="@style/Widget.AppCompat.Button">
+    <!--
+        ShapeRippleButton
+            最小宽高 0dp
+            上下 padding 0dp
+    -->
+    <style name="SRBNoPadding" parent="@style/Widget.AppCompat.Button">
         <item name="android:minWidth">0dp</item>
         <item name="android:minHeight">0dp</item>
         <item name="android:paddingTop">0dp</item>
         <item name="android:paddingBottom">0dp</item>
+    </style>
+
+    <!--
+      * ********************************************************************************************
+      * QMUITopBar
+      * ********************************************************************************************
+    -->
+    <!--
+        QMUITopBarLayout
+    -->
+    <style name="QMTopBarLayout">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fitsSystemWindows">true</item>
+    </style>
+
+    <style name="QMTopBarLayoutBrother">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginTop">?attr/qmui_topbar_height</item>
+        <item name="android:fitsSystemWindows">true</item>
+    </style>
+
+    <!--
+        QMUITopBarLayout
+    -->
+    <style name="QMTopBar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?attr/qmui_topbar_height</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="qmui_bottomDividerHeight">0.5dp</item>
+        <item name="qmui_layout_collapseMode">pin</item>
+        <item name="qmui_topbar_title_gravity">left_center</item>
     </style>
 </resources>

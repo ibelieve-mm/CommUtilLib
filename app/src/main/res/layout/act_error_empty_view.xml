@@ -5,11 +5,7 @@
     android:layout_height="match_parent"
     android:background="@android:color/white">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="?attr/qmui_topbar_height"
-        android:fitsSystemWindows="true">
+    <ScrollView style="@style/QMTopBarLayoutBrother">
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
@@ -83,22 +79,11 @@
         </androidx.appcompat.widget.LinearLayoutCompat>
     </ScrollView>
 
-    <com.qmuiteam.qmui.widget.QMUITopBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fitsSystemWindows="true">
-        <!--        android:background="#ff639b"-->
+    <com.qmuiteam.qmui.widget.QMUITopBarLayout style="@style/QMTopBarLayout">
 
-        <!--            app:qmui_bottomDividerColor="#FF0000"-->
-        <!--            app:qmui_bottomDividerHeight="10dp"-->
-        <!--            app:qmui_topbar_title_color="@android:color/white"-->
         <com.qmuiteam.qmui.widget.QMUITopBar
             android:id="@+id/topbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/qmui_topbar_height"
-            android:background="@color/qmui_config_color_transparent"
-            android:fitsSystemWindows="true"
-            app:qmui_layout_collapseMode="pin" />
+            style="@style/QMTopBar" />
     </com.qmuiteam.qmui.widget.QMUITopBarLayout>
 </com.qmuiteam.qmui.widget.QMUIWindowInsetLayout>
 
