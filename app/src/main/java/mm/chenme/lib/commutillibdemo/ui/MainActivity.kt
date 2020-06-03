@@ -6,10 +6,7 @@ import kotlinx.android.synthetic.main.act_main.*
 import mm.chenme.lib.commutillib.BaseActivity
 import mm.chenme.lib.commutillibdemo.R
 import mm.chenme.lib.commutillibdemo.netdemo.DemoActivity
-import mm.chenme.lib.commutillibdemo.ui.other.AreaSelectActivity
-import mm.chenme.lib.commutillibdemo.ui.other.ErrorEmptyViewActivity
-import mm.chenme.lib.commutillibdemo.ui.other.SelfClipLayoutTestActivity
-import mm.chenme.lib.commutillibdemo.ui.other.ShapeRippleButtonActivity
+import mm.chenme.lib.commutillibdemo.ui.other.*
 import mm.chenme.lib.commutillibdemo.ui.qmui.QMUIBottomSheetActivity
 import mm.chenme.lib.commutillibdemo.ui.qmui.QMUIWidgetTestActivity
 import mm.chenme.lib.commutillibdemo.ui.rare.ClipChildrenTestActivity
@@ -32,6 +29,7 @@ class MainActivity(
             startActivity<QMUIWidgetTestActivity>()
         }
 
+//        qmBtn_citySelect.onClick { startActivity<GridPagerSnapHelperActivity>() }
         qmBtn_citySelect.onClick { startActivity<AreaSelectActivity>() }
         qmBtn_selfClipLayout.onClick { startActivity<SelfClipLayoutTestActivity>() }
         qmBtn_clipToPadding.onClick { startActivity<ClipToPaddingTestActivity>() }

@@ -25,6 +25,7 @@
         <activity android:name="mm.chenme.lib.commutillibdemo.ui.other.SelfClipLayoutTestActivity" />
         <activity android:name="mm.chenme.lib.commutillibdemo.ui.other.ShapeRippleButtonActivity" />
         <activity android:name="mm.chenme.lib.commutillibdemo.ui.other.ErrorEmptyViewActivity" />
+        <activity android:name="mm.chenme.lib.commutillibdemo.ui.other.GridPagerSnapHelperActivity" />
 
         <activity android:name="mm.chenme.lib.commutillibdemo.ui.rare.ClipToPaddingTestActivity" />
         <activity android:name="mm.chenme.lib.commutillibdemo.ui.rare.ClipChildrenTestActivity" />
