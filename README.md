@@ -53,6 +53,11 @@ qmuiArchCompiler      : "com.qmuiteam:arch-compiler:${depsVersion.qmui}",
 lifecycleExtensions   : "android.arch.lifecycle:extensions:${depsVersion.lifecycleExtensions}",
 ```
 
+5. lottie
+
+```groovy
+lottie                : "com.airbnb.android:lottie:${depsVersion.lottie}",
+```
 
 
 ---

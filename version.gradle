@@ -46,7 +46,12 @@ ext {
 //            rxandroid          : '2.1.0',
             lifecycleExtensions: '1.1.1',
 
-            sCardView          : '1.2',
+//            sCardView          : '1.2',
+
+            /**
+             * lottie
+             */
+            lottie             : '3.4.0',
     ]
 
     depsLibs = [
@@ -86,6 +91,11 @@ ext {
 //            rxandroid             : "io.reactivex.rxjava2:rxandroid:${depsVersion.rxandroid}",
             lifecycleExtensions   : "android.arch.lifecycle:extensions:${depsVersion.lifecycleExtensions}",
 
-            sCardView             : "io.github.meetsl:SCardView:${depsVersion.sCardView}",
+//            sCardView             : "io.github.meetsl:SCardView:${depsVersion.sCardView}",
+
+            /**
+             * lottie
+             */
+            lottie                : "com.airbnb.android:lottie:${depsVersion.lottie}",
     ]
 }
