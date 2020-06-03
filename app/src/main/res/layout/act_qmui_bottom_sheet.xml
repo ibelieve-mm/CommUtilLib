@@ -13,46 +13,20 @@
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tv_gridSheet"
+                android:id="@+id/tv_showGrid"
                 android:layout_width="match_parent"
                 android:layout_height="44dp"
                 android:background="?android:selectableItemBackground"
                 android:gravity="center_vertical"
                 android:paddingStart="@dimen/size_pageContentMarginHor"
                 android:paddingEnd="@dimen/size_pageContentMarginHor"
-                android:text="宫格样式"
+                android:text="显示网格样式的 sheet"
                 android:textColor="@color/color_theme" />
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tv_gridSheet2"
-                android:layout_width="match_parent"
-                android:layout_height="44dp"
-                android:background="?android:selectableItemBackgroundBorderless"
-                android:gravity="center_vertical"
-                android:paddingStart="@dimen/size_pageContentMarginHor"
-                android:paddingEnd="@dimen/size_pageContentMarginHor"
-                android:text="宫格样式"
-                android:textColor="@color/color_theme" />
-            <mm.chenme.lib.commutillib.ErrorEmptyWidget
-                android:id="@+id/errView"
-                android:layout_width="match_parent"
-                android:layout_height="300dp"/>
-
-            <FrameLayout
-                android:id="@+id/fl"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:background="#123" />
-            <!--            <mm.chenme.lib.commutillib.pro.view.ShapeRippleButton-->
-            <!--                android:id="@+id/srb_item"-->
-            <!--                android:gravity="left"-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="40dp"-->
-            <!--                android:text="宫格样式" />-->
         </androidx.appcompat.widget.LinearLayoutCompat>
     </ScrollView>
 
@@ -71,8 +45,7 @@
             android:layout_height="?attr/qmui_topbar_height"
             android:background="@color/qmui_config_color_transparent"
             android:fitsSystemWindows="true"
-            app:qmui_layout_collapseMode="pin"
-            app:qmui_topbar_title_gravity="left_center" />
+            app:qmui_layout_collapseMode="pin" />
     </com.qmuiteam.qmui.widget.QMUITopBarLayout>
 </com.qmuiteam.qmui.widget.QMUIWindowInsetLayout>
 

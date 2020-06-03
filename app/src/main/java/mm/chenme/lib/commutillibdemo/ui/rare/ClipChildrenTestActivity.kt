@@ -1,7 +1,7 @@
 package mm.chenme.lib.commutillibdemo.ui.rare
 
 import com.qmuiteam.qmui.kotlin.onClick
-import kotlinx.android.synthetic.main.activity_clip_children.*
+import kotlinx.android.synthetic.main.act_clip_children.*
 import mm.chenme.lib.commutillibdemo.R
 import mm.chenme.lib.commutillib.BaseActivity
 
@@ -14,7 +14,7 @@ import mm.chenme.lib.commutillib.BaseActivity
  * Email：ibelieve1210@163.com
  */
 class ClipChildrenTestActivity : BaseActivity() {
-    override val layoutResId = R.layout.activity_clip_children
+    override val layoutResId = R.layout.act_clip_children
 
     override fun initView() {
         topbar.setTitle("android:clipChildren=\"false\"")

@@ -2,22 +2,22 @@ package mm.chenme.lib.commutillibdemo.ui
 
 import android.graphics.Color
 import com.qmuiteam.qmui.kotlin.onClick
-import kotlinx.android.synthetic.main.activity_main.*
-import mm.chenme.lib.commutillibdemo.R
-import mm.chenme.lib.commutillibdemo.ui.other.AreaSelectActivity
-import mm.chenme.lib.commutillibdemo.ui.other.SelfClipLayoutTestActivity
-import mm.chenme.lib.commutillibdemo.ui.qmui.QMUIWidgetTestActivity
-import mm.chenme.lib.commutillibdemo.ui.rare.ClipToPaddingTestActivity
+import kotlinx.android.synthetic.main.act_main.*
 import mm.chenme.lib.commutillib.BaseActivity
-import mm.chenme.lib.commutillib.utils.color
+import mm.chenme.lib.commutillibdemo.R
 import mm.chenme.lib.commutillibdemo.netdemo.DemoActivity
+import mm.chenme.lib.commutillibdemo.ui.other.AreaSelectActivity
+import mm.chenme.lib.commutillibdemo.ui.other.ErrorEmptyViewActivity
+import mm.chenme.lib.commutillibdemo.ui.other.SelfClipLayoutTestActivity
 import mm.chenme.lib.commutillibdemo.ui.other.ShapeRippleButtonActivity
 import mm.chenme.lib.commutillibdemo.ui.qmui.QMUIBottomSheetActivity
+import mm.chenme.lib.commutillibdemo.ui.qmui.QMUIWidgetTestActivity
 import mm.chenme.lib.commutillibdemo.ui.rare.ClipChildrenTestActivity
+import mm.chenme.lib.commutillibdemo.ui.rare.ClipToPaddingTestActivity
 import org.jetbrains.anko.startActivity
 
 class MainActivity(
-    override val layoutResId: Int = R.layout.activity_main,
+    override val layoutResId: Int = R.layout.act_main,
     override val isStatusBarLightMode: Boolean = false
 ) : BaseActivity() {
 
@@ -29,8 +29,7 @@ class MainActivity(
     override fun initListener() {
         qmBtn_qmuiTest.onClick {
 //            startActivity<FlutterDemoActivity>()
-//            startActivity<QMUIWidgetTestActivity>()
-            startActivity<QMUIBottomSheetActivity>()
+            startActivity<QMUIWidgetTestActivity>()
         }
 
         qmBtn_citySelect.onClick { startActivity<AreaSelectActivity>() }
@@ -39,5 +38,7 @@ class MainActivity(
         qmBtn_clipChildren.onClick { startActivity<ClipChildrenTestActivity>() }
         srb_netDemo.onClick { startActivity<DemoActivity>() }
         srb_shapeRippleButton.onClick { startActivity<ShapeRippleButtonActivity>() }
+        srb_errorEmpty.onClick { startActivity<ErrorEmptyViewActivity>() }
+        srb_qmuiBottomSheet.onClick { startActivity<QMUIBottomSheetActivity>() }
     }
 }

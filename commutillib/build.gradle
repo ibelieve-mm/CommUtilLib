@@ -58,6 +58,8 @@ dependencies {
      */
     api rootProject.depsLibs.lifecycleExtensions
 
+    api 'com.airbnb.android:lottie:3.4.0'
+
     implementation rootProject.depsLibs.androidxCoreKtx
     implementation rootProject.depsLibs.appcompat
 

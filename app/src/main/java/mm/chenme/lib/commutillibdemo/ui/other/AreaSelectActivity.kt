@@ -12,7 +12,7 @@ import mm.chenme.lib.commutillibdemo.utils.parseJson
 import java.io.BufferedReader
 import java.io.IOException
 import java.io.InputStreamReader
-import kotlinx.android.synthetic.main.activity_area_select.*
+import kotlinx.android.synthetic.main.act_area_select.*
 import kotlinx.android.synthetic.main.menu_text_view.*
 
 /**
@@ -37,7 +37,7 @@ class AreaSelectActivity : BaseActivity() {
 
     private var mResult = mutableMapOf<Long, ResultBean>() // 用于保存结果
 
-    override val layoutResId: Int = R.layout.activity_area_select
+    override val layoutResId: Int = R.layout.act_area_select
 
     override fun initData() {
         val jsonRes = readJsonFromAssets("location.json")

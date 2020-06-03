@@ -1,7 +1,7 @@
 package mm.chenme.lib.commutillibdemo.ui.qmui
 
 import com.qmuiteam.qmui.kotlin.onClick
-import kotlinx.android.synthetic.main.activity_qmui_widget_test.*
+import kotlinx.android.synthetic.main.act_qmui_widget_test.*
 import mm.chenme.lib.commutillib.utils.color
 import mm.chenme.lib.commutillib.utils.loge
 import mm.chenme.lib.commutillibdemo.R
@@ -19,7 +19,7 @@ import org.jetbrains.anko.dip
  */
 class QMUIWidgetTestActivity : BaseActivity() {
 
-    override val layoutResId: Int = R.layout.activity_qmui_widget_test
+    override val layoutResId: Int = R.layout.act_qmui_widget_test
 
     override fun initView() {
 
