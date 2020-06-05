@@ -143,14 +143,14 @@ glideOkhttp3          : "com.github.bumptech.glide:okhttp3-integration:${depsVer
    + [SCardView-master](https://github.com/meetsl/SCardView-master)
    + [生成阴影 .9.png](http://inloop.github.io/shadow4android/)
 
-0. anim
+10. anim
    + [lottie-android](https://github.com/airbnb/lottie-android)
 
       > [动画库](https://lottiefiles.com/)
 
-1. DB
-  + [ObjectBox](https://objectbox.io/cn/)
-  + [Room](https://developer.android.google.cn/training/data-storage/room?hl=zh_cn)
+11. DB
+   + [ObjectBox](https://objectbox.io/cn/)
+   + [Room](https://developer.android.google.cn/training/data-storage/room?hl=zh_cn)
 
 ---
 
