@@ -1,9 +1,11 @@
 package mm.chenme.lib.commutillibdemo.ui
 
 import android.graphics.Color
+import androidx.core.content.edit
 import com.qmuiteam.qmui.kotlin.onClick
 import kotlinx.android.synthetic.main.act_main.*
 import mm.chenme.lib.commutillib.BaseActivity
+import mm.chenme.lib.commutillib.utils.getSP
 import mm.chenme.lib.commutillibdemo.R
 import mm.chenme.lib.commutillibdemo.netdemo.DemoActivity
 import mm.chenme.lib.commutillibdemo.ui.other.*
@@ -21,6 +23,7 @@ class MainActivity(
 
     override fun initView() {
         topbar.setTitle("主页面").setTextColor(Color.WHITE)
+        getSP().edit { putString("asdadsa", "小盆友，你是不是有很多问？") }
     }
 
     override fun initListener() {

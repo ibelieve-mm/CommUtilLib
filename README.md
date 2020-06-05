@@ -59,6 +59,13 @@ lifecycleExtensions   : "android.arch.lifecycle:extensions:${depsVersion.lifecyc
 lottie                : "com.airbnb.android:lottie:${depsVersion.lottie}",
 ```
 
+6. glide
+
+```groovy
+glide                 : "com.github.bumptech.glide:glide:${depsVersion.glide}",
+glideCompiler         : "com.github.bumptech.glide:compiler:${depsVersion.glide}",
+glideOkhttp3          : "com.github.bumptech.glide:okhttp3-integration:${depsVersion.glide}",
+```
 
 ---
 
@@ -94,3 +101,72 @@ lottie                : "com.airbnb.android:lottie:${depsVersion.lottie}",
 > 3. 引入了[ `QMUI`](https://qmuiteam.com/android);
 > 4. `BaseActivity` 继承自 `QMUIFragmentActivity`；
 > 5. 提供了网络请求 Demo；
+
+---
+
+### 推荐三方库
+
+1. dialog
+
+   + [material-dialogs](https://github.com/afollestad/material-dialogs)
+   + [XPopup](https://github.com/li-xiaojun/XPopup)
+   + [BasePopup](https://github.com/razerdp/BasePopup)
+
+
+2. wheelPicker
+
+   + [Android-PickerView](https://github.com/Bigkoo/Android-PickerView)
+   + [NumberPicker](https://github.com/SuperRabbitD/NumberPicker)
+
+
+3. Banner
+
+   + [banner](https://github.com/youth5201314/banner)
+   + [BGABanner-Android](https://github.com/bingoogolapple/BGABanner-Android)
+
+
+4. QRCode
+
+   + [BGAQRCode-Android](https://github.com/bingoogolapple/BGAQRCode-Android)
+
+
+5. ViewPager
+
+   + [GraceViewPager](https://github.com/wurensen/GraceViewPager)
+
+
+6. compression
+
+   + [Luban](https://github.com/Curzibn/Luban)
+
+
+7. Refresh
+
+   + [SmartRefreshLayout](https://github.com/scwang90/SmartRefreshLayout)
+
+
+8. xxxBus
+
+   + [LiveEventBus](https://github.com/JeremyLiao/LiveEventBus)
+   + [EventBus](https://github.com/greenrobot/EventBus)
+
+
+9. 阴影效果
+
+   + [SCardView-master](https://github.com/meetsl/SCardView-master)
+   + [生成阴影 .9.png](http://inloop.github.io/shadow4android/)
+
+
+10. anim
+
+   + [lottie-android](https://github.com/airbnb/lottie-android)
+
+      > [动画库](https://lottiefiles.com/)
+
+
+11. DB
+
+   + [ObjectBox](https://objectbox.io/cn/)
+   + [Room](https://developer.android.google.cn/training/data-storage/room?hl=zh_cn)
+
+---
