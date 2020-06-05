@@ -120,20 +120,16 @@ glideOkhttp3          : "com.github.bumptech.glide:okhttp3-integration:${depsVer
    + [BGABanner-Android](https://github.com/bingoogolapple/BGABanner-Android)
 
 4. QRCode
-
-+ [BGAQRCode-Android](https://github.com/bingoogolapple/BGAQRCode-Android)
+   + [BGAQRCode-Android](https://github.com/bingoogolapple/BGAQRCode-Android)
 
 5. ViewPager
-
-+ [GraceViewPager](https://github.com/wurensen/GraceViewPager)
+   + [GraceViewPager](https://github.com/wurensen/GraceViewPager)
 
 6. compression
-
-+ [Luban](https://github.com/Curzibn/Luban)
+   + [Luban](https://github.com/Curzibn/Luban)
 
 7. Refresh
-
-+ [SmartRefreshLayout](https://github.com/scwang90/SmartRefreshLayout)
+   + [SmartRefreshLayout](https://github.com/scwang90/SmartRefreshLayout)
 
 8. xxxBus
    + [LiveEventBus](https://github.com/JeremyLiao/LiveEventBus)
@@ -153,5 +149,3 @@ glideOkhttp3          : "com.github.bumptech.glide:okhttp3-integration:${depsVer
    + [Room](https://developer.android.google.cn/training/data-storage/room?hl=zh_cn)
 
 ---
-
-
