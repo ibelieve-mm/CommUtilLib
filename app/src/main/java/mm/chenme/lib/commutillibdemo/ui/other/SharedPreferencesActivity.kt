@@ -1,12 +1,12 @@
 package mm.chenme.lib.commutillibdemo.ui.other
 
-import android.os.CountDownTimer
 import androidx.core.content.edit
 import com.qmuiteam.qmui.kotlin.onClick
 import kotlinx.android.synthetic.main.act_shared_preferences.*
-import kotlinx.coroutines.*
 import mm.chenme.lib.commutillib.BaseActivity
-import mm.chenme.lib.commutillib.utils.*
+import mm.chenme.lib.commutillib.utils.getSP
+import mm.chenme.lib.commutillib.utils.ltoast
+import mm.chenme.lib.commutillib.utils.string
 import mm.chenme.lib.commutillibdemo.R
 
 

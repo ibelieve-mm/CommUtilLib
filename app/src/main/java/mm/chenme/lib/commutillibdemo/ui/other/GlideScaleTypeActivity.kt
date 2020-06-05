@@ -1,14 +1,9 @@
 package mm.chenme.lib.commutillibdemo.ui.other
 
-import android.content.Context
-import android.content.SharedPreferences
-import android.os.CountDownTimer
-import androidx.core.content.edit
 import com.qmuiteam.qmui.kotlin.onClick
 import kotlinx.android.synthetic.main.act_glide_scale_type.*
-import kotlinx.coroutines.*
 import mm.chenme.lib.commutillib.BaseActivity
-import mm.chenme.lib.commutillib.utils.*
+import mm.chenme.lib.commutillib.utils.show
 import mm.chenme.lib.commutillibdemo.R
 
 

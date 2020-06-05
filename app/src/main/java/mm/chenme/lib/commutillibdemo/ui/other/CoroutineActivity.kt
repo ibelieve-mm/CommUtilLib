@@ -1,15 +1,11 @@
 package mm.chenme.lib.commutillibdemo.ui.other
 
 import android.os.CountDownTimer
-import androidx.core.content.edit
 import com.qmuiteam.qmui.kotlin.onClick
 import kotlinx.android.synthetic.main.act_coroutine.*
-import kotlinx.android.synthetic.main.act_glide_scale_type.*
 import kotlinx.android.synthetic.main.act_glide_scale_type.topbar
-import kotlinx.android.synthetic.main.act_shared_preferences.*
 import kotlinx.coroutines.*
 import mm.chenme.lib.commutillib.BaseActivity
-import mm.chenme.lib.commutillib.utils.*
 import mm.chenme.lib.commutillibdemo.R
 
 
