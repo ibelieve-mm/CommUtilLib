@@ -63,6 +63,13 @@ dependencies {
      */
     api rootProject.depsLibs.lottie
 
+    /**
+     * glide
+     */
+    api rootProject.depsLibs.glide
+    kapt rootProject.depsLibs.glideCompiler
+    implementation rootProject.depsLibs.glideOkhttp3
+
     implementation rootProject.depsLibs.androidxCoreKtx
     implementation rootProject.depsLibs.appcompat
 

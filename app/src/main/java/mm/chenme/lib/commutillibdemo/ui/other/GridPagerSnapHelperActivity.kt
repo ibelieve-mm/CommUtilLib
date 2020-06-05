@@ -3,9 +3,6 @@ package mm.chenme.lib.commutillibdemo.ui.other
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.PagerSnapHelper
-import androidx.viewpager2.widget.ViewPager2
-import com.qmuiteam.qmui.kotlin.dip
 import com.qmuiteam.qmui.kotlin.onClick
 import kotlinx.android.synthetic.main.act_grid_pager_snap_helper.*
 import mm.chenme.lib.commutillib.BaseActivity

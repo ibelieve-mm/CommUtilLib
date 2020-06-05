@@ -2,7 +2,23 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="mm.chenme.lib.commutillibdemo">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
+    <!--
+        Glide：ACCESS_NETWORK_STATE 对于 Glide 加载 URL 并不是必需的，但是它将帮助 Glide 处理 片状网络(flaky network) 和飞行模式
+    -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!--
+        Glide：从本地文件夹或 DCIM 或图库中加载图片
+    -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!--
+        Glide：缓存存储到公有 SD 卡上
+    -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:name="mm.chenme.lib.commutillibdemo.APP"
@@ -11,8 +27,8 @@
         android:label="${APP_NAME}"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
-        android:theme="@style/BThemeNoActionBar">
+        android:theme="@style/BThemeNoActionBar"
+        android:usesCleartextTraffic="true">
         <activity android:name="mm.chenme.lib.commutillibdemo.ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,6 +42,7 @@
         <activity android:name="mm.chenme.lib.commutillibdemo.ui.other.ShapeRippleButtonActivity" />
         <activity android:name="mm.chenme.lib.commutillibdemo.ui.other.ErrorEmptyViewActivity" />
         <activity android:name="mm.chenme.lib.commutillibdemo.ui.other.GridPagerSnapHelperActivity" />
+        <activity android:name="mm.chenme.lib.commutillibdemo.ui.other.GlideScaleTypeActivity" />
 
         <activity android:name="mm.chenme.lib.commutillibdemo.ui.rare.ClipToPaddingTestActivity" />
         <activity android:name="mm.chenme.lib.commutillibdemo.ui.rare.ClipChildrenTestActivity" />
@@ -34,7 +51,7 @@
         <activity android:name="mm.chenme.lib.commutillibdemo.ui.qmui.QMUIBottomSheetActivity" />
 
         <activity android:name="mm.chenme.lib.commutillibdemo.netdemo.DemoActivity" />
-<!--        <activity android:name=".ui.FlutterDemoActivity" />-->
+        <!--        <activity android:name=".ui.FlutterDemoActivity" />-->
     </application>
 
 </manifest>

@@ -30,7 +30,8 @@ class MainActivity(
         }
 
 //        qmBtn_citySelect.onClick { startActivity<GridPagerSnapHelperActivity>() }
-        qmBtn_citySelect.onClick { startActivity<AreaSelectActivity>() }
+        qmBtn_citySelect.onClick { startActivity<GlideScaleTypeActivity>() }
+//        qmBtn_citySelect.onClick { startActivity<AreaSelectActivity>() }
         qmBtn_selfClipLayout.onClick { startActivity<SelfClipLayoutTestActivity>() }
         qmBtn_clipToPadding.onClick { startActivity<ClipToPaddingTestActivity>() }
         qmBtn_clipChildren.onClick { startActivity<ClipChildrenTestActivity>() }

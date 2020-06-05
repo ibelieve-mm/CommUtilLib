@@ -52,6 +52,11 @@ ext {
              * lottie
              */
             lottie             : '3.4.0',
+
+            /**
+             * glide
+             */
+            glide              : '4.11.0',
     ]
 
     depsLibs = [
@@ -97,5 +102,12 @@ ext {
              * lottie
              */
             lottie                : "com.airbnb.android:lottie:${depsVersion.lottie}",
+
+            /**
+             * glide
+             */
+            glide                 : "com.github.bumptech.glide:glide:${depsVersion.glide}",
+            glideCompiler         : "com.github.bumptech.glide:compiler:${depsVersion.glide}",
+            glideOkhttp3          : "com.github.bumptech.glide:okhttp3-integration:${depsVersion.glide}",
     ]
 }

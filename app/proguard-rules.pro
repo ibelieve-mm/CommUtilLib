@@ -149,6 +149,21 @@
 -keep class androidx.fragment.app.* { *; }
 ### --- end: 腾讯原生UI框架 -----------------------------------------------------------------
 
+### --- start: Glide ----------------------------------------------------------------------
+-keep public class * implements com.bumptech.glide.module.GlideModule
+-keep class * extends com.bumptech.glide.module.AppGlideModule {
+ <init>(...);
+}
+-keep public enum com.bumptech.glide.load.ImageHeaderParser$** {
+  **[] $VALUES;
+  public *;
+}
+-keep class com.bumptech.glide.load.data.ParcelFileDescriptorRewinder$InternalRewinder {
+  *** rewind();
+}
+-keepresourcexmlelements manifest/application/meta-data@value=GlideModule # for DexGuard only
+### --- end: Glide ------------------------------------------------------------------------
+
 ### --- start: 保持实体类不被混淆 ------------------------------------------------------------
 -keep class mm.chenme.lib.commutillibdemo.model.** {*;} # 如果实体类被混淆了，则无法正常解析
 ### --- end: 保持实体类不被混淆 --------------------------------------------------------------
