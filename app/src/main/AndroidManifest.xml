@@ -43,6 +43,8 @@
         <activity android:name="mm.chenme.lib.commutillibdemo.ui.other.ErrorEmptyViewActivity" />
         <activity android:name="mm.chenme.lib.commutillibdemo.ui.other.GridPagerSnapHelperActivity" />
         <activity android:name="mm.chenme.lib.commutillibdemo.ui.other.GlideScaleTypeActivity" />
+        <activity android:name="mm.chenme.lib.commutillibdemo.ui.other.SharedPreferencesActivity" />
+        <activity android:name="mm.chenme.lib.commutillibdemo.ui.other.CoroutineActivity" />
 
         <activity android:name="mm.chenme.lib.commutillibdemo.ui.rare.ClipToPaddingTestActivity" />
         <activity android:name="mm.chenme.lib.commutillibdemo.ui.rare.ClipChildrenTestActivity" />

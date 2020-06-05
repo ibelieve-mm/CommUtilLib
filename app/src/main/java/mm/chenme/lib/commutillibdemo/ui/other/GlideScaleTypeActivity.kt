@@ -2,14 +2,13 @@ package mm.chenme.lib.commutillibdemo.ui.other
 
 import android.content.Context
 import android.content.SharedPreferences
+import android.os.CountDownTimer
 import androidx.core.content.edit
 import com.qmuiteam.qmui.kotlin.onClick
 import kotlinx.android.synthetic.main.act_glide_scale_type.*
+import kotlinx.coroutines.*
 import mm.chenme.lib.commutillib.BaseActivity
-import mm.chenme.lib.commutillib.utils.getSP
-import mm.chenme.lib.commutillib.utils.ltoast
-import mm.chenme.lib.commutillib.utils.show
-import mm.chenme.lib.commutillib.utils.string
+import mm.chenme.lib.commutillib.utils.*
 import mm.chenme.lib.commutillibdemo.R
 
 
@@ -38,7 +37,6 @@ class GlideScaleTypeActivity(override val layoutResId: Int = R.layout.act_glide_
 
         tv_showHeight2.onClick { loadImg(heightImgUrl, 30f) }
         tv_showWidth2.onClick { loadImg(widthImgUrl, 30f) }
-
     }
 
     private fun loadImg(imgUrl: String, radius: Float = 0f) {
@@ -66,9 +64,6 @@ class GlideScaleTypeActivity(override val layoutResId: Int = R.layout.act_glide_
         iv5.show(imgUrl, radiusDp = radius, isUseCenterCrop = false)
         iv6.show(imgUrl, radiusDp = radius, isUseCenterCrop = false)
         iv7.show(imgUrl, radiusDp = radius, isUseCenterCrop = false)
-
-        ltoast(getSP().string("asdadsa"))
     }
-
 }
 

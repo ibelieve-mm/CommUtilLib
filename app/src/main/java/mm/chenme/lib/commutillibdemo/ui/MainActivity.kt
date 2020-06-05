@@ -42,5 +42,7 @@ class MainActivity(
         srb_errorEmpty.onClick { startActivity<ErrorEmptyViewActivity>() }
         srb_qmuiBottomSheet.onClick { startActivity<QMUIBottomSheetActivity>() }
         srb_glide.onClick { startActivity<GlideScaleTypeActivity>() }
+        srb_sharedPreferences.onClick { startActivity<SharedPreferencesActivity>() }
+        srb_coroutine.onClick { startActivity<CoroutineActivity>() }
     }
 }

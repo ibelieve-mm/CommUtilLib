@@ -1,0 +1,38 @@
+package mm.chenme.lib.commutillibdemo.ui.other
+
+import android.os.CountDownTimer
+import androidx.core.content.edit
+import com.qmuiteam.qmui.kotlin.onClick
+import kotlinx.android.synthetic.main.act_shared_preferences.*
+import kotlinx.coroutines.*
+import mm.chenme.lib.commutillib.BaseActivity
+import mm.chenme.lib.commutillib.utils.*
+import mm.chenme.lib.commutillibdemo.R
+
+
+/**
+ * Descriptions：
+ * StartVersion：
+ * <p>
+ * Author：ChenME
+ * Date：2020/6/3
+ * Email：ibelieve1210@163.com
+ */
+class SharedPreferencesActivity(override val layoutResId: Int = R.layout.act_shared_preferences) : BaseActivity() {
+
+
+    override fun initView() {
+        topbar.setTitle("SharedPreferences 测试")
+        topbar.addLeftBackImageButton().onClick { closePage() }
+    }
+
+    override fun initListener() {
+        tv_write.onClick {
+            getSP().edit { putString("input", et_input.text.toString()) }
+        }
+        tv_read.onClick { ltoast(getSP().string("input")) }
+
+        tv_del.onClick { getSP().edit { putString("input", "") } }
+    }
+}
+
