@@ -38,9 +38,9 @@ import mm.chenme.lib.commutillib.glide.GlideRequest
  */
 fun ImageView.show(
     any: Any?,
-    @DrawableRes placeholder: Int = R.drawable.qmui_icon_switch_normal,
-    @DrawableRes error: Int = R.drawable.qmui_icon_switch_normal,
-    isUserCenterCrop: Boolean = true,
+    @DrawableRes placeholder: Int = R.drawable.placeholder,
+    @DrawableRes error: Int = R.drawable.placeholder,
+    isUseCenterCrop: Boolean = true,
     isCloseAnim: Boolean = false,
     radiusDp: Float = 0f
 ) {
@@ -59,7 +59,7 @@ fun ImageView.show(
      *     ②scaleType的变形一定要在角度变形前面。
      */
     val transforms = mutableListOf<Transformation<Bitmap>>()
-    if (isUserCenterCrop) {
+    if (isUseCenterCrop) {
         transforms.add(CenterCrop())
     }
     if (radiusDp > 0) {
@@ -78,8 +78,8 @@ fun ImageView.show(
  */
 fun ImageView.circle(
     any: Any?,
-    @DrawableRes placeholder: Int = R.drawable.qmui_icon_switch_normal,
-    @DrawableRes error: Int = R.drawable.qmui_icon_switch_normal,
+    @DrawableRes placeholder: Int = R.drawable.placeholder,
+    @DrawableRes error: Int = R.drawable.placeholder,
     isCloseAnim: Boolean = false
 ) {
     if (null == any) {
@@ -115,8 +115,8 @@ private fun execute(wrapper: GlideWrapper) {
 class GlideWrapper {
     var url: String? = null
     var imageView: ImageView? = null
-    var placeholder: Int = R.drawable.qmui_icon_switch_normal
-    var error: Int = R.drawable.qmui_icon_switch_normal
+    var placeholder: Int = R.drawable.placeholder
+    var error: Int = R.drawable.placeholder
     var transform: Transformation<Bitmap>? = null
 }
 
