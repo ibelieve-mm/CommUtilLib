@@ -23,6 +23,12 @@
                 android:text="显示网格样式的 sheet"
                 android:textColor="@color/color_theme" />
 
+            <mm.chenme.lib.commutillibdemo.HeartView
+                android:layout_width="250dp"
+                android:id="@+id/heartView"
+                android:background="@color/color_theme_t10"
+                android:layout_height="270dp" />
+
         </androidx.appcompat.widget.LinearLayoutCompat>
     </ScrollView>
 

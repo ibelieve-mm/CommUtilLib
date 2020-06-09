@@ -27,26 +27,27 @@ class QMUIBottomSheetActivity(override val layoutResId: Int = R.layout.act_qmui_
     }
 
     override fun initListener() {
-        tv_showGrid.onClick {
-            val sheet = QMUIBottomSheet.BottomGridSheetBuilder(this)
-                .setAllowDrag(true)
-                .setCancelText("cancel")
-                .setAddCancelBtn(true)
-                .setOnSheetItemClickListener { dialog, itemView ->
-                    stoast(itemView.tag as String)
-                    dialog.dismiss()
-                }
-                .addItem(android.R.drawable.alert_dark_frame, "1231312131", QMUIBottomSheet.BottomGridSheetBuilder.FIRST_LINE)
-                .addItem(android.R.drawable.stat_notify_call_mute, "12", QMUIBottomSheet.BottomGridSheetBuilder.SECOND_LINE)
-                .addItem(android.R.drawable.ic_input_add, "23", QMUIBottomSheet.BottomGridSheetBuilder.FIRST_LINE)
-                .addItem(android.R.drawable.edit_text, "34", QMUIBottomSheet.BottomGridSheetBuilder.FIRST_LINE)
-                .addItem(android.R.drawable.edit_text, "34", QMUIBottomSheet.BottomGridSheetBuilder.FIRST_LINE)
-                .addItem(android.R.drawable.edit_text, "44", QMUIBottomSheet.BottomGridSheetBuilder.FIRST_LINE)
-                .addItem(android.R.drawable.edit_text, "fsfd", QMUIBottomSheet.BottomGridSheetBuilder.FIRST_LINE)
-                .build()
-            sheet.setRadius(dip(20))
-            sheet.show()
-        }
+        tv_showGrid.onClick {heartView.start()}
+//        tv_showGrid.onClick {
+//            val sheet = QMUIBottomSheet.BottomGridSheetBuilder(this)
+//                .setAllowDrag(true)
+//                .setCancelText("cancel")
+//                .setAddCancelBtn(true)
+//                .setOnSheetItemClickListener { dialog, itemView ->
+//                    stoast(itemView.tag as String)
+//                    dialog.dismiss()
+//                }
+//                .addItem(android.R.drawable.alert_dark_frame, "1231312131", QMUIBottomSheet.BottomGridSheetBuilder.FIRST_LINE)
+//                .addItem(android.R.drawable.stat_notify_call_mute, "12", QMUIBottomSheet.BottomGridSheetBuilder.SECOND_LINE)
+//                .addItem(android.R.drawable.ic_input_add, "23", QMUIBottomSheet.BottomGridSheetBuilder.FIRST_LINE)
+//                .addItem(android.R.drawable.edit_text, "34", QMUIBottomSheet.BottomGridSheetBuilder.FIRST_LINE)
+//                .addItem(android.R.drawable.edit_text, "34", QMUIBottomSheet.BottomGridSheetBuilder.FIRST_LINE)
+//                .addItem(android.R.drawable.edit_text, "44", QMUIBottomSheet.BottomGridSheetBuilder.FIRST_LINE)
+//                .addItem(android.R.drawable.edit_text, "fsfd", QMUIBottomSheet.BottomGridSheetBuilder.FIRST_LINE)
+//                .build()
+//            sheet.setRadius(dip(20))
+//            sheet.show()
+//        }
 
     }
 
