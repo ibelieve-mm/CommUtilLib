@@ -144,8 +144,20 @@ glideOkhttp3          : "com.github.bumptech.glide:okhttp3-integration:${depsVer
 
       > [动画库](https://lottiefiles.com/)
 
-11. DB
+11. 数据存储
    + [ObjectBox](https://objectbox.io/cn/)
    + [Room](https://developer.android.google.cn/training/data-storage/room?hl=zh_cn)
+   + [MMKV](https://github.com/Tencent/MMKV)
 
+12. RatingBar
+   + [SimpleRatingBar](https://github.com/ome450901/SimpleRatingBar)
+
+13. Calendar
+   + [CalendarView](https://github.com/huanghaibin-dev/CalendarView)
+   + [CosmoCalendar](https://github.com/ApplikeySolutions/CosmoCalendar)
+
+14. 下载
+   + [FileDownloader](https://github.com/lingochamp/FileDownloader)
+
+> [常用库整理(轮子)](https://www.jianshu.com/p/1c40d3aacc2f)
 ---
