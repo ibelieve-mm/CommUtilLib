@@ -160,4 +160,6 @@ glideOkhttp3          : "com.github.bumptech.glide:okhttp3-integration:${depsVer
    + [FileDownloader](https://github.com/lingochamp/FileDownloader)
 
 > [常用库整理(轮子)](https://www.jianshu.com/p/1c40d3aacc2f)
+> [2020年GitHub 上那些优秀Android开源库](https://www.jianshu.com/p/7683d249b4a3)
+> [Android（常用）主流UI开源库整理](https://www.jianshu.com/p/8ba0fbbd93f5)）
 ---

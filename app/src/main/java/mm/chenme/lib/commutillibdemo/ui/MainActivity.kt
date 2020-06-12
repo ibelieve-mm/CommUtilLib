@@ -8,6 +8,7 @@ import mm.chenme.lib.commutillib.BaseActivity
 import mm.chenme.lib.commutillib.utils.getSP
 import mm.chenme.lib.commutillibdemo.R
 import mm.chenme.lib.commutillibdemo.netdemo.DemoActivity
+import mm.chenme.lib.commutillibdemo.ui.bezier.BezierHeartViewTestActivity
 import mm.chenme.lib.commutillibdemo.ui.other.*
 import mm.chenme.lib.commutillibdemo.ui.qmui.QMUIBottomSheetActivity
 import mm.chenme.lib.commutillibdemo.ui.qmui.QMUIWidgetTestActivity
@@ -44,5 +45,7 @@ class MainActivity(
         srb_glide.onClick { startActivity<GlideScaleTypeActivity>() }
         srb_sharedPreferences.onClick { startActivity<SharedPreferencesActivity>() }
         srb_coroutine.onClick { startActivity<CoroutineActivity>() }
+
+        srb_bezier.onClick { startActivity<BezierHeartViewTestActivity>() }
     }
 }

@@ -13,25 +13,22 @@
             android:orientation="vertical">
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tv_showGrid"
+                android:id="@+id/tv_play"
                 android:layout_width="match_parent"
                 android:layout_height="44dp"
                 android:background="?android:selectableItemBackground"
                 android:gravity="center_vertical"
                 android:paddingStart="@dimen/size_pageContentMarginHor"
                 android:paddingEnd="@dimen/size_pageContentMarginHor"
-                android:text="显示网格样式的 sheet"
+                android:text="播放效果"
                 android:textColor="@color/color_theme" />
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tv_showDialog"
-                android:layout_width="match_parent"
-                android:layout_height="44dp"
-                android:background="?android:selectableItemBackground"
-                android:gravity="center_vertical"
-                android:paddingStart="@dimen/size_pageContentMarginHor"
-                android:paddingEnd="@dimen/size_pageContentMarginHor"
-                android:text="显示对话框"
-                android:textColor="@color/color_theme" />
+
+            <mm.chenme.lib.commutillibdemo.ui.bezier.HeartView
+                android:layout_width="250dp"
+                android:id="@+id/heartView"
+                android:background="@color/color_theme_t10"
+                android:layout_height="310dp" />
+
         </androidx.appcompat.widget.LinearLayoutCompat>
     </ScrollView>
 

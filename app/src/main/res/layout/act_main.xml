@@ -18,7 +18,6 @@
                 android:layout_marginTop="10dp"
                 android:text="QMUI 控件测试" />
 
-
             <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
                 android:id="@+id/qmBtn_citySelect"
                 style="@style/QMBtnFull.Round"
@@ -123,6 +122,18 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="@dimen/size_pageContentMarginHor"
                 android:text="协程测试"
+                android:textColor="@android:color/white"
+                app:srb_cornerRadius="20dp"
+                app:srb_fillColor="@color/color_theme" />
+
+            <mm.chenme.lib.commutillib.pro.view.ShapeRippleButton
+                android:id="@+id/srb_bezier"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginStart="@dimen/size_pageContentMarginHor"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="@dimen/size_pageContentMarginHor"
+                android:text="贝塞尔曲线"
                 android:textColor="@android:color/white"
                 app:srb_cornerRadius="20dp"
                 app:srb_fillColor="@color/color_theme" />

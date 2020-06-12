@@ -40,19 +40,27 @@ public class JavaTest {
                         return false;
                     }
                 },
-                new Function1<String, Boolean>() {
-                    @Override
-                    public Boolean invoke(String s) {
-                        System.out.println("我在 Java 中实现参数 4 的回调！回调参数是：" + s);
-                        return true;
-                    }
+//                new Function1<String, Boolean>() {
+//                    @Override
+//                    public Boolean invoke(String s) {
+//                        System.out.println("我在 Java 中实现参数 4 的回调！回调参数是：" + s);
+//                        return true;
+//                    }
+//                },
+                s -> {
+                    System.out.println("我在 Java 中实现参数 4 的回调！回调参数是：" + s);
+                    return true;
                 },
-                new Function2<String, Integer, Boolean>() {
-                    @Override
-                    public Boolean invoke(String s, Integer integer) {
-                        System.out.println("我在 Java 中实现参数 2 的回调！回调参数是：" + s + " 以及：" + integer);
-                        return true;
-                    }
+//                new Function2<String, Integer, Boolean>() {
+//                    @Override
+//                    public Boolean invoke(String s, Integer integer) {
+//                        System.out.println("我在 Java 中实现参数 2 的回调！回调参数是：" + s + " 以及：" + integer);
+//                        return true;
+//                    }
+//                },
+                (s, integer) -> {
+                    System.out.println("我在 Java 中实现参数 2 的回调！回调参数是：" + s + " 以及：" + integer);
+                    return true;
                 });
 
         kt.funcNoParam(new Function0<Unit>() {

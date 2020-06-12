@@ -1,4 +1,4 @@
-package mm.chenme.lib.commutillibdemo
+package mm.chenme.lib.commutillibdemo.ui.bezier
 
 import android.animation.ValueAnimator
 import android.animation.ValueAnimator.AnimatorUpdateListener
@@ -6,7 +6,6 @@ import android.content.Context
 import android.graphics.*
 import android.util.AttributeSet
 import android.view.View
-import mm.chenme.lib.commutillib.utils.loge
 import org.jetbrains.anko.dip
 
 

@@ -1,4 +1,4 @@
-package mm.chenme.lib.commutillibdemo.ui.qmui;
+package mm.chenme.lib.commutillibdemo.ui.bezier;
 
 import android.graphics.PointF;
 
@@ -87,9 +87,7 @@ public class BezierUtils {
                 p1 = controlPointList.get(p).y;
                 p2 = controlPointList.get(p + 1).y;
             }
-
             return (1 - u) * p1 + u * p2;
-
         } else {
 
             /**
@@ -102,9 +100,7 @@ public class BezierUtils {
              * 1阶贝塞尔曲线 则为 真正的贝塞尔曲线存在的点
              */
             return (1 - u) * calculatePointCoordinate(type, u, k - 1, p, controlPointList) + u * calculatePointCoordinate(type, u, k - 1, p + 1, controlPointList);
-
         }
-
     }
 
     /**

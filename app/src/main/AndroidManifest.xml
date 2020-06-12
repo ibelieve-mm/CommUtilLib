@@ -46,6 +46,8 @@
         <activity android:name="mm.chenme.lib.commutillibdemo.ui.other.SharedPreferencesActivity" />
         <activity android:name="mm.chenme.lib.commutillibdemo.ui.other.CoroutineActivity" />
 
+        <activity android:name="mm.chenme.lib.commutillibdemo.ui.bezier.BezierHeartViewTestActivity" />
+
         <activity android:name="mm.chenme.lib.commutillibdemo.ui.rare.ClipToPaddingTestActivity" />
         <activity android:name="mm.chenme.lib.commutillibdemo.ui.rare.ClipChildrenTestActivity" />
 
