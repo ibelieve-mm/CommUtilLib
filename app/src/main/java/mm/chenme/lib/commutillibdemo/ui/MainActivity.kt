@@ -33,7 +33,6 @@ class MainActivity(
             startActivity<QMUIWidgetTestActivity>()
         }
 
-//        qmBtn_citySelect.onClick { startActivity<GridPagerSnapHelperActivity>() }
         qmBtn_citySelect.onClick { startActivity<AreaSelectActivity>() }
         qmBtn_selfClipLayout.onClick { startActivity<SelfClipLayoutTestActivity>() }
         qmBtn_clipToPadding.onClick { startActivity<ClipToPaddingTestActivity>() }
@@ -45,7 +44,7 @@ class MainActivity(
         srb_glide.onClick { startActivity<GlideScaleTypeActivity>() }
         srb_sharedPreferences.onClick { startActivity<SharedPreferencesActivity>() }
         srb_coroutine.onClick { startActivity<CoroutineActivity>() }
-
         srb_bezier.onClick { startActivity<BezierHeartViewTestActivity>() }
+        srb_divider4TabLayout.onClick { startActivity<Divider4TabLayoutActivity>() }
     }
 }

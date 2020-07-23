@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.qmuiteam.qmui.widget.QMUIWindowInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout style="@style/QMTopBarLayoutBrother">
+
+        <com.google.android.material.tabs.TabLayout
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/tabLayout"
+            android:background="@color/color_theme_t10"
+            app:tabPaddingStart="0dp"
+            app:tabPaddingEnd="0dp"
+            app:tabIndicatorColor="@color/color_theme_t70"
+            app:tabIndicator="@drawable/tab_indicator"
+            android:layout_height="43dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.qmuiteam.qmui.widget.QMUITopBarLayout style="@style/QMTopBarLayout">
+
+        <com.qmuiteam.qmui.widget.QMUITopBar
+            android:id="@+id/topbar"
+            style="@style/QMTopBar" />
+    </com.qmuiteam.qmui.widget.QMUITopBarLayout>
+</com.qmuiteam.qmui.widget.QMUIWindowInsetLayout>

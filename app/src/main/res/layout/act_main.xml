@@ -44,99 +44,48 @@
 
             <mm.chenme.lib.commutillib.pro.view.ShapeRippleButton
                 android:id="@+id/srb_netDemo"
-                android:layout_width="match_parent"
-                android:layout_height="44dp"
-                android:layout_marginStart="@dimen/size_pageContentMarginHor"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="@dimen/size_pageContentMarginHor"
-                android:text="Net Demo"
-                android:textColor="@android:color/white"
-                app:srb_cornerRadius="20dp"
-                app:srb_fillColor="@color/color_theme" />
+                style="@style/BtnThemeAllRoundFull"
+                android:text="Net Demo" />
 
             <mm.chenme.lib.commutillib.pro.view.ShapeRippleButton
                 android:id="@+id/srb_shapeRippleButton"
-                android:layout_width="match_parent"
-                android:layout_height="44dp"
-                android:layout_marginStart="@dimen/size_pageContentMarginHor"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="@dimen/size_pageContentMarginHor"
-                android:text="ShapeRippleButton"
-                android:textColor="@android:color/white"
-                app:srb_cornerRadius="20dp"
-                app:srb_fillColor="@color/color_theme" />
+                style="@style/BtnThemeAllRoundFull"
+                android:text="ShapeRippleButton" />
 
             <mm.chenme.lib.commutillib.pro.view.ShapeRippleButton
                 android:id="@+id/srb_errorEmpty"
-                android:layout_width="match_parent"
-                android:layout_height="44dp"
-                android:layout_marginStart="@dimen/size_pageContentMarginHor"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="@dimen/size_pageContentMarginHor"
-                android:text="Error Empty Loading View"
-                android:textColor="@android:color/white"
-                app:srb_cornerRadius="20dp"
-                app:srb_fillColor="@color/color_theme" />
+                style="@style/BtnThemeAllRoundFull"
+                android:text="Error Empty Loading View" />
 
             <mm.chenme.lib.commutillib.pro.view.ShapeRippleButton
                 android:id="@+id/srb_qmuiBottomSheet"
-                android:layout_width="match_parent"
-                android:layout_height="44dp"
-                android:layout_marginStart="@dimen/size_pageContentMarginHor"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="@dimen/size_pageContentMarginHor"
-                android:text="QMUIBottomSheet"
-                android:textColor="@android:color/white"
-                app:srb_cornerRadius="20dp"
-                app:srb_fillColor="@color/color_theme" />
+                style="@style/BtnThemeAllRoundFull"
+                android:text="QMUIBottomSheet" />
 
             <mm.chenme.lib.commutillib.pro.view.ShapeRippleButton
                 android:id="@+id/srb_glide"
-                android:layout_width="match_parent"
-                android:layout_height="44dp"
-                android:layout_marginStart="@dimen/size_pageContentMarginHor"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="@dimen/size_pageContentMarginHor"
-                android:text="Glide 中图片缩放模式测试"
-                android:textColor="@android:color/white"
-                app:srb_cornerRadius="20dp"
-                app:srb_fillColor="@color/color_theme" />
+                style="@style/BtnThemeAllRoundFull"
+                android:text="Glide 中图片缩放模式测试" />
 
             <mm.chenme.lib.commutillib.pro.view.ShapeRippleButton
                 android:id="@+id/srb_sharedPreferences"
-                android:layout_width="match_parent"
-                android:layout_height="44dp"
-                android:layout_marginStart="@dimen/size_pageContentMarginHor"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="@dimen/size_pageContentMarginHor"
-                android:text="SharedPreferences 测试"
-                android:textColor="@android:color/white"
-                app:srb_cornerRadius="20dp"
-                app:srb_fillColor="@color/color_theme" />
+                style="@style/BtnThemeAllRoundFull"
+                android:text="SharedPreferences 测试" />
 
             <mm.chenme.lib.commutillib.pro.view.ShapeRippleButton
                 android:id="@+id/srb_coroutine"
-                android:layout_width="match_parent"
-                android:layout_height="44dp"
-                android:layout_marginStart="@dimen/size_pageContentMarginHor"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="@dimen/size_pageContentMarginHor"
-                android:text="协程测试"
-                android:textColor="@android:color/white"
-                app:srb_cornerRadius="20dp"
-                app:srb_fillColor="@color/color_theme" />
+                style="@style/BtnThemeAllRoundFull"
+                android:text="协程测试" />
 
             <mm.chenme.lib.commutillib.pro.view.ShapeRippleButton
                 android:id="@+id/srb_bezier"
-                android:layout_width="match_parent"
-                android:layout_height="44dp"
-                android:layout_marginStart="@dimen/size_pageContentMarginHor"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="@dimen/size_pageContentMarginHor"
-                android:text="贝塞尔曲线"
-                android:textColor="@android:color/white"
-                app:srb_cornerRadius="20dp"
-                app:srb_fillColor="@color/color_theme" />
+                style="@style/BtnThemeAllRoundFull"
+                android:text="贝塞尔曲线" />
+
+            <mm.chenme.lib.commutillib.pro.view.ShapeRippleButton
+                android:id="@+id/srb_divider4TabLayout"
+                style="@style/BtnThemeAllRoundFull"
+                android:text="带有分割线的 TabLayout" />
         </androidx.appcompat.widget.LinearLayoutCompat>
     </ScrollView>
 

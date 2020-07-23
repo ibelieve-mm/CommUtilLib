@@ -149,4 +149,19 @@
         <item name="qmui_layout_collapseMode">pin</item>
         <item name="qmui_topbar_title_gravity">left_center</item>
     </style>
+
+    <!--
+        屏幕宽度 主题色 全圆角 mtop20 btn
+    -->
+    <style name="BtnThemeAllRoundFull">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">44dp</item>
+        <item name="android:layout_marginStart">@dimen/size_pageContentMarginHor</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginEnd">@dimen/size_pageContentMarginHor</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="srb_cornerRadius">20dp</item>
+        <item name="srb_fillColor">@color/color_theme</item>
+    </style>
+
 </resources>
