@@ -86,6 +86,11 @@
                 android:id="@+id/srb_divider4TabLayout"
                 style="@style/BtnThemeAllRoundFull"
                 android:text="带有分割线的 TabLayout" />
+
+            <mm.chenme.lib.commutillib.pro.view.ShapeRippleButton
+                android:id="@+id/srb_fragmentMain"
+                style="@style/BtnThemeAllRoundFull"
+                android:text="Fragment 示例" />
         </androidx.appcompat.widget.LinearLayoutCompat>
     </ScrollView>
 

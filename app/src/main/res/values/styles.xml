@@ -15,6 +15,8 @@
    -->
     <style name="BThemeNoActionBar" parent="QMUI.Compat.NoActionBar">
 
+        <item name="colorControlHighlight">@color/color_theme_t10</item> <!-- 水波纹的颜色 -->
+
         <item name="qmui_alpha_pressed">0.7</item> <!-- QMUIAlphaButton 按钮按下时的透明度 -->
         <item name="qmui_alpha_disabled">0.5</item> <!-- QMUIAlphaButton 按钮不可用时的透明度 -->
 

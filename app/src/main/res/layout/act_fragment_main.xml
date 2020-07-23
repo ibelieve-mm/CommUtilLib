@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.qmuiteam.qmui.widget.QMUIWindowInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false">
+
+    <androidx.constraintlayout.widget.ConstraintLayout style="@style/QMTopBarLayoutBrother">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/vp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/ll_bottomBtn"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/ll_bottomBtn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <mm.chenme.lib.commutillibdemo.widget.TabItemWidget
+                android:id="@+id/ti_home"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:ti_icon="@android:drawable/ic_delete"
+                app:ti_title="home" />
+
+            <mm.chenme.lib.commutillibdemo.widget.TabItemWidget
+                android:id="@+id/ti_history"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:ti_icon="@android:drawable/ic_btn_speak_now"
+                app:ti_title="second" />
+
+            <mm.chenme.lib.commutillibdemo.widget.TabItemWidget
+                android:id="@+id/ti_third"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:ti_icon="@android:drawable/ic_dialog_map"
+                app:ti_title="third" />
+
+            <mm.chenme.lib.commutillibdemo.widget.TabItemWidget
+                android:id="@+id/ti_mine"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:ti_icon="@android:drawable/ic_dialog_email"
+                app:ti_title="mine" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_line"
+            android:background="@color/color_dividerLine"
+            app:layout_constraintTop_toTopOf="@+id/ll_bottomBtn" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.qmuiteam.qmui.widget.QMUITopBarLayout
+        style="@style/QMTopBarLayout"
+        android:background="@color/color_theme">
+
+        <!--
+            QMUITopBarLayout 中的 background：控制状态栏颜色
+            QMUITopBar 中的 background：控制标题栏的颜色
+        -->
+
+        <com.qmuiteam.qmui.widget.QMUITopBar
+            android:id="@+id/topbar"
+            style="@style/QMTopBar"
+            android:background="@color/color_theme"
+            app:qmui_bottomDividerHeight="0dp"
+            app:qmui_topbar_subtitle_color="@android:color/white"
+            app:qmui_topbar_title_color="@android:color/white"
+            app:qmui_topbar_title_gravity="center" />
+    </com.qmuiteam.qmui.widget.QMUITopBarLayout>
+</com.qmuiteam.qmui.widget.QMUIWindowInsetLayout>
+

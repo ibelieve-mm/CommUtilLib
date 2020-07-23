@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mm.chenme.lib.commutillib.pro.view.ClipConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    app:clip_radius="7dp"
+    app:clip_side="all">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/color_theme"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_dialogTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="20dp"
+        android:textColor="@color/color_theme_t80"
+        android:textSize="17sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="对话框标题"
+        tools:visibility="visible" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_dialogContent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="20dp"
+        android:textColor="#555555"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_dialogTitle"
+        app:layout_goneMarginTop="30dp"
+        tools:text="对话框内容"
+        tools:visibility="visible" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_btn0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="15dp"
+        android:background="?android:selectableItemBackgroundBorderless"
+        android:padding="12dp"
+        android:textColor="@color/color_theme_t80"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_dialogContent"
+        tools:text="按钮0"
+        tools:visibility="visible" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="?android:selectableItemBackgroundBorderless"
+        android:padding="12dp"
+        android:textColor="#777777"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_btn0"
+        app:layout_constraintEnd_toStartOf="@+id/tv_btn0"
+        tools:text="按钮1"
+        tools:visibility="visible" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="?android:selectableItemBackgroundBorderless"
+        android:padding="12dp"
+        android:textColor="#777777"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_btn0"
+        app:layout_constraintEnd_toStartOf="@+id/tv_btn1"
+        tools:text="按钮2"
+        tools:visibility="visible" />
+</mm.chenme.lib.commutillib.pro.view.ClipConstraintLayout>

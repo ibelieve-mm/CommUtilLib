@@ -14,6 +14,7 @@
 
     <!-- 主题色 -->
     <color name="color_theme">#1B85ED</color>
+    <color name="color_theme_t80">#CC1B85ED</color>
     <color name="color_theme_t10">#191B85ED</color>
 
     <!-- 标题栏 -->

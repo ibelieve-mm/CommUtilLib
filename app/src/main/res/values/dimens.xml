@@ -5,4 +5,6 @@
 
     <dimen name="size_btnHeight">45dp</dimen>
     <dimen name="size_btnHeightHalf">22.5dp</dimen>
+
+    <dimen name="divider_line">0.5dp</dimen>
 </resources>

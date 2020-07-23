@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="TabItemWidget">
+        <attr name="ti_icon" format="reference" />
+        <attr name="ti_title" format="string" />
+    </declare-styleable>
+</resources>

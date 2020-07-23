@@ -1,5 +1,6 @@
 package mm.chenme.lib.commutillib.utils
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -39,7 +40,8 @@ val screenWidthPx get() = AppGlobals.application().resources.displayMetrics.widt
  */
 val screenHeightPx get() = AppGlobals.application().resources.displayMetrics.heightPixels
 
-fun inflate(@LayoutRes resId: Int, parent: ViewGroup? = null, attachToRoot: Boolean = false): View = LayoutInflater.from(AppGlobals.application()).inflate(resId, parent, attachToRoot)
+//fun inflate(@LayoutRes resId: Int, parent: ViewGroup? = null, attachToRoot: Boolean = false): View = LayoutInflater.from(AppGlobals.application()).inflate(resId, parent, attachToRoot)
+fun Context.inflate(@LayoutRes resId: Int, parent: ViewGroup? = null, attachToRoot: Boolean = false): View = LayoutInflater.from(this).inflate(resId, parent, attachToRoot)
 
 fun string(@StringRes resId: Int): String = AppGlobals.application().getString(resId)
 fun string(@StringRes resId: Int, vararg formatArgs: Any): String = AppGlobals.application().getString(resId, formatArgs)
