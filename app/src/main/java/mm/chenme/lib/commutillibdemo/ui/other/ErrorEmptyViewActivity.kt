@@ -2,6 +2,8 @@ package mm.chenme.lib.commutillibdemo.ui.other
 
 import com.qmuiteam.qmui.kotlin.onClick
 import kotlinx.android.synthetic.main.act_error_empty_view.*
+import kotlinx.android.synthetic.main.act_error_empty_view.topbar
+import kotlinx.android.synthetic.main.act_tab_layout_divider.*
 import mm.chenme.lib.commutillib.BaseActivity
 import mm.chenme.lib.commutillib.utils.stoast
 import mm.chenme.lib.commutillibdemo.R
@@ -18,8 +20,7 @@ import mm.chenme.lib.commutillibdemo.R
 class ErrorEmptyViewActivity(override val layoutResId: Int = R.layout.act_error_empty_view) : BaseActivity() {
 
     override fun initView() {
-        topbar.setTitle("Error Empty Loading View")
-        topbar.addLeftBackImageButton().onClick { closePage() }
+        initTopBar(topbar,"Error Empty Loading View")
         errView.loadContentView(tv_contentArea)
     }
 

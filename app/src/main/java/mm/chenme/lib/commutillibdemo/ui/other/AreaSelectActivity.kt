@@ -13,6 +13,8 @@ import java.io.BufferedReader
 import java.io.IOException
 import java.io.InputStreamReader
 import kotlinx.android.synthetic.main.act_area_select.*
+import kotlinx.android.synthetic.main.act_area_select.topbar
+import kotlinx.android.synthetic.main.act_tab_layout_divider.*
 import kotlinx.android.synthetic.main.menu_text_view.*
 
 /**
@@ -50,9 +52,7 @@ class AreaSelectActivity : BaseActivity() {
     }
 
     override fun initView() {
-
-        topbar.setTitle("城市选择")
-        topbar.addLeftBackImageButton().onClick { closePage() }
+        initTopBar(topbar, "城市选择")
         topbar.addRightTextButton("打印结果", R.id.tv_menuStyle)
 
         recyclerView1.layoutManager = LinearLayoutManager(this)

@@ -4,6 +4,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.qmuiteam.qmui.kotlin.onClick
 import kotlinx.android.synthetic.main.act_clip_to_padding.*
+import kotlinx.android.synthetic.main.act_clip_to_padding.topbar
+import kotlinx.android.synthetic.main.act_tab_layout_divider.*
 import mm.chenme.lib.commutillib.pro.adapter.BaseRecyclerViewAdapter
 import mm.chenme.lib.commutillib.utils.color
 import mm.chenme.lib.commutillibdemo.R
@@ -21,9 +23,7 @@ class ClipToPaddingTestActivity : BaseActivity() {
     override val layoutResId: Int = R.layout.act_clip_to_padding
 
     override fun initView() {
-
-        topbar.setTitle("android:clipToPadding=\"false\"")
-        topbar.addLeftBackImageButton().onClick { closePage() }
+        initTopBar(topbar,"android:clipToPadding=\"false\"")
 
         val list = IntRange(1, 100).step(2)
         recyclerView.layoutManager = LinearLayoutManager(this)

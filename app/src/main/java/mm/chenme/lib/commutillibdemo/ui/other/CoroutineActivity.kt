@@ -4,6 +4,7 @@ import android.os.CountDownTimer
 import com.qmuiteam.qmui.kotlin.onClick
 import kotlinx.android.synthetic.main.act_coroutine.*
 import kotlinx.android.synthetic.main.act_glide_scale_type.topbar
+import kotlinx.android.synthetic.main.act_tab_layout_divider.*
 import kotlinx.coroutines.*
 import mm.chenme.lib.commutillib.BaseActivity
 import mm.chenme.lib.commutillibdemo.R
@@ -19,10 +20,10 @@ import mm.chenme.lib.commutillibdemo.R
  */
 class CoroutineActivity(override val layoutResId: Int = R.layout.act_coroutine) : BaseActivity() {
 
-    private val viewModelJob = Job()    //用来取消协程
+    private val viewModelJob = Job() // 用来取消协程
+
     override fun initView() {
-        topbar.setTitle("协程测试")
-        topbar.addLeftBackImageButton().onClick { closePage() }
+        initTopBar(topbar,"协程测试")
     }
 
     override fun initListener() {

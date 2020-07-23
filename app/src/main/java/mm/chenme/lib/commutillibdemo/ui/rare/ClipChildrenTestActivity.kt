@@ -2,6 +2,8 @@ package mm.chenme.lib.commutillibdemo.ui.rare
 
 import com.qmuiteam.qmui.kotlin.onClick
 import kotlinx.android.synthetic.main.act_clip_children.*
+import kotlinx.android.synthetic.main.act_clip_children.topbar
+import kotlinx.android.synthetic.main.act_tab_layout_divider.*
 import mm.chenme.lib.commutillibdemo.R
 import mm.chenme.lib.commutillib.BaseActivity
 
@@ -17,7 +19,6 @@ class ClipChildrenTestActivity : BaseActivity() {
     override val layoutResId = R.layout.act_clip_children
 
     override fun initView() {
-        topbar.setTitle("android:clipChildren=\"false\"")
-        topbar.addLeftBackImageButton().onClick { closePage() }
+        initTopBar(topbar,"android:clipChildren=\"false\"")
     }
 }

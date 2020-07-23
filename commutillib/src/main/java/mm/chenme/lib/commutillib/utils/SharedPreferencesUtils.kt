@@ -20,3 +20,12 @@ fun SharedPreferences.long(key: String, default: Long = 0L): Long = getLong(key,
 fun SharedPreferences.float(key: String, default: Float = 0f): Float = getFloat(key, default)
 fun SharedPreferences.string(key: String, default: String = ""): String = getString(key, default)!!
 fun SharedPreferences.stringSet(key: String, default: Set<String> = mutableSetOf()): Set<String> = getStringSet(key, default)!!
+
+/*
+
+// 存储
+getSP().edit { putString(SPConst.UserToken, "小盆友，你是不是有很多问？") }
+
+// 读取
+getSP().string(SPConst.UserToken)
+ */

@@ -5,6 +5,8 @@ import com.qmuiteam.qmui.kotlin.dip
 import com.qmuiteam.qmui.kotlin.onClick
 import com.qmuiteam.qmui.widget.dialog.*
 import kotlinx.android.synthetic.main.act_qmui_bottom_sheet.*
+import kotlinx.android.synthetic.main.act_qmui_bottom_sheet.topbar
+import kotlinx.android.synthetic.main.act_tab_layout_divider.*
 import mm.chenme.lib.commutillib.BaseActivity
 import mm.chenme.lib.commutillib.pro.view.ShapeRippleButton
 import mm.chenme.lib.commutillib.utils.color
@@ -24,8 +26,7 @@ import org.jetbrains.anko.find
 class QMUIBottomSheetActivity(override val layoutResId: Int = R.layout.act_qmui_bottom_sheet) : BaseActivity() {
 
     override fun initView() {
-        topbar.setTitle("QMUIBottomSheet")
-        topbar.addLeftBackImageButton().onClick { closePage() }
+        initTopBar(topbar,"QMUIBottomSheet")
     }
 
     override fun initListener() {

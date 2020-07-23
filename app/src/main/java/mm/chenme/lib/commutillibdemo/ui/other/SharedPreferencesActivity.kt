@@ -3,6 +3,8 @@ package mm.chenme.lib.commutillibdemo.ui.other
 import androidx.core.content.edit
 import com.qmuiteam.qmui.kotlin.onClick
 import kotlinx.android.synthetic.main.act_shared_preferences.*
+import kotlinx.android.synthetic.main.act_shared_preferences.topbar
+import kotlinx.android.synthetic.main.act_tab_layout_divider.*
 import mm.chenme.lib.commutillib.BaseActivity
 import mm.chenme.lib.commutillib.utils.getSP
 import mm.chenme.lib.commutillib.utils.ltoast
@@ -22,8 +24,7 @@ class SharedPreferencesActivity(override val layoutResId: Int = R.layout.act_sha
 
 
     override fun initView() {
-        topbar.setTitle("SharedPreferences 测试")
-        topbar.addLeftBackImageButton().onClick { closePage() }
+        initTopBar(topbar,"SharedPreferences 测试")
     }
 
     override fun initListener() {

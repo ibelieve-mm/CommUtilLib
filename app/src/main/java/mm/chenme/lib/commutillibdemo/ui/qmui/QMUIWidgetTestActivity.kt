@@ -2,6 +2,8 @@ package mm.chenme.lib.commutillibdemo.ui.qmui
 
 import com.qmuiteam.qmui.kotlin.onClick
 import kotlinx.android.synthetic.main.act_qmui_widget_test.*
+import kotlinx.android.synthetic.main.act_qmui_widget_test.topbar
+import kotlinx.android.synthetic.main.act_tab_layout_divider.*
 import mm.chenme.lib.commutillib.utils.color
 import mm.chenme.lib.commutillib.utils.loge
 import mm.chenme.lib.commutillibdemo.R
@@ -22,10 +24,7 @@ class QMUIWidgetTestActivity : BaseActivity() {
     override val layoutResId: Int = R.layout.act_qmui_widget_test
 
     override fun initView() {
-
-        topbar.setTitle("QMUI 控件测试")
-        topbar.setSubTitle("这里是副标题")
-        topbar.addLeftBackImageButton().onClick { closePage() }
+        initTopBar(topbar,"QMUI 控件测试",subtitle = "这里是副标题")
 
         addQMUIBtnAlpha(btn_printLog, qmBtn_cannotUse, qmBtn_showToast, qmBtn_noEvent)
 

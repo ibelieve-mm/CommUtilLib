@@ -5,7 +5,6 @@ import android.view.View
 import android.widget.RelativeLayout
 import android.widget.TextView
 import com.google.android.material.tabs.TabLayout
-import com.qmuiteam.qmui.kotlin.onClick
 import kotlinx.android.synthetic.main.act_tab_layout_divider.*
 import mm.chenme.lib.commutillib.BaseActivity
 import mm.chenme.lib.commutillibdemo.R
@@ -24,8 +23,7 @@ class Divider4TabLayoutActivity(override val layoutResId: Int = R.layout.act_tab
     override fun initView() {
         super.initView()
 
-        topbar.setTitle("TabLayoutWithDivider")
-        topbar.addLeftBackImageButton().onClick { closePage() }
+        initTopBar(topbar,"TabLayoutWithDivider")
 
         tabLayout.tabMode = TabLayout.MODE_SCROLLABLE
         tabLayout.addTab(tabLayout.newTab().setText("1"))

@@ -4,6 +4,8 @@ import android.graphics.Color
 import androidx.core.content.edit
 import com.qmuiteam.qmui.kotlin.onClick
 import kotlinx.android.synthetic.main.act_main.*
+import kotlinx.android.synthetic.main.act_main.topbar
+import kotlinx.android.synthetic.main.act_tab_layout_divider.*
 import mm.chenme.lib.commutillib.BaseActivity
 import mm.chenme.lib.commutillib.utils.getSP
 import mm.chenme.lib.commutillib.utils.stoast
@@ -28,7 +30,8 @@ class MainActivity(
 
 
     override fun initView() {
-        topbar.setTitle("主页面").setTextColor(Color.WHITE)
+        initTopBar(topbar, "主页面", Color.WHITE, isShowBackBtn = false)
+
         getSP().edit { putString("asdadsa", "小盆友，你是不是有很多问？") }
     }
 

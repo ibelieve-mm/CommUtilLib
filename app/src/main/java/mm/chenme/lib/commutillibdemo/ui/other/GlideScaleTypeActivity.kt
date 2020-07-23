@@ -2,6 +2,8 @@ package mm.chenme.lib.commutillibdemo.ui.other
 
 import com.qmuiteam.qmui.kotlin.onClick
 import kotlinx.android.synthetic.main.act_glide_scale_type.*
+import kotlinx.android.synthetic.main.act_glide_scale_type.topbar
+import kotlinx.android.synthetic.main.act_tab_layout_divider.*
 import mm.chenme.lib.commutillib.BaseActivity
 import mm.chenme.lib.commutillib.utils.show
 import mm.chenme.lib.commutillibdemo.R
@@ -22,8 +24,7 @@ class GlideScaleTypeActivity(override val layoutResId: Int = R.layout.act_glide_
     private val widthImgUrl = "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1591276322766&di=4fd14347e58ba03856a95229e39693e5&imgtype=0&src=http%3A%2F%2Fattimg.dospy.com%2Fimg%2Fday_130714%2F20130714_ec6461694efe14f339fe6JpXmWkl4kBK.jpg"
 
     override fun initView() {
-        topbar.setTitle("Glide 中图片缩放模式测试")
-        topbar.addLeftBackImageButton().onClick { closePage() }
+        initTopBar(topbar,"Glide 中图片缩放模式测试")
     }
 
     override fun initListener() {
