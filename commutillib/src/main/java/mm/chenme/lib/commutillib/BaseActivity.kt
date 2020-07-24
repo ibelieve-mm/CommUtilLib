@@ -29,15 +29,53 @@ abstract class BaseActivity : QMUIFragmentActivity() {
     open fun initListener() {} // 初始化Listener
     open fun loadData() {} // 请求数据
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(layoutResId)
+
+        initData()
+
+        QMUIStatusBarHelper.translucent(this) // 设置沉浸模式
+        if (isStatusBarLightMode) { // 设置状态栏黑色字体
+            QMUIStatusBarHelper.setStatusBarLightMode(this)
+        } else { // 设置状态栏白色字体
+            QMUIStatusBarHelper.setStatusBarDarkMode(this)
+        }
+
+        initView()
+        initListener()
+        loadData()
+    }
+
+    /**
+     * 初始化 TopBar
+     * 2020/7/24，ChenME
+     * @param topBar            :  QMUITopBar
+     * @param titleRes          :  标题文字资源
+     * @param colorTitleRes     :  标题颜色资源
+     * @param subtitleRes       :  副标题文字资源
+     * @param colorSubtitleRes  :  副标题颜色资源
+     * @param isShowBackBtn     :  是否显示返回按钮
+     */
     fun initTopBar(
         topBar: QMUITopBar,
         @StringRes titleRes: Int, @ColorRes colorTitleRes: Int? = null,
-        subtitle: String? = null, @ColorRes colorSubtitleRes: Int? = null,
+        @StringRes subtitleRes: Int? = null, @ColorRes colorSubtitleRes: Int? = null,
         isShowBackBtn: Boolean = true
     ) {
-        initTopBar(topBar, string(titleRes), if (null != colorTitleRes) color(colorTitleRes) else null, subtitle, if (null != colorSubtitleRes) color(colorSubtitleRes) else null, isShowBackBtn)
+        initTopBar(topBar, string(titleRes), if (null != colorTitleRes) color(colorTitleRes) else null, if (null != subtitleRes) string(subtitleRes) else null, if (null != colorSubtitleRes) color(colorSubtitleRes) else null, isShowBackBtn)
     }
 
+    /**
+     * 初始化 TopBar
+     * 2020/7/24，ChenME
+     * @param topBar            :  QMUITopBar
+     * @param title             :  标题文字
+     * @param colorTitle        :  标题颜色
+     * @param subtitle          :  副标题文字
+     * @param colorSubtitle     :  副标题颜色
+     * @param isShowBackBtn     :  是否显示返回按钮
+     */
     fun initTopBar(
         topBar: QMUITopBar,
         title: String, colorTitle: Int? = null,
@@ -63,23 +101,6 @@ abstract class BaseActivity : QMUIFragmentActivity() {
         loge("-------- BaseActivity ------------> 数据为空")
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(layoutResId)
-
-        initData()
-
-        QMUIStatusBarHelper.translucent(this) // 设置沉浸模式
-        if (isStatusBarLightMode) { // 设置状态栏黑色字体
-            QMUIStatusBarHelper.setStatusBarLightMode(this)
-        } else { // 设置状态栏白色字体
-            QMUIStatusBarHelper.setStatusBarDarkMode(this)
-        }
-
-        initView()
-        initListener()
-        loadData()
-    }
 
     fun closePage() {
         onBackPressed()

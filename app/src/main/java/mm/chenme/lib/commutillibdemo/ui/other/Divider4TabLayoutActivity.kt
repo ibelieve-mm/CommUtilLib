@@ -26,8 +26,8 @@ class Divider4TabLayoutActivity(override val layoutResId: Int = R.layout.act_tab
         initTopBar(topbar,"TabLayoutWithDivider")
 
         tabLayout.tabMode = TabLayout.MODE_SCROLLABLE
-        tabLayout.addTab(tabLayout.newTab().setText("1"))
-        tabLayout.addTab(tabLayout.newTab().setText("2"))
+        tabLayout.addTab(tabLayout.newTab().setText("创意详情"))
+        tabLayout.addTab(tabLayout.newTab().setText("素材预览"))
         tabLayout.addTab(tabLayout.newTab().setText("3"))
         tabLayout.addTab(tabLayout.newTab().setText("4"))
         tabLayout.addTab(tabLayout.newTab().setText("5"))
