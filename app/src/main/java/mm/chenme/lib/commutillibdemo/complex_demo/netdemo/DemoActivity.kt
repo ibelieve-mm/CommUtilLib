@@ -1,4 +1,4 @@
-package mm.chenme.lib.commutillibdemo.netdemo
+package mm.chenme.lib.commutillibdemo.complex_demo.netdemo
 
 import androidx.lifecycle.Observer
 import com.qmuiteam.qmui.kotlin.onClick
@@ -10,7 +10,7 @@ import mm.chenme.lib.commutillibdemo.R
 
 
 /**
- * Descriptions：
+ * Descriptions：一个简单的网络请求 demo，涉及到网络请求的时候可以作为参考
  * StartVersion：
  * <p>
  * Author：ChenME

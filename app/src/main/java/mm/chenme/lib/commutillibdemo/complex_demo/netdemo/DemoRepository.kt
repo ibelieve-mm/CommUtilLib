@@ -1,8 +1,7 @@
-package mm.chenme.lib.commutillibdemo.netdemo
+package mm.chenme.lib.commutillibdemo.complex_demo.netdemo
 
 import androidx.lifecycle.MutableLiveData
 import mm.chenme.lib.commutillibdemo.utils.createService
-import mm.cme.commnetlib.RetrofitClient
 import mm.cme.commnetlib.impl.DefaultCallback
 import mm.cme.commnetlib.resp.BaseResponse
 

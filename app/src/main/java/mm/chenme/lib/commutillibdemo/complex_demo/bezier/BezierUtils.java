@@ -1,4 +1,4 @@
-package mm.chenme.lib.commutillibdemo.ui.bezier;
+package mm.chenme.lib.commutillibdemo.complex_demo.bezier;
 
 import android.graphics.PointF;
 

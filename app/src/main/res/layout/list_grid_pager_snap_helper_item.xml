@@ -1,29 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
-    android:background="@color/color_red_ff639b"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="@color/color_theme_t10">
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/iv_itemIcon"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
-        android:src="@color/color_theme_t10"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@color/color_theme_t10" />
 
     <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_itemName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
-        android:id="@+id/tv_itemName"
-        android:text="itemName"
         android:textColor="@color/color_theme_t70"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_itemIcon" />
+        app:layout_constraintTop_toBottomOf="@+id/iv_itemIcon"
+        tools:text="itemName" />
 </androidx.constraintlayout.widget.ConstraintLayout>

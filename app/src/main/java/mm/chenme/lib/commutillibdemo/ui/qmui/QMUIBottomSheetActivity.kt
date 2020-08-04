@@ -1,15 +1,11 @@
 package mm.chenme.lib.commutillibdemo.ui.qmui
 
-import android.view.View
 import com.qmuiteam.qmui.kotlin.dip
 import com.qmuiteam.qmui.kotlin.onClick
-import com.qmuiteam.qmui.widget.dialog.*
+import com.qmuiteam.qmui.widget.dialog.QMUIBottomSheet
 import kotlinx.android.synthetic.main.act_qmui_bottom_sheet.*
-import kotlinx.android.synthetic.main.act_qmui_bottom_sheet.topbar
-import kotlinx.android.synthetic.main.act_tab_layout_divider.*
 import mm.chenme.lib.commutillib.BaseActivity
 import mm.chenme.lib.commutillib.pro.view.ShapeRippleButton
-import mm.chenme.lib.commutillib.utils.color
 import mm.chenme.lib.commutillib.utils.stoast
 import mm.chenme.lib.commutillibdemo.R
 import org.jetbrains.anko.find

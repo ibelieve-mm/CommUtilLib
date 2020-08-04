@@ -8,9 +8,25 @@
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <mm.chenme.lib.commutillib.pro.view.ShapeRippleButton
+                android:id="@+id/srb_divider4TabLayout"
+                style="@style/BtnThemeAllRoundFull"
+                android:text="带有分割线的 TabLayout" />
+
+            <mm.chenme.lib.commutillib.pro.view.ShapeRippleButton
+                android:id="@+id/srb_pagingSnap"
+                style="@style/BtnThemeAllRoundFull"
+                android:text="分页滚动" />
+
+            <mm.chenme.lib.commutillib.pro.view.ShapeRippleButton
+                android:id="@+id/srb_netDemo"
+                style="@style/BtnThemeAllRoundFull"
+                android:text="Net Demo" />
+
+            <View style="@style/DividerBar" />
 
             <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
                 android:id="@+id/qmBtn_qmuiTest"
@@ -18,17 +34,12 @@
                 android:layout_marginTop="10dp"
                 android:text="QMUI 控件测试" />
 
-            <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
-                android:id="@+id/qmBtn_citySelect"
-                style="@style/QMBtnFull.Round"
-                android:layout_marginTop="10dp"
-                android:text="城市选择 Demo" />
+            <mm.chenme.lib.commutillib.pro.view.ShapeRippleButton
+                android:id="@+id/srb_qmuiBottomSheet"
+                style="@style/BtnThemeAllRoundFull"
+                android:text="QMUIBottomSheet" />
 
-            <mm.chenme.lib.commutillib.pro.view.AlphaButton
-                android:id="@+id/qmBtn_selfClipLayout"
-                style="@style/QMBtnFull.Round"
-                android:layout_marginTop="10dp"
-                android:text="自定义 ClipLayout Demo" />
+            <View style="@style/DividerBar" />
 
             <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
                 android:id="@+id/qmBtn_clipToPadding"
@@ -42,10 +53,20 @@
                 android:layout_marginTop="10dp"
                 android:text="ClipChildren" />
 
-            <mm.chenme.lib.commutillib.pro.view.ShapeRippleButton
-                android:id="@+id/srb_netDemo"
-                style="@style/BtnThemeAllRoundFull"
-                android:text="Net Demo" />
+            <View style="@style/DividerBar" />
+
+            <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                android:id="@+id/qmBtn_citySelect"
+                style="@style/QMBtnFull.Round"
+                android:layout_marginTop="10dp"
+                android:text="城市选择 Demo" />
+
+            <mm.chenme.lib.commutillib.pro.view.AlphaButton
+                android:id="@+id/qmBtn_selfClipLayout"
+                style="@style/QMBtnFull.Round"
+                android:layout_marginTop="10dp"
+                android:text="自定义 ClipLayout Demo" />
+
 
             <mm.chenme.lib.commutillib.pro.view.ShapeRippleButton
                 android:id="@+id/srb_shapeRippleButton"
@@ -56,11 +77,6 @@
                 android:id="@+id/srb_errorEmpty"
                 style="@style/BtnThemeAllRoundFull"
                 android:text="Error Empty Loading View" />
-
-            <mm.chenme.lib.commutillib.pro.view.ShapeRippleButton
-                android:id="@+id/srb_qmuiBottomSheet"
-                style="@style/BtnThemeAllRoundFull"
-                android:text="QMUIBottomSheet" />
 
             <mm.chenme.lib.commutillib.pro.view.ShapeRippleButton
                 android:id="@+id/srb_glide"
@@ -81,11 +97,6 @@
                 android:id="@+id/srb_bezier"
                 style="@style/BtnThemeAllRoundFull"
                 android:text="贝塞尔曲线" />
-
-            <mm.chenme.lib.commutillib.pro.view.ShapeRippleButton
-                android:id="@+id/srb_divider4TabLayout"
-                style="@style/BtnThemeAllRoundFull"
-                android:text="带有分割线的 TabLayout" />
 
             <mm.chenme.lib.commutillib.pro.view.ShapeRippleButton
                 android:id="@+id/srb_fragmentMain"

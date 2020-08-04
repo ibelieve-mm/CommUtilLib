@@ -1,4 +1,4 @@
-package mm.chenme.lib.commutillibdemo.netdemo
+package mm.chenme.lib.commutillibdemo.complex_demo.netdemo
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel

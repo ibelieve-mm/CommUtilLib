@@ -1,5 +1,6 @@
-package mm.chenme.lib.commutillibdemo.ui.other
+package mm.chenme.lib.commutillibdemo.complex_demo.rv_paging_scroll
 
+import androidx.appcompat.widget.AppCompatImageView
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -8,6 +9,7 @@ import kotlinx.android.synthetic.main.act_grid_pager_snap_helper.*
 import mm.chenme.lib.commutillib.BaseActivity
 import mm.chenme.lib.commutillib.pro.adapter.BaseRecyclerViewAdapter
 import mm.chenme.lib.commutillib.utils.screenWidthPx
+import mm.chenme.lib.commutillib.utils.show
 import mm.chenme.lib.commutillibdemo.R
 import org.jetbrains.anko.find
 
@@ -23,27 +25,32 @@ import org.jetbrains.anko.find
 class GridPagerSnapHelperActivity(override val layoutResId: Int = R.layout.act_grid_pager_snap_helper) : BaseActivity() {
 
     override fun initView() {
-        topbar.setTitle("Error Empty Loading View")
+        topbar.setTitle("分页滚动")
         topbar.addLeftBackImageButton().onClick { closePage() }
 
-//        val layoutManager = GridLayoutManager(this, 3)
-        val layoutManager = GridLayoutManager(this, 2, LinearLayoutManager.HORIZONTAL, false)
+        val columns = 3
+        val rows = 2
+        val layoutManager = GridLayoutManager(this, rows, LinearLayoutManager.HORIZONTAL, false)
         recyclerView.layoutManager = layoutManager
 
         val helper = GridPagerSnapHelper(layoutManager)
-        helper.setColumn(3).setRow(2)
+        helper.setColumn(columns).setRow(rows)
         helper.attachToRecyclerView(recyclerView)
 
-//        PagerSnapHelper().attachToRecyclerView(recyclerView)
-
         val list = mutableListOf<Int>()
-        IntRange(1, 50).forEach { list.add(it) }
-        recyclerView.adapter = BaseRecyclerViewAdapter(this, list, R.layout.list_grid_pager_snap_helper_item) { rootView, dataItem, pos ->
-            rootView.find<AppCompatTextView>(R.id.tv_itemName).text = "$pos -> $dataItem"
+        IntRange(1, 20).forEach { list.add(it) }
+        recyclerView.adapter = BaseRecyclerViewAdapter(this, transformAndFillEmptyData(list, rows, columns), R.layout.list_grid_pager_snap_helper_item) { rootView, dataItem, pos ->
+
+            if (null == dataItem) {
+                rootView.find<AppCompatTextView>(R.id.tv_itemName).text = ""
+                rootView.find<AppCompatImageView>(R.id.iv_itemIcon).setImageDrawable(resources.getDrawable(android.R.color.transparent))
+            } else {
+                rootView.find<AppCompatTextView>(R.id.tv_itemName).text = "数据：$dataItem"
+                rootView.find<AppCompatImageView>(R.id.iv_itemIcon).show(R.mipmap.tmp128)
+            }
 
             val lp = rootView.layoutParams
-//            lp.width = (screenWidthPx-dip(20))/3
-            lp.width = screenWidthPx / 3
+            lp.width = screenWidthPx / columns
             rootView.layoutParams = lp
         }
     }

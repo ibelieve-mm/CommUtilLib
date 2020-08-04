@@ -23,7 +23,7 @@
                 android:text="播放效果"
                 android:textColor="@color/color_theme" />
 
-            <mm.chenme.lib.commutillibdemo.ui.bezier.HeartView
+            <mm.chenme.lib.commutillibdemo.complex_demo.bezier.HeartView
                 android:layout_width="250dp"
                 android:id="@+id/heartView"
                 android:background="@color/color_theme_t10"

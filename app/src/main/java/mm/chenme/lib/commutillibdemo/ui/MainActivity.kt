@@ -4,15 +4,14 @@ import android.graphics.Color
 import androidx.core.content.edit
 import com.qmuiteam.qmui.kotlin.onClick
 import kotlinx.android.synthetic.main.act_main.*
-import kotlinx.android.synthetic.main.act_main.topbar
-import kotlinx.android.synthetic.main.act_tab_layout_divider.*
 import mm.chenme.lib.commutillib.BaseActivity
 import mm.chenme.lib.commutillib.utils.getSP
 import mm.chenme.lib.commutillib.utils.stoast
 import mm.chenme.lib.commutillibdemo.R
+import mm.chenme.lib.commutillibdemo.complex_demo.netdemo.DemoActivity
+import mm.chenme.lib.commutillibdemo.complex_demo.rv_paging_scroll.GridPagerSnapHelperActivity
 import mm.chenme.lib.commutillibdemo.consts.Values
-import mm.chenme.lib.commutillibdemo.netdemo.DemoActivity
-import mm.chenme.lib.commutillibdemo.ui.bezier.BezierHeartViewTestActivity
+import mm.chenme.lib.commutillibdemo.complex_demo.bezier.BezierHeartViewTestActivity
 import mm.chenme.lib.commutillibdemo.ui.main.FragmentMainActivity
 import mm.chenme.lib.commutillibdemo.ui.other.*
 import mm.chenme.lib.commutillibdemo.ui.qmui.QMUIBottomSheetActivity
@@ -36,11 +35,8 @@ class MainActivity(
     }
 
     override fun initListener() {
-        qmBtn_qmuiTest.onClick {
 //            startActivity<FlutterDemoActivity>()
-            startActivity<QMUIWidgetTestActivity>()
-        }
-
+        qmBtn_qmuiTest.onClick { startActivity<QMUIWidgetTestActivity>() }
         qmBtn_citySelect.onClick { startActivity<AreaSelectActivity>() }
         qmBtn_selfClipLayout.onClick { startActivity<SelfClipLayoutTestActivity>() }
         qmBtn_clipToPadding.onClick { startActivity<ClipToPaddingTestActivity>() }
@@ -55,6 +51,7 @@ class MainActivity(
         srb_bezier.onClick { startActivity<BezierHeartViewTestActivity>() }
         srb_divider4TabLayout.onClick { startActivity<Divider4TabLayoutActivity>() }
         srb_fragmentMain.onClick { startActivity<FragmentMainActivity>() }
+        srb_pagingSnap.onClick { startActivity<GridPagerSnapHelperActivity>() }
     }
 
     /**

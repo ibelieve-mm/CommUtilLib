@@ -43,13 +43,13 @@
         <activity android:name="mm.chenme.lib.commutillibdemo.ui.other.SelfClipLayoutTestActivity" />
         <activity android:name="mm.chenme.lib.commutillibdemo.ui.other.ShapeRippleButtonActivity" />
         <activity android:name="mm.chenme.lib.commutillibdemo.ui.other.ErrorEmptyViewActivity" />
-        <activity android:name="mm.chenme.lib.commutillibdemo.ui.other.GridPagerSnapHelperActivity" />
+        <activity android:name="mm.chenme.lib.commutillibdemo.complex_demo.rv_paging_scroll.GridPagerSnapHelperActivity" />
         <activity android:name="mm.chenme.lib.commutillibdemo.ui.other.GlideScaleTypeActivity" />
         <activity android:name="mm.chenme.lib.commutillibdemo.ui.other.SharedPreferencesActivity" />
         <activity android:name="mm.chenme.lib.commutillibdemo.ui.other.CoroutineActivity" />
         <activity android:name="mm.chenme.lib.commutillibdemo.ui.other.Divider4TabLayoutActivity" />
 
-        <activity android:name="mm.chenme.lib.commutillibdemo.ui.bezier.BezierHeartViewTestActivity" />
+        <activity android:name="mm.chenme.lib.commutillibdemo.complex_demo.bezier.BezierHeartViewTestActivity" />
 
         <activity android:name="mm.chenme.lib.commutillibdemo.ui.rare.ClipToPaddingTestActivity" />
         <activity android:name="mm.chenme.lib.commutillibdemo.ui.rare.ClipChildrenTestActivity" />
@@ -57,7 +57,7 @@
         <activity android:name="mm.chenme.lib.commutillibdemo.ui.qmui.QMUIWidgetTestActivity" />
         <activity android:name="mm.chenme.lib.commutillibdemo.ui.qmui.QMUIBottomSheetActivity" />
 
-        <activity android:name="mm.chenme.lib.commutillibdemo.netdemo.DemoActivity" />
+        <activity android:name="mm.chenme.lib.commutillibdemo.complex_demo.netdemo.DemoActivity" />
         <!--        <activity android:name=".ui.FlutterDemoActivity" />-->
     </application>
 

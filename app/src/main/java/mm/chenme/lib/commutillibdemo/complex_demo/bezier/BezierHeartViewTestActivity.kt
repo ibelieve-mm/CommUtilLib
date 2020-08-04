@@ -1,9 +1,8 @@
-package mm.chenme.lib.commutillibdemo.ui.bezier
+package mm.chenme.lib.commutillibdemo.complex_demo.bezier
 
 import com.qmuiteam.qmui.kotlin.onClick
 import kotlinx.android.synthetic.main.act_bezier_heart_view.*
 import kotlinx.android.synthetic.main.act_bezier_heart_view.topbar
-import kotlinx.android.synthetic.main.act_main.*
 import mm.chenme.lib.commutillib.BaseActivity
 import mm.chenme.lib.commutillibdemo.R
 

@@ -7,4 +7,5 @@
     <dimen name="size_btnHeightHalf">22.5dp</dimen>
 
     <dimen name="divider_line">0.5dp</dimen>
+    <dimen name="divider_bar">25dp</dimen>
 </resources>

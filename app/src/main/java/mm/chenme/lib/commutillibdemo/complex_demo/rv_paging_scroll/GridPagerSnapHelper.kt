@@ -1,4 +1,4 @@
-package mm.chenme.lib.commutillibdemo.ui.other
+package mm.chenme.lib.commutillibdemo.complex_demo.rv_paging_scroll
 
 import android.graphics.PointF
 import android.util.DisplayMetrics
@@ -146,8 +146,7 @@ class GridPagerSnapHelper// 得到私有字段
             return null
         }
         var closestChild: View? = null
-        val center: Int
-        center = if (layoutManager.clipToPadding) {
+        val center: Int = if (layoutManager.clipToPadding) {
             helper.startAfterPadding + helper.totalSpace / 2
         } else {
             helper.end / 2
