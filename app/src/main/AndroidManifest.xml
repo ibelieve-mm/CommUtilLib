@@ -48,6 +48,7 @@
         <activity android:name="mm.chenme.lib.commutillibdemo.ui.other.SharedPreferencesActivity" />
         <activity android:name="mm.chenme.lib.commutillibdemo.ui.other.CoroutineActivity" />
         <activity android:name="mm.chenme.lib.commutillibdemo.ui.other.Divider4TabLayoutActivity" />
+        <activity android:name="mm.chenme.lib.commutillibdemo.ui.other.ViewStubActivity" />
 
         <activity android:name="mm.chenme.lib.commutillibdemo.complex_demo.bezier.BezierHeartViewTestActivity" />
 

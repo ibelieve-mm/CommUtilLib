@@ -52,6 +52,7 @@ class MainActivity(
         srb_divider4TabLayout.onClick { startActivity<Divider4TabLayoutActivity>() }
         srb_fragmentMain.onClick { startActivity<FragmentMainActivity>() }
         srb_pagingSnap.onClick { startActivity<GridPagerSnapHelperActivity>() }
+        qmBtn_viewStub.onClick { startActivity<ViewStubActivity>() }
     }
 
     /**

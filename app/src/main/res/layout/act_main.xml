@@ -42,6 +42,12 @@
             <View style="@style/DividerBar" />
 
             <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                android:id="@+id/qmBtn_viewStub"
+                style="@style/QMBtnFull.Round"
+                android:layout_marginTop="10dp"
+                android:text="ViewStub" />
+
+            <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
                 android:id="@+id/qmBtn_clipToPadding"
                 style="@style/QMBtnFull.Round"
                 android:layout_marginTop="10dp"
