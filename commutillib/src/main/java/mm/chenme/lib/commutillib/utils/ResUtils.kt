@@ -1,12 +1,15 @@
 package mm.chenme.lib.commutillib.utils
 
 import android.content.Context
+import android.graphics.drawable.Drawable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.ColorRes
+import androidx.annotation.DrawableRes
 import androidx.annotation.LayoutRes
 import androidx.annotation.StringRes
+import androidx.core.content.ContextCompat
 
 /**
  * Descriptions：资源工具类
@@ -46,7 +49,10 @@ fun Context.inflate(@LayoutRes resId: Int, parent: ViewGroup? = null, attachToRo
 fun string(@StringRes resId: Int): String = AppGlobals.application().getString(resId)
 fun string(@StringRes resId: Int, vararg formatArgs: Any): String = AppGlobals.application().getString(resId, formatArgs)
 
-fun color(@ColorRes resId: Int): Int = AppGlobals.application().resources.getColor(resId)
+//fun color(@ColorRes resId: Int): Int = AppGlobals.application().resources.getColor(resId)
+fun color(@ColorRes resId: Int): Int = ContextCompat.getColor(AppGlobals.application(), resId)
+
+fun drawable(@DrawableRes drawableId: Int): Drawable? = ContextCompat.getDrawable(AppGlobals.application(), drawableId)
 
 //val Context.screenWidthPx get() = resources.displayMetrics.widthPixels
 //val Context.screenHeightPx get() = resources.displayMetrics.heightPixels

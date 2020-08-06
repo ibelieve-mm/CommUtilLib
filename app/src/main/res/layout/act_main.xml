@@ -11,6 +11,14 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="浅谈ServiceLoader"
+                android:id="@+id/tv_demo"
+                android:textColor="@android:color/transparent"
+                android:background="#5123"/>
+
             <mm.chenme.lib.commutillib.pro.view.ShapeRippleButton
                 android:id="@+id/srb_divider4TabLayout"
                 style="@style/BtnThemeAllRoundFull"
@@ -40,6 +48,12 @@
                 android:text="QMUIBottomSheet" />
 
             <View style="@style/DividerBar" />
+
+            <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                android:id="@+id/qmBtn_surfaceView"
+                style="@style/QMBtnFull.Round"
+                android:layout_marginTop="10dp"
+                android:text="SurfaceView" />
 
             <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
                 android:id="@+id/qmBtn_viewStub"
