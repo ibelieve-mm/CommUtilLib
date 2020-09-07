@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@mipmap/lottery_pan_out_circle" />
+    <mm.chenme.lib.commutillibdemo.complex_demo.lotteryx.LotteryXPan
+        android:id="@+id/lPan"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <mm.chenme.lib.commutillibdemo.complex_demo.lotteryx.LotteryXPointerBg
+        android:id="@+id/lPointerBg"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_gravity="center" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="35dp"
+        android:src="@mipmap/lottery_pointer_arrow" />
+
+    <mm.chenme.lib.commutillibdemo.complex_demo.lotteryx.LotteryXPointerCircle
+        android:id="@+id/lPointerCircle"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center" />
+
+
+<!--    <androidx.appcompat.widget.AppCompatTextView-->
+<!--        android:id="@+id/tv_isFree"-->
+<!--        android:layout_width="45dp"-->
+<!--        android:layout_height="18dp"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:layout_marginTop="32dp"-->
+<!--        android:background="@drawable/corner_blue_1537ef_r100"-->
+<!--        android:gravity="center"-->
+<!--        android:text="FREE"-->
+<!--        android:textColor="@color/color_yellow_ffea01"-->
+<!--        android:textSize="12sp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:visibility="gone"-->
+<!--        tools:visibility="visible" />-->
+
+    <View
+        android:id="@+id/view_bonusBg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="42dp"
+        android:background="@mipmap/lottery_pan_bg_color"
+        android:visibility="gone" />
+</merge>
+

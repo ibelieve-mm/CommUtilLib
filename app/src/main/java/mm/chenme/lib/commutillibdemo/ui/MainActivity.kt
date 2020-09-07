@@ -12,6 +12,9 @@ import mm.chenme.lib.commutillibdemo.complex_demo.netdemo.DemoActivity
 import mm.chenme.lib.commutillibdemo.complex_demo.rv_paging_scroll.GridPagerSnapHelperActivity
 import mm.chenme.lib.commutillibdemo.consts.Values
 import mm.chenme.lib.commutillibdemo.complex_demo.bezier.BezierHeartViewTestActivity
+import mm.chenme.lib.commutillibdemo.complex_demo.interview.base.pass_value4service.ServiceActivity
+import mm.chenme.lib.commutillibdemo.complex_demo.lottery.LotteryViewActivity
+import mm.chenme.lib.commutillibdemo.complex_demo.lotteryx.LotteryXViewActivity
 import mm.chenme.lib.commutillibdemo.complex_demo.surface_view.SurfaceViewActivity
 import mm.chenme.lib.commutillibdemo.ui.main.FragmentMainActivity
 import mm.chenme.lib.commutillibdemo.ui.other.*
@@ -55,6 +58,13 @@ class MainActivity(
         srb_pagingSnap.onClick { startActivity<GridPagerSnapHelperActivity>() }
         qmBtn_viewStub.onClick { startActivity<ViewStubActivity>() }
         qmBtn_surfaceView.onClick { startActivity<SurfaceViewActivity>() }
+
+
+        srb_passValueService.onClick { startActivity<ServiceActivity>() }
+
+
+        srb_lottery1.onClick { startActivity<LotteryViewActivity>() }
+        srb_lottery2.onClick { startActivity<LotteryXViewActivity>() }
     }
 
     /**

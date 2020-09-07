@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <mm.chenme.lib.commutillibdemo.complex_demo.lottery.LotteryPan
+        android:id="@+id/lPan"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <mm.chenme.lib.commutillibdemo.complex_demo.lottery.LotteryPointerBg
+        android:id="@+id/lPointerBg"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:layout_gravity="center" />
+
+    <mm.chenme.lib.commutillibdemo.complex_demo.lottery.LotteryPointer
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center" />
+
+    <mm.chenme.lib.commutillibdemo.complex_demo.lottery.LotteryPointerCircle
+        android:id="@+id/lPointerCircle"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_isFree"
+        android:layout_width="45dp"
+        android:layout_height="18dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/corner_blue_1537ef_r100"
+        android:gravity="center"
+        android:text="FREE"
+        android:textColor="@color/color_yellow_ffea01"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <View
+        android:id="@+id/view_bonusBg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:background="@drawable/oval_white"
+        android:visibility="gone" />
+</merge>
+

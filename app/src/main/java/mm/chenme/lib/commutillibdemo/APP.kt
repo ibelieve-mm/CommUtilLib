@@ -14,8 +14,14 @@ import com.qmuiteam.qmui.arch.QMUISwipeBackActivityManager
  */
 class APP : Application() {
 
+    companion object {
+        private var INSTANCE: APP? = null
+        fun instance() = INSTANCE!!
+    }
+
     override fun onCreate() {
         super.onCreate()
+        INSTANCE = this
         QMUISwipeBackActivityManager.init(this)
 
         /**

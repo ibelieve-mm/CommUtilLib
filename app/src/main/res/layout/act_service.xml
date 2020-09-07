@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <mm.chenme.lib.commutillib.pro.view.ShapeRippleButton
+        android:id="@+id/srb_startService"
+        style="@style/BtnThemeAllRoundFull"
+        android:layout_marginTop="10dp"
+        android:text="启动服务" />
+
+
+    <mm.chenme.lib.commutillib.pro.view.ShapeRippleButton
+        android:id="@+id/srb_changeServiceData"
+        style="@style/BtnThemeAllRoundFull"
+        android:layout_marginTop="10dp"
+        android:text="更新数据" />
+
+    <mm.chenme.lib.commutillib.pro.view.ShapeRippleButton
+        android:id="@+id/srb_unbindService"
+        style="@style/BtnThemeAllRoundFull"
+        android:layout_marginTop="10dp"
+        android:text="解绑服务" />
+
+    <mm.chenme.lib.commutillib.pro.view.ShapeRippleButton
+        android:id="@+id/srb_stopService"
+        style="@style/BtnThemeAllRoundFull"
+        android:layout_marginTop="10dp"
+        android:text="终止服务" />
+
+    <mm.chenme.lib.commutillib.pro.view.ShapeRippleButton
+        android:id="@+id/srb_printData"
+        style="@style/BtnThemeAllRoundFull"
+        android:layout_marginTop="10dp"
+        android:text="打印数据" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

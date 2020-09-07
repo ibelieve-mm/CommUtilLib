@@ -60,7 +60,15 @@
         <activity android:name="mm.chenme.lib.commutillibdemo.complex_demo.bezier.BezierHeartViewTestActivity" />
         <activity android:name="mm.chenme.lib.commutillibdemo.complex_demo.rv_paging_scroll.GridPagerSnapHelperActivity" />
         <activity android:name="mm.chenme.lib.commutillibdemo.complex_demo.surface_view.SurfaceViewActivity" />
+        <activity android:name="mm.chenme.lib.commutillibdemo.complex_demo.lottery.LotteryViewActivity"/>
+        <activity android:name="mm.chenme.lib.commutillibdemo.complex_demo.lotteryx.LotteryXViewActivity"/>
+
+
+        <activity android:name="mm.chenme.lib.commutillibdemo.complex_demo.interview.base.pass_value4service.ServiceActivity" />
         <!--        <activity android:name=".ui.FlutterDemoActivity" />-->
+
+        <service android:name=".complex_demo.interview.base.pass_value4service.TargetService" />
+        <service android:name=".complex_demo.interview.base.pass_value4service.SelfIntentService" />
     </application>
 
 </manifest>

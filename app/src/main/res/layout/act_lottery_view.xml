@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.qmuiteam.qmui.widget.QMUIWindowInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_theme_t10">
+
+    <androidx.constraintlayout.widget.ConstraintLayout style="@style/QMTopBarLayoutBrother">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_pointsIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:src="@mipmap/points"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lv" />
+
+        <EditText
+            android:id="@+id/et_result"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/color_theme_t40"
+            android:gravity="center_vertical"
+            android:hint="输入奖品的编号，默认0号奖品"
+            android:inputType="number"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <mm.chenme.lib.commutillibdemo.complex_demo.lottery.LotteryView
+            android:id="@+id/lv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_result" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_resultIcon"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/lv"
+            app:layout_constraintEnd_toEndOf="@+id/lv"
+            app:layout_constraintStart_toStartOf="@+id/lv"
+            app:layout_constraintTop_toTopOf="@+id/lv" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_resultText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_red_ff5346"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/lv"
+            app:layout_constraintStart_toStartOf="@+id/lv"
+            app:layout_constraintTop_toBottomOf="@+id/iv_resultIcon" />
+
+
+
+        <Button
+            android:id="@+id/btn_fill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="模拟接口返回数据正常"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lv" />
+
+
+        <Button
+            android:id="@+id/btn_err"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="模拟接口返回数据异常"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_fill" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.qmuiteam.qmui.widget.QMUITopBarLayout style="@style/QMTopBarLayout">
+
+        <com.qmuiteam.qmui.widget.QMUITopBar
+            android:id="@+id/topbar"
+            style="@style/QMTopBar" />
+    </com.qmuiteam.qmui.widget.QMUITopBarLayout>
+</com.qmuiteam.qmui.widget.QMUIWindowInsetLayout>
+

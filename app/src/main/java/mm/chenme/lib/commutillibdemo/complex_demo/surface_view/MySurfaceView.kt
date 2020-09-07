@@ -106,12 +106,7 @@ class MySurfaceView @JvmOverloads constructor(
 
             for (i in 0 until 5) {
                 for (j in 0 until 8) {
-                    mCanvas?.drawCircle(
-                        width / 5f * i + width / 10f,
-                        height / 8f * j + height / 16f,
-                        mCircleRadius,
-                        mPaint
-                    )
+                    mCanvas?.drawCircle(width / 5f * i + width / 10f, height / 8f * j + height / 16f, mCircleRadius, mPaint)
                 }
             }
             mHolder.unlockCanvasAndPost(mCanvas) // 完成画画，把画布显示在屏幕上

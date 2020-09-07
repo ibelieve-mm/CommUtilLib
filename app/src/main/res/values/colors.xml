@@ -34,4 +34,24 @@
 
     <!-- 其他 -->
     <color name="color_red_ff639b">#FF639B</color>
+    <color name="color_red_ff5346">#FF5346</color>
+    <color name="color_red_ff467d">#FF467D</color>
+    <color name="color_red_fd5564">#FD5564</color>
+
+    <color name="color_yellow_ffea01">#FFEA01</color>
+    <color name="color_yellow_e1ce00">#E1CE00</color>
+    <color name="color_yellow_ffe300">#FFE300</color>
+
+    <color name="color_blue_1537ef">#1537EF</color>
+    <color name="color_blue_0b1e6f">#0B1E6F</color>
+
+    <color name="color_white_t50">#7FFFFFFF</color>
+
+    <color name="color_black_t50">#B2000000</color>
+
+
+    <color name="color_white_fafafa">#FAFAFA</color>
+    <color name="color_purple_t10">#1ABD00FF</color>
+
+
 </resources>

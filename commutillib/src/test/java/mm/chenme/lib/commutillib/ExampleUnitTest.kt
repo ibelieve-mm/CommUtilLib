@@ -25,4 +25,43 @@ class ExampleUnitTest {
         println("你好の富士康家福克斯fjskfhjsk123".md5())    // B98CF799138BE57D59C69BE91A017D81
         println("你好の富士康家福克斯fjskfhjsk123".sha1())   // 72F4E28E398D64BDFBDF0B7062DEE3B717BFA2FC
     }
+
+    @Test
+    fun testToInt(){
+       println( "12".toIntNoErr())
+       println( "djakl".toIntNoErr())
+       println( "-1".toIntNoErr())
+    }
+
+    @Test
+    fun testRandom(){
+        println((8 + Math.random() * (14 - 8 + 1)).toInt())
+        println((8 + Math.random() * (14 - 8 + 1)).toInt())
+        println((8 + Math.random() * (14 - 8 + 1)).toInt())
+        println((8 + Math.random() * (14 - 8 + 1)).toInt())
+        println((8 + Math.random() * (14 - 8 + 1)).toInt())
+        println((8 + Math.random() * (14 - 8 + 1)).toInt())
+        println((8 + Math.random() * (14 - 8 + 1)).toInt())
+        println((8 + Math.random() * (14 - 8 + 1)).toInt())
+        println((8 + Math.random() * (14 - 8 + 1)).toInt())
+        println((8 + Math.random() * (14 - 8 + 1)).toInt())
+        println((8 + Math.random() * (14 - 8 + 1)).toInt())
+        println(randomIntFromAtoB(8,14))
+        println(randomIntFromAtoB(8,14))
+        println(randomIntFromAtoB(8,14))
+        println(randomIntFromAtoB(8,14))
+        println(randomIntFromAtoB(8,14))
+        println(randomIntFromAtoB(8,14))
+        println(randomIntFromAtoB(8,14))
+        println(randomIntFromAtoB(8,14))
+        println(randomIntFromAtoB(8,14))
+        println(randomIntFromAtoB(8,14))
+        println(randomIntFromAtoB(8,14))
+        println(randomIntFromAtoB(8,14))
+        println(randomIntFromAtoB(8,14))
+        println(randomIntFromAtoB(8,14))
+        println(randomIntFromAtoB(8,14))
+        println(randomIntFromAtoB(8,14))
+        println(randomIntFromAtoB(8,14))
+    }
 }

@@ -1,5 +1,16 @@
 package mm.chenme.lib.commutillib.utils
 
+import android.content.Context
+import android.graphics.Canvas
+import android.graphics.Paint
+import android.graphics.drawable.Drawable
+import android.text.Spannable
+import android.text.SpannableString
+import android.text.TextUtils
+import android.text.style.ImageSpan
+import android.widget.TextView
+import java.lang.ref.WeakReference
+
 /**
  * Descriptions：
  * StartVersion：

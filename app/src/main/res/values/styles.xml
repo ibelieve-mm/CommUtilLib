@@ -178,4 +178,27 @@
         <item name="srb_fillColor">@color/color_theme</item>
     </style>
 
+    <!--  lottery start  -->
+    <style name="LlLotteryBottomBtn">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="IvLotteryBottomBtn">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+    </style>
+
+    <style name="TsLotteryBottomBtn">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:inAnimation">@anim/fade_in_150</item>
+        <item name="android:outAnimation">@anim/fade_out_100</item>
+    </style>
+    <!--  lottery end  -->
+
 </resources>

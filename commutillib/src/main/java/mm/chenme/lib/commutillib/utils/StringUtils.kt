@@ -58,4 +58,15 @@ fun String?.hexString2Bytes(): ByteArray {
     return data
 }
 
+fun String?.toIntNoErr(default: Int = 0): Int {
+    if (null == this) {
+        return default
+    }
+    return try{
+        this.toInt()
+    }catch (e:NumberFormatException){
+        default
+    }
+}
+
 
