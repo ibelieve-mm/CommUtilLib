@@ -15,6 +15,8 @@ object Values {
     const val VerificationCodeLength = 6
     const val PhoneNumberLength = 11
 
+   const val Token = "0d1a1755c47ead8d0204088d944f85de"
+
     const val Time_DoubleClickInterval = 1_500L // 两次点击的时间间隔
 
     //region 性别
@@ -23,4 +25,6 @@ object Values {
         const val Female = 2
     }
     //endregion
+
+
 }

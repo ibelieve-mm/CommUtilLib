@@ -5,6 +5,7 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MediatorLiveData
 import androidx.lifecycle.Transformations
+import mm.chenme.lib.commutillib.utils.loge
 import mm.chenme.lib.commutillib.utils.stoast
 import mm.cme.commnetlib.config.Net_OK
 
@@ -34,6 +35,33 @@ class DemoViewModel(application: Application) : AndroidViewModel(application) {
         return Transformations.switchMap(mHomeRepository.queryWeather()) {
             if (Net_OK == it.resultCode) {
                 mlvWeather.value = it.data
+            } else {
+                mlvWeather.value = null
+                stoast(it.resultDesc)
+                aActivity.dataEmpty()
+            }
+            mlvWeather
+        }
+    }
+
+    fun resetLotteryTime(): LiveData<Boolean> {
+        val mlvWeather = MediatorLiveData<Boolean>()
+        return Transformations.switchMap(mHomeRepository.resetLotteryTime()) {
+            if (Net_OK == it.resultCode) {
+                mlvWeather.value = true
+            } else {
+                mlvWeather.value = null
+                stoast(it.resultDesc)
+                aActivity.dataEmpty()
+            }
+            mlvWeather
+        }
+    }
+    fun resetLotteryCount(): LiveData<Boolean> {
+        val mlvWeather = MediatorLiveData<Boolean>()
+        return Transformations.switchMap(mHomeRepository.resetLotteryCount()) {
+            if (Net_OK == it.resultCode) {
+                mlvWeather.value = true
             } else {
                 mlvWeather.value = null
                 stoast(it.resultDesc)

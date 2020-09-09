@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.qmuiteam.qmui.widget.QMUIWindowInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout style="@style/QMTopBarLayoutBrother">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <mm.chenme.lib.commutillib.pro.view.ShapeRippleButton
+                    android:id="@+id/srb_startLottery"
+                    style="@style/BtnThemeAllRoundFull"
+                    android:text="开始抽奖" />
+
+                <FrameLayout
+                    android:id="@+id/fl_bg"
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:layout_gravity="center_horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@mipmap/lottery_bg" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/ll0"
+                        style="@style/LlLotteryPro">
+
+                        <TextView
+                            android:id="@+id/tv0"
+                            style="@style/TvLotteryPro" />
+
+                        <androidx.appcompat.widget.AppCompatImageView style="@style/IvLotteryPro" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/ll1"
+                        style="@style/LlLotteryPro">
+
+                        <TextView
+                            android:id="@+id/tv1"
+                            style="@style/TvLotteryPro" />
+
+                        <androidx.appcompat.widget.AppCompatImageView style="@style/IvLotteryPro" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/ll2"
+                        style="@style/LlLotteryPro">
+
+                        <TextView
+                            android:id="@+id/tv2"
+                            style="@style/TvLotteryPro" />
+
+                        <androidx.appcompat.widget.AppCompatImageView style="@style/IvLotteryPro" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/ll3"
+                        style="@style/LlLotteryPro">
+
+                        <TextView
+                            android:id="@+id/tv3"
+                            style="@style/TvLotteryPro" />
+
+                        <androidx.appcompat.widget.AppCompatImageView style="@style/IvLotteryPro" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/ll4"
+                        style="@style/LlLotteryPro">
+
+                        <TextView
+                            android:id="@+id/tv4"
+                            style="@style/TvLotteryPro" />
+
+                        <androidx.appcompat.widget.AppCompatImageView style="@style/IvLotteryPro" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/ll5"
+                        style="@style/LlLotteryPro">
+
+                        <TextView
+                            android:id="@+id/tv5"
+                            style="@style/TvLotteryPro" />
+
+                        <androidx.appcompat.widget.AppCompatImageView style="@style/IvLotteryPro" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/ll6"
+                        style="@style/LlLotteryPro">
+
+                        <TextView
+                            android:id="@+id/tv6"
+                            style="@style/TvLotteryPro" />
+
+                        <androidx.appcompat.widget.AppCompatImageView style="@style/IvLotteryPro" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/ll7"
+                        style="@style/LlLotteryPro">
+
+                        <TextView
+                            android:id="@+id/tv7"
+                            style="@style/TvLotteryPro" />
+
+                        <androidx.appcompat.widget.AppCompatImageView style="@style/IvLotteryPro" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </FrameLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.qmuiteam.qmui.widget.QMUITopBarLayout style="@style/QMTopBarLayout">
+
+        <com.qmuiteam.qmui.widget.QMUITopBar
+            android:id="@+id/topbar"
+            style="@style/QMTopBar" />
+    </com.qmuiteam.qmui.widget.QMUITopBarLayout>
+</com.qmuiteam.qmui.widget.QMUIWindowInsetLayout>

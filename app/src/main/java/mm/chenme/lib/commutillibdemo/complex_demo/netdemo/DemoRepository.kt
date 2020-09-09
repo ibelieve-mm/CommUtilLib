@@ -22,5 +22,20 @@ class DemoRepository {
         mApi.queryWeather().enqueue(DefaultCallback(respLiveData))
         return respLiveData
     }
+
+    fun resetLotteryTime(): MutableLiveData<BaseResponse<Any?>> {
+        val respLiveData = MutableLiveData<BaseResponse<Any?>>()
+        mApi.resetLotteryTime().enqueue(DefaultCallback(respLiveData))
+        return respLiveData
+    }
+
+
+    fun resetLotteryCount(): MutableLiveData<BaseResponse<Any?>> {
+        val respLiveData = MutableLiveData<BaseResponse<Any?>>()
+        mApi.resetLotteryCount().enqueue(DefaultCallback(respLiveData))
+        return respLiveData
+    }
+
+
 }
 

@@ -28,6 +28,11 @@
                 style="@style/BtnThemeAllRoundFull"
                 android:text="Lottery View 2" />
 
+            <mm.chenme.lib.commutillib.pro.view.ShapeRippleButton
+                android:id="@+id/srb_lottery3"
+                style="@style/BtnThemeAllRoundFull"
+                android:text="自适应文案 Lottery" />
+
             <View style="@style/DividerBar" />
 
             <mm.chenme.lib.commutillib.pro.view.ShapeRippleButton
@@ -97,7 +102,6 @@
                 style="@style/QMBtnFull.Round"
                 android:layout_marginTop="10dp"
                 android:text="自定义 ClipLayout Demo" />
-
 
             <mm.chenme.lib.commutillib.pro.view.ShapeRippleButton
                 android:id="@+id/srb_shapeRippleButton"

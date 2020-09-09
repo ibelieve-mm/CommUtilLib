@@ -14,6 +14,7 @@ import mm.chenme.lib.commutillibdemo.consts.Values
 import mm.chenme.lib.commutillibdemo.complex_demo.bezier.BezierHeartViewTestActivity
 import mm.chenme.lib.commutillibdemo.complex_demo.interview.base.pass_value4service.ServiceActivity
 import mm.chenme.lib.commutillibdemo.complex_demo.lottery.LotteryViewActivity
+import mm.chenme.lib.commutillibdemo.complex_demo.lottery_pro.LotteryProActivity
 import mm.chenme.lib.commutillibdemo.complex_demo.lotteryx.LotteryXViewActivity
 import mm.chenme.lib.commutillibdemo.complex_demo.surface_view.SurfaceViewActivity
 import mm.chenme.lib.commutillibdemo.ui.main.FragmentMainActivity
@@ -40,31 +41,38 @@ class MainActivity(
 
     override fun initListener() {
 //            startActivity<FlutterDemoActivity>()
-        qmBtn_qmuiTest.onClick { startActivity<QMUIWidgetTestActivity>() }
-        qmBtn_citySelect.onClick { startActivity<AreaSelectActivity>() }
-        qmBtn_selfClipLayout.onClick { startActivity<SelfClipLayoutTestActivity>() }
-        qmBtn_clipToPadding.onClick { startActivity<ClipToPaddingTestActivity>() }
-        qmBtn_clipChildren.onClick { startActivity<ClipChildrenTestActivity>() }
-        srb_netDemo.onClick { startActivity<DemoActivity>() }
-        srb_shapeRippleButton.onClick { startActivity<ShapeRippleButtonActivity>() }
-        srb_errorEmpty.onClick { startActivity<ErrorEmptyViewActivity>() }
-        srb_qmuiBottomSheet.onClick { startActivity<QMUIBottomSheetActivity>() }
-        srb_glide.onClick { startActivity<GlideScaleTypeActivity>() }
-        srb_sharedPreferences.onClick { startActivity<SharedPreferencesActivity>() }
-        srb_coroutine.onClick { startActivity<CoroutineActivity>() }
-        srb_bezier.onClick { startActivity<BezierHeartViewTestActivity>() }
-        srb_divider4TabLayout.onClick { startActivity<Divider4TabLayoutActivity>() }
-        srb_fragmentMain.onClick { startActivity<FragmentMainActivity>() }
-        srb_pagingSnap.onClick { startActivity<GridPagerSnapHelperActivity>() }
-        qmBtn_viewStub.onClick { startActivity<ViewStubActivity>() }
-        qmBtn_surfaceView.onClick { startActivity<SurfaceViewActivity>() }
-
-
         srb_passValueService.onClick { startActivity<ServiceActivity>() }
 
 
         srb_lottery1.onClick { startActivity<LotteryViewActivity>() }
         srb_lottery2.onClick { startActivity<LotteryXViewActivity>() }
+        srb_lottery3.onClick { startActivity<LotteryProActivity>() }
+
+
+        srb_divider4TabLayout.onClick { startActivity<Divider4TabLayoutActivity>() }
+        srb_pagingSnap.onClick { startActivity<GridPagerSnapHelperActivity>() }
+        srb_netDemo.onClick { startActivity<DemoActivity>() }
+
+
+        qmBtn_qmuiTest.onClick { startActivity<QMUIWidgetTestActivity>() }
+        srb_qmuiBottomSheet.onClick { startActivity<QMUIBottomSheetActivity>() }
+
+
+        qmBtn_surfaceView.onClick { startActivity<SurfaceViewActivity>() }
+        qmBtn_viewStub.onClick { startActivity<ViewStubActivity>() }
+        qmBtn_clipToPadding.onClick { startActivity<ClipToPaddingTestActivity>() }
+        qmBtn_clipChildren.onClick { startActivity<ClipChildrenTestActivity>() }
+
+
+        qmBtn_citySelect.onClick { startActivity<AreaSelectActivity>() }
+        qmBtn_selfClipLayout.onClick { startActivity<SelfClipLayoutTestActivity>() }
+        srb_shapeRippleButton.onClick { startActivity<ShapeRippleButtonActivity>() }
+        srb_errorEmpty.onClick { startActivity<ErrorEmptyViewActivity>() }
+        srb_glide.onClick { startActivity<GlideScaleTypeActivity>() }
+        srb_sharedPreferences.onClick { startActivity<SharedPreferencesActivity>() }
+        srb_coroutine.onClick { startActivity<CoroutineActivity>() }
+        srb_bezier.onClick { startActivity<BezierHeartViewTestActivity>() }
+        srb_fragmentMain.onClick { startActivity<FragmentMainActivity>() }
     }
 
     /**

@@ -12,7 +12,8 @@ def AppName_Sit = "ULib-Sit"
 def AppName_Alpha = "ULib-Alpha"
 def AppName_Product = "ULib"
 
-def ApiHost_Sit = '"http://api.yytianqi.com/"'
+//def ApiHost_Sit = '"http://api.yytianqi.com/"'
+def ApiHost_Sit = '"http://apitest.omegle.fun/"'
 def ApiHost_Alpha = '"http://api.yytianqi.com/"'
 def ApiHost_Product = '"http://api.yytianqi.com/"'
 
@@ -141,9 +142,6 @@ dependencies {
     implementation rootProject.depsLibs.liveEventBus
 
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.0'
-
-//    implementation "com.contrarywind:Android-PickerView:4.1.9"
-
 //    /**
 //     * flutter 项目
 //     */

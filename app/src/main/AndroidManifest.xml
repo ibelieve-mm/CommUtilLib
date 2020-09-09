@@ -62,6 +62,7 @@
         <activity android:name="mm.chenme.lib.commutillibdemo.complex_demo.surface_view.SurfaceViewActivity" />
         <activity android:name="mm.chenme.lib.commutillibdemo.complex_demo.lottery.LotteryViewActivity"/>
         <activity android:name="mm.chenme.lib.commutillibdemo.complex_demo.lotteryx.LotteryXViewActivity"/>
+        <activity android:name="mm.chenme.lib.commutillibdemo.complex_demo.lottery_pro.LotteryProActivity"/>
 
 
         <activity android:name="mm.chenme.lib.commutillibdemo.complex_demo.interview.base.pass_value4service.ServiceActivity" />

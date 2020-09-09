@@ -201,4 +201,31 @@
     </style>
     <!--  lottery end  -->
 
+    <!-- lottery pro start -->
+    <style name="TvLotteryPro">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:gravity">center|bottom</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:text">123</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="LlLotteryPro">
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">top|center_horizontal</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="IvLotteryPro">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:src">@mipmap/points_40</item>
+    </style>
+    <!-- lottery pro  ent  -->
 </resources>

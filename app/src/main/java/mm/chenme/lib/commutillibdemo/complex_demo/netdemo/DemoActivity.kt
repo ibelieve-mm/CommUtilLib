@@ -6,6 +6,7 @@ import com.qmuiteam.qmui.widget.dialog.QMUITipDialog
 import kotlinx.android.synthetic.main.act_net_demo.*
 import mm.chenme.lib.commutillib.BaseActivity
 import mm.chenme.lib.commutillib.utils.bindViewModel
+import mm.chenme.lib.commutillib.utils.stoast
 import mm.chenme.lib.commutillibdemo.R
 
 
@@ -33,15 +34,42 @@ class DemoActivity(override val layoutResId: Int = R.layout.act_net_demo) : Base
         topbar.addLeftBackImageButton().onClick { closePage() }
     }
 
+    override fun initListener() {
+        super.initListener()
+        srb_resetLotteryCount.onClick {
+            mLoadingDialog.show()
+            mViewModel.resetLotteryCount().observe(this, Observer {
+                mLoadingDialog.dismiss()
+                it?.apply {
+                    stoast("抽奖次数重置成功！！")
+                }
+            })
+        }
+        srb_resetLotteryTime.onClick {
+            mLoadingDialog.show()
+            mViewModel.resetLotteryTime().observe(this, Observer {
+                mLoadingDialog.dismiss()
+                it?.apply {
+                    stoast("抽奖时间重置成功！！")
+                }
+            })
+        }
+    }
 
     override fun loadData() {
-        mLoadingDialog.show()
-        mViewModel.queryWeather().observe(this, Observer {
-            mLoadingDialog.dismiss()
-            it?.apply {
-                tv_label.text = this.toString()
-            }
-        })
+//        mLoadingDialog.show()
+//        mViewModel.resetLotteryTime().observe(this, Observer {
+//            mLoadingDialog.dismiss()
+//            it?.apply {
+//                tv_label.text = this.toString()
+//            }
+//        })
+//        mViewModel.queryWeather().observe(this, Observer {
+//            mLoadingDialog.dismiss()
+//            it?.apply {
+//                tv_label.text = this.toString()
+//            }
+//        })
     }
 }
 

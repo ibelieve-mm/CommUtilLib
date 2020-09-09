@@ -11,19 +11,11 @@ import com.google.gson.annotations.SerializedName
  * Email：ibelieve1210@163.com
  */
 data class BaseResponse<T>(
-    @SerializedName("code")
-    var resultCode: Int = 0,
-    @SerializedName("msg")
-    var resultDesc: String = "",
-    @SerializedName("data")
-    var data: T? = null
+    @SerializedName("result") var resultCode: Int = 0,
+    @SerializedName("message") var resultDesc: String = "",
+    @SerializedName("data") var data: T? = null
+
+//    @SerializedName("code") var resultCode: Int = 0,
+//    @SerializedName("msg") var resultDesc: String = "",
+//    @SerializedName("data") var data: T? = null
 )
-//
-//data class BaseResponse<T>(
-//    @SerializedName("error_code")
-//    var resultCode: Int = 0,
-//    @SerializedName("reason")
-//    var resultDesc: String = "",
-//    @SerializedName("result")
-//    var data: T? = null
-//)
