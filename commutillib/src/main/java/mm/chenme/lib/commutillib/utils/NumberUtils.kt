@@ -1,5 +1,7 @@
 package mm.chenme.lib.commutillib.utils
 
+import java.util.*
+
 /**
  * Descriptions：
  * StartVersion：
@@ -14,4 +16,15 @@ package mm.chenme.lib.commutillib.utils
  */
 fun randomIntFromAtoB(a: Int, b: Int): Int {
     return (a + Math.random() * (b - a + 1)).toInt()
+}
+
+/**
+ * 四舍五入保留 n 位小数
+ * 强制使用英文样式，避免多语言造成的混乱
+ */
+fun Float?.keepDecimals(n: Int = 1, default: String = "0.0"): String {
+    if (null == this) {
+        return default
+    }
+    return String.format(Locale.ENGLISH, "%.${n}f", this)
 }

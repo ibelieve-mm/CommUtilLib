@@ -16,6 +16,11 @@
                 style="@style/BtnThemeAllRoundFull"
                 android:text="Activity Service 传递数据" />
 
+            <mm.chenme.lib.commutillib.pro.view.ShapeRippleButton
+                android:id="@+id/srb_openLiveData"
+                style="@style/BtnThemeAllRoundFull"
+                android:text="open live data demo" />
+
             <View style="@style/DividerBar" />
 
             <mm.chenme.lib.commutillib.pro.view.ShapeRippleButton

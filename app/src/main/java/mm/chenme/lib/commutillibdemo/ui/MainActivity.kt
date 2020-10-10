@@ -4,18 +4,21 @@ import android.graphics.Color
 import androidx.core.content.edit
 import com.qmuiteam.qmui.kotlin.onClick
 import kotlinx.android.synthetic.main.act_main.*
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 import mm.chenme.lib.commutillib.BaseActivity
 import mm.chenme.lib.commutillib.utils.getSP
-import mm.chenme.lib.commutillib.utils.stoast
+import mm.chenme.lib.commutillib.utils.st
 import mm.chenme.lib.commutillibdemo.R
 import mm.chenme.lib.commutillibdemo.complex_demo.netdemo.DemoActivity
 import mm.chenme.lib.commutillibdemo.complex_demo.rv_paging_scroll.GridPagerSnapHelperActivity
 import mm.chenme.lib.commutillibdemo.consts.Values
 import mm.chenme.lib.commutillibdemo.complex_demo.bezier.BezierHeartViewTestActivity
-import mm.chenme.lib.commutillibdemo.complex_demo.interview.base.pass_value4service.ServiceActivity
+import mm.chenme.lib.commutillibdemo.complex_demo.live_data.LiveDataActivity
 import mm.chenme.lib.commutillibdemo.complex_demo.lottery.LotteryViewActivity
 import mm.chenme.lib.commutillibdemo.complex_demo.lottery_pro.LotteryProActivity
 import mm.chenme.lib.commutillibdemo.complex_demo.lotteryx.LotteryXViewActivity
+import mm.chenme.lib.commutillibdemo.complex_demo.rating_bar.RatingBerActivity
 import mm.chenme.lib.commutillibdemo.complex_demo.surface_view.SurfaceViewActivity
 import mm.chenme.lib.commutillibdemo.ui.main.FragmentMainActivity
 import mm.chenme.lib.commutillibdemo.ui.other.*
@@ -41,7 +44,9 @@ class MainActivity(
 
     override fun initListener() {
 //            startActivity<FlutterDemoActivity>()
-        srb_passValueService.onClick { startActivity<ServiceActivity>() }
+        srb_passValueService.onClick { startActivity<RatingBerActivity>() }
+//        srb_passValueService.onClick { startActivity<ServiceActivity>() }
+        srb_openLiveData.onClick { startActivity<LiveDataActivity>() }
 
 
         srb_lottery1.onClick { startActivity<LotteryViewActivity>() }
@@ -81,11 +86,17 @@ class MainActivity(
     override fun onBackPressed() {
         val time = System.currentTimeMillis()
         if (time - mPressTime > Values.Time_DoubleClickInterval) {
-            stoast("再按一次退出程序")
+            st("再按一次退出程序")
             mPressTime = time
         } else {
             finish()
 //            APPManager.instance.exitApp(this)
+        }
+    }
+
+    fun coroutineTest(){
+        GlobalScope.launch {
+
         }
     }
 }

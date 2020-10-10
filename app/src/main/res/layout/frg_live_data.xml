@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/color_theme_t10"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/sb_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <mm.chenme.lib.commutillibdemo.complex_demo.live_data.LineProgress
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:id="@+id/lp"
+        android:layout_margin="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <com.opensource.svgaplayer.SVGAImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:clearsAfterStop="true"
+        android:id="@+id/imageView"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#9FFF">
+
+        <androidx.constraintlayout.helper.widget.Flow
+            android:layout_width="wrap_content"
+            android:id="@+id/flow"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:flow_wrapMode="aligned"
+            android:padding="20dp"
+            app:constraint_referenced_ids="tv1,tv2,tv3,tv4"
+            app:flow_horizontalGap="2dp"
+            app:flow_verticalGap="30dp"
+            android:background="#EF00"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="11111111111111"
+            android:textColor="#FFF"
+            android:background="#123"
+            android:id="@+id/tv1"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="222222222222222222"
+            android:textColor="#FFF"
+            android:background="#123"
+            android:id="@+id/tv2"/>
+
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="333"
+            android:textColor="#FFF"
+            android:background="#123"
+            android:id="@+id/tv3"/>
+
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="444444444444444444"
+            android:textColor="#FFF"
+            android:background="#123"
+            android:id="@+id/tv4"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:id="@+id/cl_loginByPwd"
+            android:background="@color/color_theme_t40"
+           app:layout_constraintTop_toBottomOf="@+id/flow" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_loginByVerification"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:visibility="gone"
+            android:background="#ff639b"
+           app:layout_constraintTop_toBottomOf="@+id/flow" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

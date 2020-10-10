@@ -19,26 +19,26 @@ private val handler = Handler(Looper.getMainLooper())
 /**
  * 短 Toast
  */
-fun stoast(messageRes: Int) {
-    mtoast(string(messageRes))
+fun st(messageRes: Int) {
+    mt(string(messageRes))
 }
 
-fun stoast(message: String) {
-    mtoast(message)
+fun st(message: String) {
+    mt(message)
 }
 
 /**
  * 长 Toast
  */
-fun ltoast(messageRes: Int) {
-    mtoast(string(messageRes), true)
+fun lt(messageRes: Int) {
+    mt(string(messageRes), true)
 }
 
-fun ltoast(message: String) {
-    mtoast(message, true)
+fun lt(message: String) {
+    mt(message, true)
 }
 
-fun mtoast(msg: String, isLongToast: Boolean = false) {
+fun mt(msg: String, isLongToast: Boolean = false) {
     Thread(Runnable {
         run {
             handler.post {

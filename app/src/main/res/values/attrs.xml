@@ -5,4 +5,20 @@
         <attr name="ti_icon" format="reference" />
         <attr name="ti_title" format="string" />
     </declare-styleable>
+
+    <declare-styleable name="BaseRatingBar">
+        <attr format="integer" name="srb_numStars"/>
+        <attr format="float" name="srb_minimumStars"/>
+        <attr format="float" name="srb_rating"/>
+        <attr format="dimension" name="srb_starPadding"/>
+        <attr format="reference" name="srb_drawableEmpty"/>
+        <attr format="reference" name="srb_drawableFilled"/>
+        <attr format="boolean" name="srb_isIndicator"/>
+        <attr format="boolean" name="srb_scrollable"/>
+        <attr format="boolean" name="srb_clickable"/>
+        <attr format="boolean" name="srb_clearRatingEnabled"/>
+        <attr format="dimension" name="srb_starWidth"/>
+        <attr format="dimension" name="srb_starHeight"/>
+        <attr format="float" name="srb_stepSize"/>
+    </declare-styleable>
 </resources>

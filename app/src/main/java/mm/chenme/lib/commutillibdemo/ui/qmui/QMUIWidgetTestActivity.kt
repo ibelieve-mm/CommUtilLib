@@ -3,12 +3,11 @@ package mm.chenme.lib.commutillibdemo.ui.qmui
 import com.qmuiteam.qmui.kotlin.onClick
 import kotlinx.android.synthetic.main.act_qmui_widget_test.*
 import kotlinx.android.synthetic.main.act_qmui_widget_test.topbar
-import kotlinx.android.synthetic.main.act_tab_layout_divider.*
 import mm.chenme.lib.commutillib.utils.color
 import mm.chenme.lib.commutillib.utils.loge
 import mm.chenme.lib.commutillibdemo.R
 import mm.chenme.lib.commutillib.BaseActivity
-import mm.chenme.lib.commutillib.utils.stoast
+import mm.chenme.lib.commutillib.utils.st
 import mm.chenme.lib.commutillibdemo.utils.addQMUIBtnAlpha
 import org.jetbrains.anko.dip
 
@@ -41,7 +40,7 @@ class QMUIWidgetTestActivity : BaseActivity() {
         }
 
         qmBtn_showToast.onClick {
-            stoast("弹出 toast！")
+            st("弹出 toast！")
         }
     }
 }

@@ -6,7 +6,7 @@ import com.qmuiteam.qmui.widget.dialog.QMUITipDialog
 import kotlinx.android.synthetic.main.act_net_demo.*
 import mm.chenme.lib.commutillib.BaseActivity
 import mm.chenme.lib.commutillib.utils.bindViewModel
-import mm.chenme.lib.commutillib.utils.stoast
+import mm.chenme.lib.commutillib.utils.st
 import mm.chenme.lib.commutillibdemo.R
 
 
@@ -41,7 +41,7 @@ class DemoActivity(override val layoutResId: Int = R.layout.act_net_demo) : Base
             mViewModel.resetLotteryCount().observe(this, Observer {
                 mLoadingDialog.dismiss()
                 it?.apply {
-                    stoast("抽奖次数重置成功！！")
+                    st("抽奖次数重置成功！！")
                 }
             })
         }
@@ -50,7 +50,7 @@ class DemoActivity(override val layoutResId: Int = R.layout.act_net_demo) : Base
             mViewModel.resetLotteryTime().observe(this, Observer {
                 mLoadingDialog.dismiss()
                 it?.apply {
-                    stoast("抽奖时间重置成功！！")
+                    st("抽奖时间重置成功！！")
                 }
             })
         }

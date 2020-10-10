@@ -1,7 +1,12 @@
 package mm.chenme.lib.commutillib.utils
 
+import java.lang.Exception
+import java.math.BigInteger
+import java.nio.charset.StandardCharsets
 import java.security.MessageDigest
 import java.security.NoSuchAlgorithmException
+import javax.crypto.Mac
+import javax.crypto.spec.SecretKeySpec
 
 /**
  * Descriptions：加密工具类
@@ -54,5 +59,19 @@ fun ByteArray?.hashTemplate(algorithm: String): ByteArray {
     } catch (e: NoSuchAlgorithmException) {
         e.printStackTrace()
         ByteArray(0)
+    }
+}
+
+
+/*---------------------------------- HmacSHA256 --------------------------------------*/
+fun hmacSHA256(sour: String, secret: String): String {
+    return try {
+        val mac = Mac.getInstance("HmacSHA256")
+        mac.init(SecretKeySpec(secret.toByteArray(StandardCharsets.UTF_8), "HmacSHA256"))
+        mac.update(sour.toByteArray(charset("UTF-8")))
+        val result = mac.doFinal()
+        BigInteger(1, result).toString(16)
+    }catch (e:Exception){
+        ""
     }
 }

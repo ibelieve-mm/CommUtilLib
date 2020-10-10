@@ -5,8 +5,7 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MediatorLiveData
 import androidx.lifecycle.Transformations
-import mm.chenme.lib.commutillib.utils.loge
-import mm.chenme.lib.commutillib.utils.stoast
+import mm.chenme.lib.commutillib.utils.st
 import mm.cme.commnetlib.config.Net_OK
 
 /**
@@ -37,7 +36,7 @@ class DemoViewModel(application: Application) : AndroidViewModel(application) {
                 mlvWeather.value = it.data
             } else {
                 mlvWeather.value = null
-                stoast(it.resultDesc)
+                st(it.resultDesc)
                 aActivity.dataEmpty()
             }
             mlvWeather
@@ -51,7 +50,7 @@ class DemoViewModel(application: Application) : AndroidViewModel(application) {
                 mlvWeather.value = true
             } else {
                 mlvWeather.value = null
-                stoast(it.resultDesc)
+                st(it.resultDesc)
                 aActivity.dataEmpty()
             }
             mlvWeather
@@ -64,7 +63,7 @@ class DemoViewModel(application: Application) : AndroidViewModel(application) {
                 mlvWeather.value = true
             } else {
                 mlvWeather.value = null
-                stoast(it.resultDesc)
+                st(it.resultDesc)
                 aActivity.dataEmpty()
             }
             mlvWeather

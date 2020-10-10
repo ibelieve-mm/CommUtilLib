@@ -6,7 +6,7 @@ import kotlinx.android.synthetic.main.act_view_stub_test.*
 import kotlinx.android.synthetic.main.stub_layout1.*
 import mm.chenme.lib.commutillib.BaseActivity
 import mm.chenme.lib.commutillib.utils.loge
-import mm.chenme.lib.commutillib.utils.stoast
+import mm.chenme.lib.commutillib.utils.st
 import mm.chenme.lib.commutillibdemo.R
 
 /**
@@ -33,7 +33,7 @@ class ViewStubActivity(override val layoutResId: Int = R.layout.act_view_stub_te
         super.initListener()
         tv_showStub.onClick {
             if (isViewStubInflated) {
-                stoast("ViewStub 已经显示了")
+                st("ViewStub 已经显示了")
             } else {
                 vs_placeholder.inflate()
             }

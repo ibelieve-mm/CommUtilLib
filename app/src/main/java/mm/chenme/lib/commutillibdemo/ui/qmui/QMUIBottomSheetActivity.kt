@@ -6,7 +6,7 @@ import com.qmuiteam.qmui.widget.dialog.QMUIBottomSheet
 import kotlinx.android.synthetic.main.act_qmui_bottom_sheet.*
 import mm.chenme.lib.commutillib.BaseActivity
 import mm.chenme.lib.commutillib.pro.view.ShapeRippleButton
-import mm.chenme.lib.commutillib.utils.stoast
+import mm.chenme.lib.commutillib.utils.st
 import mm.chenme.lib.commutillibdemo.R
 import org.jetbrains.anko.find
 
@@ -32,7 +32,7 @@ class QMUIBottomSheetActivity(override val layoutResId: Int = R.layout.act_qmui_
                 .setCancelText("cancel")
                 .setAddCancelBtn(true)
                 .setOnSheetItemClickListener { dialog, itemView ->
-                    stoast(itemView.tag as String)
+                    st(itemView.tag as String)
                     dialog.dismiss()
                 }
                 .addItem(android.R.drawable.alert_dark_frame, "1231312131", QMUIBottomSheet.BottomGridSheetBuilder.FIRST_LINE)
@@ -54,7 +54,7 @@ class QMUIBottomSheetActivity(override val layoutResId: Int = R.layout.act_qmui_
              .setAllowDrag(true)
                 .build()
              dialog.show()
-            dialog.find<ShapeRippleButton>(R.id.srb_retry).onClick { stoast("qweq“”") }
+            dialog.find<ShapeRippleButton>(R.id.srb_retry).onClick { st("qweq“”") }
 
 //            val dialog = QMUIDialog.CustomDialogBuilder(this)
 //                .setLayout(R.layout.dialog_base)

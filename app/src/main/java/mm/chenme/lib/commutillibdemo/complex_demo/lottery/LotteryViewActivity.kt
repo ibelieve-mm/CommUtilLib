@@ -12,7 +12,7 @@ import mm.chenme.lib.commutillib.BaseActivity
 import mm.chenme.lib.commutillib.utils.catchInt
 import mm.chenme.lib.commutillib.utils.screenWidthPx
 import mm.chenme.lib.commutillib.utils.setVisible
-import mm.chenme.lib.commutillib.utils.stoast
+import mm.chenme.lib.commutillib.utils.st
 import mm.chenme.lib.commutillibdemo.R
 
 
@@ -49,7 +49,7 @@ class LotteryViewActivity(override val layoutResId: Int = R.layout.act_lottery_v
                 lv.showFreeTag(false)
                 resultIndex = et_result.catchInt()
                 if (resultIndex < 0 || resultIndex > mBonusSize) {
-                    stoast("请输入 0 - $mBonusSize ")
+                    st("请输入 0 - $mBonusSize ")
                     return false
                 }
 //                lv.setResultBonusIndex(result)
@@ -59,11 +59,11 @@ class LotteryViewActivity(override val layoutResId: Int = R.layout.act_lottery_v
             }
 
             override fun onPanStop(resultBonusIndex: Int) {
-                stoast("!!恭喜获得奖品$resultBonusIndex")
+                st("!!恭喜获得奖品$resultBonusIndex")
             }
 
             override fun onPanStopWithErr() {
-                stoast("!!!!!!!!!!!!!出错啦")
+                st("!!!!!!!!!!!!!出错啦")
             }
 
             override fun onBonusBackgroundAnimEnter() {

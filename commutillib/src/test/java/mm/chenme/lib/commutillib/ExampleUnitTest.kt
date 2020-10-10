@@ -64,4 +64,12 @@ class ExampleUnitTest {
         println(randomIntFromAtoB(8,14))
         println(randomIntFromAtoB(8,14))
     }
+
+    @Test
+    fun hmacSHA256Test(){
+//        加密前：{"ids":[5708792],"token":"91d081902f8474cad7ff878cd6cb6914"}4,Android,1.2.0
+//        加密后：edd466d6a91264be263c7ac7ed4249d2e8288092835e12f7555ff4ba9fe744e5
+//        key：#C5jk._}
+        println(hmacSHA256("""{"ids":[5708792],"token":"91d081902f8474cad7ff878cd6cb6914"}4,Android,1.2.0""","#C5jk._}"))
+    }
 }

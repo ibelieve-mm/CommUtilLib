@@ -32,7 +32,7 @@ class LotteryProActivity(override val layoutResId: Int = R.layout.act_lottery_pr
         var angle = 0f
         val tvs = arrayListOf(tv0, tv1, tv2, tv3, tv4, tv5, tv6, tv7)
         val lls = arrayListOf(ll0, ll1, ll2, ll3, ll4, ll5, ll6, ll7)
-        val texts = arrayListOf("180 coins to lottery good good study", "123", "123", "123", "123", "123", "123", "123")
+        val texts = arrayListOf("180 coins to lottery good good study", "180 coins to lottery", "180 coins to lottery", "123", "123", "123", "123", "123")
         lls.forEachIndexed { index, it ->
             tvs[index].text = texts[index]
             if (index > 0) {

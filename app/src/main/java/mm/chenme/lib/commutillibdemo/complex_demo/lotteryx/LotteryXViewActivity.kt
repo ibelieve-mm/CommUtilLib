@@ -1,13 +1,10 @@
 package mm.chenme.lib.commutillibdemo.complex_demo.lotteryx
 
-import android.animation.Animator
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
 import android.graphics.Rect
 import android.os.Bundle
-import android.os.Handler
 import android.view.View
-import android.view.ViewGroup
 import android.view.animation.*
 import android.widget.TextView
 import android.widget.ViewSwitcher
@@ -86,7 +83,7 @@ class LotteryXViewActivity : AppCompatActivity() {
             }
 
             override fun onPanStop(resultBonusIndex: Int) {
-                stoast("!!恭喜获得奖品$resultBonusIndex")
+                st("!!恭喜获得奖品$resultBonusIndex")
             }
 
             override fun onPanStopWithErr() {

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="mm.chenme.lib.commutillibdemo">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -28,8 +29,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/BThemeNoActionBar"
+        tools:replace="android:label"
         android:usesCleartextTraffic="true">
-        <activity android:name="mm.chenme.lib.commutillibdemo.ui.MainActivity">
+        <activity android:name="mm.chenme.lib.commutillibdemo.ui.other.CoroutineDemoActivity">
+<!--        <activity android:name="mm.chenme.lib.commutillibdemo.ui.MainActivity">-->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -63,6 +66,8 @@
         <activity android:name="mm.chenme.lib.commutillibdemo.complex_demo.lottery.LotteryViewActivity"/>
         <activity android:name="mm.chenme.lib.commutillibdemo.complex_demo.lotteryx.LotteryXViewActivity"/>
         <activity android:name="mm.chenme.lib.commutillibdemo.complex_demo.lottery_pro.LotteryProActivity"/>
+        <activity android:name="mm.chenme.lib.commutillibdemo.complex_demo.live_data.LiveDataActivity"/>
+        <activity android:name="mm.chenme.lib.commutillibdemo.complex_demo.rating_bar.RatingBerActivity"/>
 
 
         <activity android:name="mm.chenme.lib.commutillibdemo.complex_demo.interview.base.pass_value4service.ServiceActivity" />

@@ -4,10 +4,9 @@ import androidx.core.content.edit
 import com.qmuiteam.qmui.kotlin.onClick
 import kotlinx.android.synthetic.main.act_shared_preferences.*
 import kotlinx.android.synthetic.main.act_shared_preferences.topbar
-import kotlinx.android.synthetic.main.act_tab_layout_divider.*
 import mm.chenme.lib.commutillib.BaseActivity
 import mm.chenme.lib.commutillib.utils.getSP
-import mm.chenme.lib.commutillib.utils.ltoast
+import mm.chenme.lib.commutillib.utils.lt
 import mm.chenme.lib.commutillib.utils.string
 import mm.chenme.lib.commutillibdemo.R
 
@@ -31,7 +30,7 @@ class SharedPreferencesActivity(override val layoutResId: Int = R.layout.act_sha
         tv_write.onClick {
             getSP().edit { putString("input", et_input.text.toString()) }
         }
-        tv_read.onClick { ltoast(getSP().string("input")) }
+        tv_read.onClick { lt(getSP().string("input")) }
 
         tv_del.onClick { getSP().edit { putString("input", "") } }
     }
