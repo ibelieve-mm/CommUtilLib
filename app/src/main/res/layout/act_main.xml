@@ -134,6 +134,11 @@
                 android:text="协程测试" />
 
             <mm.chenme.lib.commutillib.pro.view.ShapeRippleButton
+                android:id="@+id/srb_coroutineDemo"
+                style="@style/BtnThemeAllRoundFull"
+                android:text="kotlin 协程 demo" />
+
+            <mm.chenme.lib.commutillib.pro.view.ShapeRippleButton
                 android:id="@+id/srb_bezier"
                 style="@style/BtnThemeAllRoundFull"
                 android:text="贝塞尔曲线" />

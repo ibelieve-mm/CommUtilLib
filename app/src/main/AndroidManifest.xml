@@ -29,10 +29,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/BThemeNoActionBar"
-        tools:replace="android:label"
-        android:usesCleartextTraffic="true">
-        <activity android:name="mm.chenme.lib.commutillibdemo.ui.other.CoroutineDemoActivity">
-<!--        <activity android:name="mm.chenme.lib.commutillibdemo.ui.MainActivity">-->
+        android:usesCleartextTraffic="true"
+        tools:replace="android:label">
+        <activity android:name="mm.chenme.lib.commutillibdemo.ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -49,6 +48,7 @@
         <activity android:name="mm.chenme.lib.commutillibdemo.ui.other.GlideScaleTypeActivity" />
         <activity android:name="mm.chenme.lib.commutillibdemo.ui.other.SharedPreferencesActivity" />
         <activity android:name="mm.chenme.lib.commutillibdemo.ui.other.CoroutineActivity" />
+        <activity android:name="mm.chenme.lib.commutillibdemo.ui.other.CoroutineDemoActivity" />
         <activity android:name="mm.chenme.lib.commutillibdemo.ui.other.Divider4TabLayoutActivity" />
         <activity android:name="mm.chenme.lib.commutillibdemo.ui.other.ViewStubActivity" />
 
@@ -63,11 +63,11 @@
         <activity android:name="mm.chenme.lib.commutillibdemo.complex_demo.bezier.BezierHeartViewTestActivity" />
         <activity android:name="mm.chenme.lib.commutillibdemo.complex_demo.rv_paging_scroll.GridPagerSnapHelperActivity" />
         <activity android:name="mm.chenme.lib.commutillibdemo.complex_demo.surface_view.SurfaceViewActivity" />
-        <activity android:name="mm.chenme.lib.commutillibdemo.complex_demo.lottery.LotteryViewActivity"/>
-        <activity android:name="mm.chenme.lib.commutillibdemo.complex_demo.lotteryx.LotteryXViewActivity"/>
-        <activity android:name="mm.chenme.lib.commutillibdemo.complex_demo.lottery_pro.LotteryProActivity"/>
-        <activity android:name="mm.chenme.lib.commutillibdemo.complex_demo.live_data.LiveDataActivity"/>
-        <activity android:name="mm.chenme.lib.commutillibdemo.complex_demo.rating_bar.RatingBerActivity"/>
+        <activity android:name="mm.chenme.lib.commutillibdemo.complex_demo.lottery.LotteryViewActivity" />
+        <activity android:name="mm.chenme.lib.commutillibdemo.complex_demo.lotteryx.LotteryXViewActivity" />
+        <activity android:name="mm.chenme.lib.commutillibdemo.complex_demo.lottery_pro.LotteryProActivity" />
+        <activity android:name="mm.chenme.lib.commutillibdemo.complex_demo.live_data.LiveDataActivity" />
+        <activity android:name="mm.chenme.lib.commutillibdemo.complex_demo.rating_bar.RatingBerActivity" />
 
 
         <activity android:name="mm.chenme.lib.commutillibdemo.complex_demo.interview.base.pass_value4service.ServiceActivity" />

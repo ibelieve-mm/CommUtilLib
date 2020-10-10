@@ -1,5 +1,6 @@
 package mm.chenme.lib.commutillibdemo.ui.other
 
+import kotlinx.android.synthetic.main.act_coroutine_demo.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -17,7 +18,7 @@ import kotlin.concurrent.thread
  * Date：2020/9/30
  * Email：ibelieve1210@163.com
  */
-class CoroutineDemoActivity(override val layoutResId: Int = R.layout.act_main) : BaseActivity() {
+class CoroutineDemoActivity(override val layoutResId: Int = R.layout.act_coroutine_demo) : BaseActivity() {
 
     /**
      * 1. 使用线程的写法
@@ -74,6 +75,9 @@ class CoroutineDemoActivity(override val layoutResId: Int = R.layout.act_main) :
      */
     override fun initView() {
         super.initView()
+
+        initTopBar(topbar,"kotlin 协程 demo")
+
         GlobalScope.launch(Dispatchers.Main) {
             ioCode1()
             uiCode1()

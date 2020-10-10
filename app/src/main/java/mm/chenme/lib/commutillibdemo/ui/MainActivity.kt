@@ -76,6 +76,7 @@ class MainActivity(
         srb_glide.onClick { startActivity<GlideScaleTypeActivity>() }
         srb_sharedPreferences.onClick { startActivity<SharedPreferencesActivity>() }
         srb_coroutine.onClick { startActivity<CoroutineActivity>() }
+        srb_coroutineDemo.onClick { startActivity<CoroutineDemoActivity>() }
         srb_bezier.onClick { startActivity<BezierHeartViewTestActivity>() }
         srb_fragmentMain.onClick { startActivity<FragmentMainActivity>() }
     }
