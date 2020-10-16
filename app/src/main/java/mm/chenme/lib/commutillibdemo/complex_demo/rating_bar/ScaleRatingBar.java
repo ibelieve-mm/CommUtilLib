@@ -85,8 +85,10 @@ public class ScaleRatingBar extends AnimationRatingBar {
             postRunnable(mRunnable, ANIMATION_DELAY);
         }
     }
+
     private int mCurrentColor = Color.parseColor("#ffd900");
     int colorEnd = mCurrentColor;
+
     @NonNull
     private Runnable getAnimationRunnable(final float rating, final PartialView partialView, final int ratingViewId, final double maxIntOfRating) {
         return new Runnable() {
@@ -98,51 +100,59 @@ public class ScaleRatingBar extends AnimationRatingBar {
                     partialView.setFilled();
                 }
 
-                if (ratingViewId == rating) {
-                    Animation scaleUp = AnimationUtils.loadAnimation(getContext(), R.anim.scale_up);
-                    Animation scaleDown = AnimationUtils.loadAnimation(getContext(), R.anim.scale_down);
-                    partialView.startAnimation(scaleUp);
-                    partialView.startAnimation(scaleDown);
+//                if (ratingViewId == rating) {
+                Animation scaleUp = AnimationUtils.loadAnimation(getContext(), R.anim.scale_up);
+                Animation scaleDown = AnimationUtils.loadAnimation(getContext(), R.anim.scale_down);
+                partialView.startAnimation(scaleUp);
+                partialView.startAnimation(scaleDown);
 
 
 //                    f35959
-                    // f98e2d
+                // f98e2d
 //                    ffd900
 
+                if (rating <= 1) {
+                    colorEnd = Color.parseColor("#f35959");
+                } else if (rating > 3) {
+                    colorEnd = Color.parseColor("#ffd900");
 
-                    ObjectAnimator anim = ObjectAnimator.ofInt(new TextView(getContext()), "textColor", mCurrentColor, colorEnd);
-                    anim.setEvaluator(new ArgbEvaluator());
-                    anim.setDuration(200);
-                    anim.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-                        @Override
-                        public void onAnimationUpdate(ValueAnimator animation) {
-                            partialView.getFilledView().setColorFilter((int) animation.getAnimatedValue());
-                        }
-                    });
+                } else {
+                    colorEnd = Color.parseColor("#f98e2d");
 
-                    anim.addListener(new Animator.AnimatorListener() {
-                        @Override
-                        public void onAnimationStart(Animator animation) {
-
-                        }
-
-                        @Override
-                        public void onAnimationEnd(Animator animation) {
-                            mCurrentColor = colorEnd;
-                        }
-
-                        @Override
-                        public void onAnimationCancel(Animator animation) {
-
-                        }
-
-                        @Override
-                        public void onAnimationRepeat(Animator animation) {
-
-                        }
-                    });
-                    anim.start();
                 }
+                ObjectAnimator anim = ObjectAnimator.ofInt(new TextView(getContext()), "textColor", mCurrentColor, colorEnd);
+                anim.setEvaluator(new ArgbEvaluator());
+                anim.setDuration(200);
+                anim.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+                    @Override
+                    public void onAnimationUpdate(ValueAnimator animation) {
+                        partialView.getFilledView().setColorFilter((int) animation.getAnimatedValue());
+                    }
+                });
+
+                anim.addListener(new Animator.AnimatorListener() {
+                    @Override
+                    public void onAnimationStart(Animator animation) {
+
+                    }
+
+                    @Override
+                    public void onAnimationEnd(Animator animation) {
+                        mCurrentColor = colorEnd;
+                    }
+
+                    @Override
+                    public void onAnimationCancel(Animator animation) {
+
+                    }
+
+                    @Override
+                    public void onAnimationRepeat(Animator animation) {
+
+                    }
+                });
+                anim.start();
+//                }
             }
         };
     }
