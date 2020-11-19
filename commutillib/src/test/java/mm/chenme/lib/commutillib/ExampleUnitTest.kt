@@ -27,14 +27,14 @@ class ExampleUnitTest {
     }
 
     @Test
-    fun testToInt(){
-       println( "12".toIntNoErr())
-       println( "djakl".toIntNoErr())
-       println( "-1".toIntNoErr())
+    fun testToInt() {
+        println("12".toIntNoErr())
+        println("djakl".toIntNoErr())
+        println("-1".toIntNoErr())
     }
 
     @Test
-    fun testRandom(){
+    fun testRandom() {
         println((8 + Math.random() * (14 - 8 + 1)).toInt())
         println((8 + Math.random() * (14 - 8 + 1)).toInt())
         println((8 + Math.random() * (14 - 8 + 1)).toInt())
@@ -46,30 +46,66 @@ class ExampleUnitTest {
         println((8 + Math.random() * (14 - 8 + 1)).toInt())
         println((8 + Math.random() * (14 - 8 + 1)).toInt())
         println((8 + Math.random() * (14 - 8 + 1)).toInt())
-        println(randomIntFromAtoB(8,14))
-        println(randomIntFromAtoB(8,14))
-        println(randomIntFromAtoB(8,14))
-        println(randomIntFromAtoB(8,14))
-        println(randomIntFromAtoB(8,14))
-        println(randomIntFromAtoB(8,14))
-        println(randomIntFromAtoB(8,14))
-        println(randomIntFromAtoB(8,14))
-        println(randomIntFromAtoB(8,14))
-        println(randomIntFromAtoB(8,14))
-        println(randomIntFromAtoB(8,14))
-        println(randomIntFromAtoB(8,14))
-        println(randomIntFromAtoB(8,14))
-        println(randomIntFromAtoB(8,14))
-        println(randomIntFromAtoB(8,14))
-        println(randomIntFromAtoB(8,14))
-        println(randomIntFromAtoB(8,14))
+        println(randomIntFromAtoB(8, 14))
+        println(randomIntFromAtoB(8, 14))
+        println(randomIntFromAtoB(8, 14))
+        println(randomIntFromAtoB(8, 14))
+        println(randomIntFromAtoB(8, 14))
+        println(randomIntFromAtoB(8, 14))
+        println(randomIntFromAtoB(8, 14))
+        println(randomIntFromAtoB(8, 14))
+        println(randomIntFromAtoB(8, 14))
+        println(randomIntFromAtoB(8, 14))
+        println(randomIntFromAtoB(8, 14))
+        println(randomIntFromAtoB(8, 14))
+        println(randomIntFromAtoB(8, 14))
+        println(randomIntFromAtoB(8, 14))
+        println(randomIntFromAtoB(8, 14))
+        println(randomIntFromAtoB(8, 14))
+        println(randomIntFromAtoB(8, 14))
     }
 
     @Test
-    fun hmacSHA256Test(){
+    fun hmacSHA256Test() {
 //        加密前：{"ids":[5708792],"token":"91d081902f8474cad7ff878cd6cb6914"}4,Android,1.2.0
 //        加密后：edd466d6a91264be263c7ac7ed4249d2e8288092835e12f7555ff4ba9fe744e5
 //        key：#C5jk._}
-        println(hmacSHA256("""{"ids":[5708792],"token":"91d081902f8474cad7ff878cd6cb6914"}4,Android,1.2.0""","#C5jk._}"))
+        println(hmacSHA256("""{"ids":[5708792],"token":"91d081902f8474cad7ff878cd6cb6914"}4,Android,1.2.0""", "#C5jk._}"))
+    }
+
+
+    data class Per(var id: Int = 0, var name: String = "") {
+        override fun equals(other: Any?): Boolean {
+            if (other is Per) {
+                return this.id == other.id
+            }
+            return false
+        }
+
+//        override fun hashCode(): Int {
+//            return this.id.hashCode()
+//        }
+    }
+
+    @Test
+    fun paichong() {
+        val list1 = mutableListOf<Per>()
+        list1.add(Per(1, "1"))
+        list1.add(Per(2, "1"))
+        list1.add(Per(3, "2"))
+        list1.add(Per(4, "3"))
+        list1.add(Per(5, "2"))
+
+        val list2 = mutableListOf<Per>()
+        list2.add(Per(1, "2"))
+        list2.add(Per(3, "2"))
+        list2.add(Per(7, "7"))
+
+        list2.forEach {
+            if(!list1.contains(it)){
+                list1.add(it)
+            }
+        }
+        list1.forEach { println(it.toString()) }
     }
 }

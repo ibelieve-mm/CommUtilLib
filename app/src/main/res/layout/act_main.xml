@@ -24,6 +24,13 @@
             <View style="@style/DividerBar" />
 
             <mm.chenme.lib.commutillib.pro.view.ShapeRippleButton
+                android:id="@+id/srb_staggeredGrid"
+                style="@style/BtnThemeAllRoundFull"
+                android:text="StaggeredGridActivity" />
+
+            <View style="@style/DividerBar" />
+
+            <mm.chenme.lib.commutillib.pro.view.ShapeRippleButton
                 android:id="@+id/srb_lottery1"
                 style="@style/BtnThemeAllRoundFull"
                 android:text="Lottery View 1" />

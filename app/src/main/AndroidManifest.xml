@@ -70,6 +70,8 @@
         <activity android:name="mm.chenme.lib.commutillibdemo.complex_demo.rating_bar.RatingBerActivity" />
 
 
+        <activity android:name="mm.chenme.lib.commutillibdemo.complex_demo.staggered_grid.StaggeredGridActivity" />
+
         <activity android:name="mm.chenme.lib.commutillibdemo.complex_demo.interview.base.pass_value4service.ServiceActivity" />
         <!--        <activity android:name=".ui.FlutterDemoActivity" />-->
 

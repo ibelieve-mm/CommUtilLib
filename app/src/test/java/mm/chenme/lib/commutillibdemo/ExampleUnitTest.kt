@@ -1,6 +1,8 @@
 package mm.chenme.lib.commutillibdemo
 
+import android.util.Range
 import org.junit.Test
+import java.lang.StringBuilder
 
 /**
  * Example local unit test, which will execute on the development machine (host).
@@ -18,17 +20,48 @@ class ExampleUnitTest {
 
     @Test
     fun lopperTest() {
-        aaa = "111"
-        aaa?.apply tag@{
-            li.forEach {
-                print("---> $it \t")
-                if (it == 2) {
-                    return@tag
-                }
-                print("$it \t")
-            }
+//        aaa = "111"
+//        aaa?.apply tag@{
+//            li.forEach {
+//                print("---> $it \t")
+//                if (it == 2) {
+//                    return@tag
+//                }
+//                print("$it \t")
+//            }
+//        }
+//        println("\ntest func is end!")
+
+//        (0..10).forEach {
+//            print("$it  ")
+//
+//        }
+
+//        println(Math.ceil(120L/1000.0).toInt())
+//        println(Math.ceil(499L/1000.0).toInt())
+//        println(Math.ceil(500L/1000.0).toInt())
+//        println(Math.ceil(501L/1000.0).toInt())
+//        println(Math.ceil(999L/1000.0).toInt())
+//        println(Math.ceil(1001L/1000.0).toInt())
+
+        val  t = StringBuilder()
+        println(t)
+        if (t.isNotEmpty()){
+            t.deleteCharAt(t.length-1)
         }
-        println("\ntest func is end!")
+        println(t)
+        t.append(",")
+        println(t)
+        if (t.isNotEmpty()){
+            t.deleteCharAt(t.length-1)
+        }
+        println(t)
+        t.append("qqqq,")
+        println(t)
+        if (t.isNotEmpty()){
+            t.deleteCharAt(t.length-1)
+        }
+        println(t)
     }
 // 0 	1
 // test func is end!

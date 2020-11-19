@@ -14,11 +14,13 @@ import mm.chenme.lib.commutillibdemo.complex_demo.netdemo.DemoActivity
 import mm.chenme.lib.commutillibdemo.complex_demo.rv_paging_scroll.GridPagerSnapHelperActivity
 import mm.chenme.lib.commutillibdemo.consts.Values
 import mm.chenme.lib.commutillibdemo.complex_demo.bezier.BezierHeartViewTestActivity
+import mm.chenme.lib.commutillibdemo.complex_demo.interview.base.pass_value4service.ServiceActivity
 import mm.chenme.lib.commutillibdemo.complex_demo.live_data.LiveDataActivity
 import mm.chenme.lib.commutillibdemo.complex_demo.lottery.LotteryViewActivity
 import mm.chenme.lib.commutillibdemo.complex_demo.lottery_pro.LotteryProActivity
 import mm.chenme.lib.commutillibdemo.complex_demo.lotteryx.LotteryXViewActivity
 import mm.chenme.lib.commutillibdemo.complex_demo.rating_bar.RatingBerActivity
+import mm.chenme.lib.commutillibdemo.complex_demo.staggered_grid.StaggeredGridActivity
 import mm.chenme.lib.commutillibdemo.complex_demo.surface_view.SurfaceViewActivity
 import mm.chenme.lib.commutillibdemo.ui.main.FragmentMainActivity
 import mm.chenme.lib.commutillibdemo.ui.other.*
@@ -44,9 +46,11 @@ class MainActivity(
 
     override fun initListener() {
 //            startActivity<FlutterDemoActivity>()
-        srb_passValueService.onClick { startActivity<RatingBerActivity>() }
-//        srb_passValueService.onClick { startActivity<ServiceActivity>() }
+//        srb_passValueService.onClick { startActivity<RatingBerActivity>() }
+        srb_passValueService.onClick { startActivity<ServiceActivity>() }
         srb_openLiveData.onClick { startActivity<LiveDataActivity>() }
+
+        srb_staggeredGrid.onClick { startActivity<StaggeredGridActivity>() }
 
 
         srb_lottery1.onClick { startActivity<LotteryViewActivity>() }
