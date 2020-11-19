@@ -5,119 +5,112 @@ ext {
             minSdkVersion    : 23,
             targetSdkVersion : 29,
             applicationId    : 'com.dahu.app',
-            versionCode      : new Date().format("yyMMddHH", TimeZone.getTimeZone("GMT+08:00")).toInteger(),
-//            versionCode      : 20060117,
+            versionCode      : new Date().format("yyMMddHHmm", TimeZone.getTimeZone("GMT+08:00")).toInteger(),
             versionName      : '0.1.0',
             multiDexEnabled  : true,
     ]
 
     depsVersion = [
+            // test
+            junit              : "4.13.1",
+            testRunner         : "1.3.0",
+            testEspressoCore   : "3.3.0",
 
-            /**
-             * 基本组件
-             */
-            androidxCoreKtx    : '1.2.0',
-            appcompat          : '1.1.0',
-            constraintLayout   : '2.0.1',
-            recyclerView       : '1.1.0',
+            // 基本组件
+            androidxCoreKtx    : "1.3.2",
+            appcompat          : "1.2.0",
+            constraintLayout   : "2.0.4",
+            recyclerView       : "1.1.0",
 
-            /**
-             * 腾讯原生UI框架
-             */
-            qmui               : '2.0.0-alpha08',
+            // 腾讯原生UI框架
+            qmui               : "2.0.0-alpha08",
 
-            /**
-             * Gson
-             */
-            gson               : '2.8.6',
-//            gson               : '2.6.2',
+            // Gson
+            gson               : "2.8.6",
 
-            /**
-             * Anko
-             */
-            anko               : '0.10.8',
+            // Anko
+            anko               : "0.10.8",
 
-            /**
-             * net
-             */
-            retrofit2          : '2.9.0',
-            okhttp3Logging     : '4.7.2',
-//            rxjava             : '2.2.4',
-//            rxandroid          : '2.1.0',
-            lifecycleExtensions: '1.1.1',
+            // net
+            retrofit2          : "2.9.0",
+            okhttp3Logging     : "4.9.0",
 
-//            sCardView          : '1.2',
+            lifecycleExtensions: "1.1.1",
 
-            /**
-             * lottie
-             */
-            lottie             : '3.4.0',
+            // lottie 动画
+            lottie             : "3.5.0",
 
-            /**
-             * glide
-             */
-            glide              : '4.11.0',
+            // glide
+            glide              : "4.11.0",
 
-            /**
-             * liveEventBus
-             */
-            liveEventBus       : '1.5.1',
+            // liveEventBus
+            liveEventBus       : "1.5.1",
+
+            // 协程
+            coroutines         : "1.3.0",
+
+            // 25.3.0版本添加支持的一个动画库，让实现弹性动画变得更加方便
+            dynamicAnimationKtx: "1.0.0-alpha03",
+
+            // SVGA 动画
+            svgaPlayer         : "2.5.11",
+
+            // RatingBar
+            simpleRatingBar    : "1.5.0",
     ]
 
     depsLibs = [
-            /**
-             * 基本组件
-             */
+            // test
+            junit                 : "junit:junit:${depsVersion.junit}",
+            testRunner            : "androidx.test:runner:${depsVersion.testRunner}",
+            testEspressoCore      : "androidx.test.espresso:espresso-core:${depsVersion.testEspressoCore}",
+
+            // 基本组件
             androidxCoreKtx       : "androidx.core:core-ktx:${depsVersion.androidxCoreKtx}",
             appcompat             : "androidx.appcompat:appcompat:${depsVersion.appcompat}",
             constraintLayout      : "androidx.constraintlayout:constraintlayout:${depsVersion.constraintLayout}",
             recyclerView          : "androidx.recyclerview:recyclerview:${depsVersion.recyclerView}",
 
-            /**
-             * 腾讯原生UI框架
-             */
+            // 腾讯原生UI框架
             qmui                  : "com.qmuiteam:qmui:${depsVersion.qmui}",
             qmuiArch              : "com.qmuiteam:arch:${depsVersion.qmui}",
             qmuiArchCompiler      : "com.qmuiteam:arch-compiler:${depsVersion.qmui}",
 
-            /**
-             * Gson
-             */
+            // Gson
             gson                  : "com.google.code.gson:gson:${depsVersion.gson}",
 
-            /**
-             * Anko
-             */
+            // Anko
             anko                  : "org.jetbrains.anko:anko-commons:${depsVersion.anko}",
 
-            /**
-             * net
-             */
+            // net
             retrofit              : "com.squareup.retrofit2:retrofit:${depsVersion.retrofit2}",
             retrofitConvertGson   : "com.squareup.retrofit2:converter-gson:${depsVersion.retrofit2}",
             retrofitAdapterRxjava2: "com.squareup.retrofit2:adapter-rxjava2:${depsVersion.retrofit2}",
             okhttp3Logging        : "com.squareup.okhttp3:logging-interceptor:${depsVersion.okhttp3Logging}",
-//            rxjava                : "io.reactivex.rxjava2:rxjava:${depsVersion.rxjava}",
-//            rxandroid             : "io.reactivex.rxjava2:rxandroid:${depsVersion.rxandroid}",
+
             lifecycleExtensions   : "android.arch.lifecycle:extensions:${depsVersion.lifecycleExtensions}",
 
-//            sCardView             : "io.github.meetsl:SCardView:${depsVersion.sCardView}",
-
-            /**
-             * lottie
-             */
+            // lottie 动画
             lottie                : "com.airbnb.android:lottie:${depsVersion.lottie}",
 
-            /**
-             * glide
-             */
+            // glide
             glide                 : "com.github.bumptech.glide:glide:${depsVersion.glide}",
             glideCompiler         : "com.github.bumptech.glide:compiler:${depsVersion.glide}",
             glideOkhttp3          : "com.github.bumptech.glide:okhttp3-integration:${depsVersion.glide}",
 
-            /**
-             * liveEventBus
-             */
+            // liveEventBus
             liveEventBus          : "com.jeremyliao:live-event-bus:${depsVersion.liveEventBus}",
+
+            // 协程
+            coroutines            : "org.jetbrains.kotlinx:kotlinx-coroutines-android:${depsVersion.coroutines}",
+
+            // 25.3.0版本添加支持的一个动画库，让实现弹性动画变得更加方便
+            dynamicAnimationKtx   : "androidx.dynamicanimation:dynamicanimation-ktx:${depsVersion.dynamicAnimationKtx}",
+
+            // SVGA 动画
+            svgaPlayer            : "com.github.yyued:SVGAPlayer-Android:${depsVersion.svgaPlayer}",
+
+            // RatingBar
+            simpleRatingBar       : "com.github.ome450901:SimpleRatingBar:${depsVersion.simpleRatingBar}",
     ]
 }

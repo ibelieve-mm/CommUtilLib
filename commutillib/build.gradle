@@ -38,10 +38,10 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test:runner:1.2.0'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
+    testImplementation rootProject.depsLibs.junit
+    androidTestImplementation rootProject.depsLibs.testRunner
+    androidTestImplementation rootProject.depsLibs.testEspressoCore
 
     /**
      * 基本组件

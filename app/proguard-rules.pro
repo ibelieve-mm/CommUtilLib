@@ -61,6 +61,11 @@
 -assumenosideeffects class kotlin.jvm.internal.Intrinsics {
     static void checkParameterIsNotNull(java.lang.Object, java.lang.String);
 }
+# Most of volatile fields are updated with AFU and should not be mangled
+-keepclassmembernames class kotlinx.** {
+    volatile <fields>;
+}
+
 
 # --- native ------------------------------------------------------------------------------
 -keepclasseswithmembernames class * {
@@ -139,15 +144,49 @@
 
 #------------------------------------------------------------------------------------------
 #------------------------------------------------------------------------------------------
-### --- 三方等自定义混淆 --------------------------------------------------------------------
+### --- 三方混淆 ---------------------------------------------------------------------------
 #------------------------------------------------------------------------------------------
 #------------------------------------------------------------------------------------------
 
 ### --- start: 腾讯原生UI框架 ---------------------------------------------------------------
 -keep class **_FragmentFinder { *; }
--keep class com.qmuiteam.qmui.arch.record.** { *; }
 -keep class androidx.fragment.app.* { *; }
+-keep class com.qmuiteam.qmui.arch.record.RecordIdClassMap { *; }
+-keep class com.qmuiteam.qmui.arch.record.RecordIdClassMapImpl { *; }
+-keep class com.qmuiteam.qmui.arch.scheme.SchemeMap {*;}
+-keep class com.qmuiteam.qmui.arch.scheme.SchemeMapImpl {*;}
 ### --- end: 腾讯原生UI框架 -----------------------------------------------------------------
+
+
+### --- start: Retrofit2 ------------------------------------------------------------------
+# Retrofit does reflection on generic parameters. InnerClasses is required to use Signature and
+# EnclosingMethod is required to use InnerClasses.
+-keepattributes Signature, InnerClasses, EnclosingMethod
+# Retrofit does reflection on method and parameter annotations.
+-keepattributes RuntimeVisibleAnnotations, RuntimeVisibleParameterAnnotations
+# Retain service method parameters when optimizing.
+-keepclassmembers,allowshrinking,allowobfuscation interface * {
+    @retrofit2.http.* <methods>;
+}
+# Ignore annotation used for build tooling.
+-dontwarn org.codehaus.mojo.animal_sniffer.IgnoreJRERequirement
+# Ignore JSR 305 annotations for embedding nullability information.
+-dontwarn javax.annotation.**
+# Guarded by a NoClassDefFoundError try/catch and only used when on the classpath.
+-dontwarn kotlin.Unit
+# Top-level functions that can only be used by Kotlin.
+-dontwarn retrofit2.KotlinExtensions
+-dontwarn retrofit2.KotlinExtensions$*
+# With R8 full mode, it sees no subtypes of Retrofit interfaces since they are created with a Proxy
+# and replaces all potential values with null. Explicitly keeping the interfaces prevents this.
+-if interface * { @retrofit2.http.* <methods>; }
+-keep,allowobfuscation interface <1>
+### --- end: Retrofit2 --------------------------------------------------------------------
+
+
+### --- start: lottie ---------------------------------------------------------------------
+### --- end: lottie -----------------------------------------------------------------------
+
 
 ### --- start: Glide ----------------------------------------------------------------------
 -keep public class * implements com.bumptech.glide.module.GlideModule
@@ -161,8 +200,49 @@
 -keep class com.bumptech.glide.load.data.ParcelFileDescriptorRewinder$InternalRewinder {
   *** rewind();
 }
--keepresourcexmlelements manifest/application/meta-data@value=GlideModule # for DexGuard only
+# for DexGuard only
+#-keepresourcexmlelements manifest/application/meta-data@value=GlideModule
 ### --- end: Glide ------------------------------------------------------------------------
+
+
+### --- start: liveEventBus ---------------------------------------------------------------
+-dontwarn com.jeremyliao.liveeventbus.**
+-keep class com.jeremyliao.liveeventbus.** { *; }
+-keep class androidx.lifecycle.** { *; }
+-keep class androidx.arch.core.** { *; }
+### --- end: liveEventBus -----------------------------------------------------------------
+
+
+### --- start: coroutines -----------------------------------------------------------------
+-keep class kotlinx.coroutines.android.** {*;}
+# ServiceLoader support
+-keepnames class kotlinx.coroutines.internal.MainDispatcherFactory {}
+-keepnames class kotlinx.coroutines.CoroutineExceptionHandler {}
+-keepnames class kotlinx.coroutines.android.AndroidExceptionPreHandler {}
+-keepnames class kotlinx.coroutines.android.AndroidDispatcherFactory {}
+### --- end: coroutines -------------------------------------------------------------------
+
+
+### --- start: svgaPlayer -----------------------------------------------------------------
+-keep class com.squareup.wire.** { *; }
+-keep class com.opensource.svgaplayer.proto.** { *; }
+### --- end: svgaPlayer -------------------------------------------------------------------
+
+
+### --- start: simpleRatingBar ------------------------------------------------------------
+-keep class com.willy.ratingbar.** {*;}
+### --- end: simpleRatingBar --------------------------------------------------------------
+
+
+
+
+
+
+#------------------------------------------------------------------------------------------
+#------------------------------------------------------------------------------------------
+### --- 自定义混淆 -------------------------------------------------------------------------
+#------------------------------------------------------------------------------------------
+#------------------------------------------------------------------------------------------
 
 ### --- start: 保持实体类不被混淆 ------------------------------------------------------------
 -keep class mm.chenme.lib.commutillibdemo.model.** {*;} # 如果实体类被混淆了，则无法正常解析
