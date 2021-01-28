@@ -228,4 +228,58 @@
         <item name="android:src">@mipmap/points_40</item>
     </style>
     <!-- lottery pro  ent  -->
+
+    <!--  ShapeableIV  -->
+    <style name="roundCornerStyle">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">15dp</item>
+    </style>
+    <style name="circleCornerStyle">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+    <style name="cutCornerStyle">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSize">15dp</item>
+    </style>
+    <style name="diamondStyle">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSize">50%</item>
+    </style>
+    <style name="topRightCornerStyle">
+        <item name="cornerFamilyTopRight">rounded</item>
+        <item name="cornerSizeTopRight">50%</item>
+    </style>
+    <style name="cornerStyle">
+        <item name="cornerFamilyTopRight">rounded</item>
+        <item name="cornerFamilyBottomRight">cut</item>
+        <item name="cornerFamilyBottomLeft">rounded</item>
+        <item name="cornerSizeTopRight">50%</item>
+        <item name="cornerSizeBottomRight">50%</item>
+        <item name="cornerSizeBottomLeft">50%</item>
+    </style>
+    <style name="cornerStyle2">
+        <item name="cornerFamilyTopRight">rounded</item>
+        <item name="cornerFamilyTopLeft">rounded</item>
+        <item name="cornerSizeTopRight">50%</item>
+        <item name="cornerSizeTopLeft">50%</item>
+    </style>
+    <style name="cornerStyle3">
+        <item name="cornerFamilyTopRight">cut</item>
+        <item name="cornerFamilyBottomRight">cut</item>
+        <item name="cornerSizeTopRight">26dp</item>
+        <item name="cornerSizeBottomRight">26dp</item>
+    </style>
+    <style name="cornerStyle4">
+        <item name="cornerFamilyTopRight">rounded</item>
+        <item name="cornerFamilyBottomLeft">rounded</item>
+        <item name="cornerSizeTopRight">50%</item>
+        <item name="cornerSizeBottomLeft">50%</item>
+    </style>
+    <style name="cornerStyle5">
+        <item name="cornerFamilyTopRight">cut</item>
+        <item name="cornerFamilyBottomLeft">cut</item>
+        <item name="cornerSizeTopRight">50%</item>
+        <item name="cornerSizeBottomLeft">50%</item>
+    </style>
 </resources>

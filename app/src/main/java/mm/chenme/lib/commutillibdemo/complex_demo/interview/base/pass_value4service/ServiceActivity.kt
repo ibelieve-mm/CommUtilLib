@@ -8,7 +8,11 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.IBinder
 import android.os.Message
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import com.blankj.utilcode.constant.PermissionConstants
+import com.blankj.utilcode.util.PermissionUtils
+import com.blankj.utilcode.util.UtilsTransActivity
 import com.qmuiteam.qmui.kotlin.onClick
 import kotlinx.android.synthetic.main.act_service.*
 import kotlinx.coroutines.CoroutineScope
@@ -38,9 +42,31 @@ class ServiceActivity : AppCompatActivity(), ServiceConnection {
     }
 
 
+    fun getPermission() {
+        Log.i("SplashActivity", "getPermission()")
+        PermissionUtils.permission(PermissionConstants.CAMERA)
+            .rationale(object : PermissionUtils.OnRationaleListener {
+                override fun rationale(activity: UtilsTransActivity, shouldRequest: PermissionUtils.OnRationaleListener.ShouldRequest) {
+                    Log.i("SplashActivity", "getPermission  rationale()")
+                    shouldRequest.again(true)
+                }
+            })
+            .callback(object : PermissionUtils.FullCallback {
+                override fun onGranted(granted: MutableList<String>) {
+                    Log.i("SplashActivity", "onGranted()")
+                }
+
+                override fun onDenied(deniedForever: MutableList<String>, denied: MutableList<String>) {
+                    Log.i("SplashActivity", "onDenied()")
+                }
+            }).request()
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.act_service)
+
+        getPermission()
 
         mIntent = Intent(this, TargetService::class.java)
 

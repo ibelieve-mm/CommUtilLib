@@ -43,6 +43,9 @@ dependencies {
     androidTestImplementation rootProject.depsLibs.testRunner
     androidTestImplementation rootProject.depsLibs.testEspressoCore
 
+    api rootProject.depsLibs.androidxCoreKtx
+    api rootProject.depsLibs.appcompat
+
     /**
      * 基本组件
      */
@@ -72,6 +75,8 @@ dependencies {
     api rootProject.depsLibs.glide
     kapt rootProject.depsLibs.glideCompiler
     implementation rootProject.depsLibs.glideOkhttp3
+
+    api "com.google.android.material:material:1.2.1"
 
     implementation rootProject.depsLibs.androidxCoreKtx
     implementation rootProject.depsLibs.appcompat

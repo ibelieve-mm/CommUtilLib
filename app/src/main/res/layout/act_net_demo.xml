@@ -24,6 +24,13 @@
                     android:id="@+id/srb_resetLotteryTime"
                     style="@style/BtnThemeAllRoundFull"
                     android:text="重置抽奖时间" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:hint="暂无数据！！"
+                    android:id="@+id/tv_result"/>
             </androidx.appcompat.widget.LinearLayoutCompat>
         </androidx.core.widget.NestedScrollView>
 

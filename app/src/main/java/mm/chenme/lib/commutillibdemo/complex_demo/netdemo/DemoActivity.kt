@@ -42,6 +42,7 @@ class DemoActivity(override val layoutResId: Int = R.layout.act_net_demo) : Base
                 mLoadingDialog.dismiss()
                 it?.apply {
                     st("抽奖次数重置成功！！")
+                    tv_result.text="抽奖次数重置成功"
                 }
             })
         }

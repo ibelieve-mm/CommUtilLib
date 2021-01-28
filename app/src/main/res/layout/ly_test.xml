@@ -1,4 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="tv1,tv2,tv3,tv4,tv5"
+        app:flow_verticalGap="10dp"
+        app:flow_horizontalGap="30dp"
+        app:flow_verticalAlign="top"
+        app:flow_maxElementsWrap="0"
+        app:flow_wrapMode="aligned"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:background="#123"
+        android:textColor="#FFF"
+        android:text="1233123212331232" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFF"
+        android:background="#ff639b"
+        android:text="ssssssssssssssssss" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#123"
+        android:textColor="#FFF"
+        android:text="12331232" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#123"
+        android:textColor="#FFF"
+        android:text="12331232" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#123"
+        android:textColor="#FFF"
+        android:text="12331232" />
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="100dp"
+        app:round="10dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.constraintlayout.utils.widget.MockView
+        android:id="@+id/first"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/space"
+        app:layout_constraintBottom_toBottomOf="@+id/first"
+        app:layout_constraintStart_toEndOf="@+id/first"/>
+
+
+    <androidx.constraintlayout.utils.widget.MockView
+        android:id="@+id/second"
+        android:layout_width="100dp"
+        android:layout_marginLeft="-10dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="-10dp"
+        app:layout_constraintLeft_toRightOf="@id/space"
+        app:layout_constraintTop_toBottomOf="@id/space" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

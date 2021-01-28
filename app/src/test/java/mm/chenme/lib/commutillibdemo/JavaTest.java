@@ -2,6 +2,10 @@ package mm.chenme.lib.commutillibdemo;
 
 import org.junit.Test;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Random;
+
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
@@ -70,5 +74,74 @@ public class JavaTest {
                 return null;
             }
         });
+    }
+
+    @Test
+    public void mapTest(){
+        Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+        map.put(1, 333);
+        map.put(2, 1234);
+        map.put(3, 4321);
+        map.put(4,5555);
+        map.put(5,5555);
+        Integer[] keys = map.keySet().toArray(new Integer[0]);
+        Random random = new Random();
+//        Integer randomKey = keys[random.nextInt(keys.length)];
+        System.out.println(keys[random.nextInt(keys.length)]);
+        System.out.println(keys[random.nextInt(keys.length)]);
+        System.out.println(keys[random.nextInt(keys.length)]);
+        System.out.println(keys[random.nextInt(keys.length)]);
+
+    }
+
+    @Test
+    public void formatTest(){
+        System.out.println(formatTimestamp2Hms(367800000L));
+        System.out.println(formatTimestamp2Hms(3678000L));
+        System.out.println(formatTimestamp2Hms(3478000L));
+        System.out.println(formatTimestamp2Hms(61000L));
+        System.out.println(formatTimestamp2Hms(6000L));
+        System.out.println(formatTimestamp2Hms(0L));
+    }
+
+    public static String formatTimestamp2Hms(Long timestamp) {
+        if (null == timestamp || timestamp <= 0) {
+            return "00:00:00";
+        }
+        String result = "";
+        timestamp /= 1000;
+        int hour = (int) (timestamp / 3600);
+        if (hour <= 0) {
+            result += "00:";
+        } else if (hour < 10) {
+            result += "0" + hour + ":";
+        } else {
+            result += hour + ":";
+        }
+
+        timestamp %= 3600;
+        int min = (int) (timestamp / 60);
+        if (min <= 0) {
+            result += "00:";
+        } else if (min < 10) {
+            result += "0" + min + ":";
+        } else {
+            result += min + ":";
+        }
+
+        timestamp %= 60;
+        if (timestamp < 10) {
+            result += "0" + timestamp;
+        } else {
+            result += String.valueOf(timestamp);
+        }
+        return result;
+    }
+
+    @Test
+   public void mathRound(){
+        int a = 89;
+        int b = 71;
+        System.out.println(Math.round((float)b/(float)a*100));
     }
 }

@@ -114,11 +114,11 @@ dependencies {
     androidTestImplementation rootProject.depsLibs.testRunner
     androidTestImplementation rootProject.depsLibs.testEspressoCore
 
-    implementation project(':commutillib')
+    implementation project(":commutillib")
     implementation project(":commnetlib")
 
-    implementation rootProject.depsLibs.androidxCoreKtx
-    implementation rootProject.depsLibs.appcompat
+//    implementation rootProject.depsLibs.androidxCoreKtx
+//    implementation rootProject.depsLibs.appcompat
 
     /**
      * Gson
@@ -139,6 +139,10 @@ dependencies {
     implementation rootProject.depsLibs.dynamicAnimationKtx
     implementation rootProject.depsLibs.svgaPlayer
     implementation rootProject.depsLibs.simpleRatingBar
+
+    // 29k 的 Android 工具类
+    // 地址：https://github.com/Blankj/AndroidUtilCode/blob/master/lib/utilcode/README-CN.md
+    implementation 'com.blankj:utilcodex:1.30.5'
 
 //    /**
 //     * flutter 项目

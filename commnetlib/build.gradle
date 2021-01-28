@@ -44,9 +44,6 @@ dependencies {
 
     implementation project(':commutillib')
 
-    implementation rootProject.depsLibs.androidxCoreKtx
-    implementation rootProject.depsLibs.appcompat
-
     /**
      * net
      */

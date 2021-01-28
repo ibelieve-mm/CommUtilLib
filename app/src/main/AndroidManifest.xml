@@ -21,6 +21,9 @@
     -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
     <application
         android:name="mm.chenme.lib.commutillibdemo.APP"
         android:allowBackup="true"
@@ -51,6 +54,10 @@
         <activity android:name="mm.chenme.lib.commutillibdemo.ui.other.CoroutineDemoActivity" />
         <activity android:name="mm.chenme.lib.commutillibdemo.ui.other.Divider4TabLayoutActivity" />
         <activity android:name="mm.chenme.lib.commutillibdemo.ui.other.ViewStubActivity" />
+        <activity android:name="mm.chenme.lib.commutillibdemo.ui.other.SpanTextActivity" />
+        <activity android:name="mm.chenme.lib.commutillibdemo.ui.other.ShapeableImageViewActivity" />
+
+        <activity android:name="mm.chenme.lib.commutillibdemo.ui.other.PermissionDemoActivity" />
 
 
         <activity android:name="mm.chenme.lib.commutillibdemo.ui.rare.ClipToPaddingTestActivity" />

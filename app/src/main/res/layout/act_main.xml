@@ -21,6 +21,11 @@
                 style="@style/BtnThemeAllRoundFull"
                 android:text="open live data demo" />
 
+            <mm.chenme.lib.commutillib.pro.view.ShapeRippleButton
+                android:id="@+id/srb_permissionDemo"
+                style="@style/BtnThemeAllRoundFull"
+                android:text="Permission demo" />
+
             <View style="@style/DividerBar" />
 
             <mm.chenme.lib.commutillib.pro.view.ShapeRippleButton
@@ -154,6 +159,18 @@
                 android:id="@+id/srb_fragmentMain"
                 style="@style/BtnThemeAllRoundFull"
                 android:text="Fragment 示例" />
+
+            <View style="@style/DividerBar" />
+
+            <mm.chenme.lib.commutillib.pro.view.ShapeRippleButton
+                android:id="@+id/srb_specialText"
+                style="@style/BtnThemeAllRoundFull"
+                android:text="TextView 文字特殊处理" />
+
+            <mm.chenme.lib.commutillib.pro.view.ShapeRippleButton
+                android:id="@+id/srb_shapeableImageView"
+                style="@style/BtnThemeAllRoundFull"
+                android:text="ShapeableImageView 测试" />
         </androidx.appcompat.widget.LinearLayoutCompat>
     </ScrollView>
 

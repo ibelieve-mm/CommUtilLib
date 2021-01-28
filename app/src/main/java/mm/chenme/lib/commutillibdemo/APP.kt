@@ -1,6 +1,7 @@
 package mm.chenme.lib.commutillibdemo
 
 import android.app.Application
+import com.blankj.utilcode.util.Utils
 import com.jeremyliao.liveeventbus.LiveEventBus
 import com.qmuiteam.qmui.arch.QMUISwipeBackActivityManager
 
@@ -35,5 +36,8 @@ class APP : Application() {
          * 配置在没有Observer关联的时候是否自动清除LiveEvent以释放内存（默认值false）
          * */
         LiveEventBus.config().supportBroadcast(this).lifecycleObserverAlwaysActive(true).autoClear(false)
+
+
+        Utils.init(this)
     }
 }

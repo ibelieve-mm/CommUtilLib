@@ -12,22 +12,12 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tv_play"
+            <TextView
+                android:id="@+id/tv1"
+                android:textSize="20sp"
                 android:layout_width="match_parent"
-                android:layout_height="44dp"
-                android:background="?android:selectableItemBackground"
-                android:gravity="center_vertical"
-                android:paddingStart="@dimen/size_pageContentMarginHor"
-                android:paddingEnd="@dimen/size_pageContentMarginHor"
-                android:text="播放效果"
-                android:textColor="@color/color_theme" />
-
-            <mm.chenme.lib.commutillibdemo.complex_demo.bezier.HeartView
-                android:layout_width="250dp"
-                android:id="@+id/heartView"
-                android:background="@color/color_theme_t10"
-                android:layout_height="310dp" />
+                android:layout_height="wrap_content"
+                android:background="@color/color_theme_t10" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
     </ScrollView>

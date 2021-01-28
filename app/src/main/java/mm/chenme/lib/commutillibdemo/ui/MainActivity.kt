@@ -1,7 +1,14 @@
 package mm.chenme.lib.commutillibdemo.ui
 
 import android.graphics.Color
+import android.text.Spannable
+import android.text.Spanned
+import android.util.Log
+import android.widget.TextView
 import androidx.core.content.edit
+import com.blankj.utilcode.constant.PermissionConstants
+import com.blankj.utilcode.util.PermissionUtils
+import com.blankj.utilcode.util.UtilsTransActivity
 import com.qmuiteam.qmui.kotlin.onClick
 import kotlinx.android.synthetic.main.act_main.*
 import kotlinx.coroutines.GlobalScope
@@ -10,18 +17,17 @@ import mm.chenme.lib.commutillib.BaseActivity
 import mm.chenme.lib.commutillib.utils.getSP
 import mm.chenme.lib.commutillib.utils.st
 import mm.chenme.lib.commutillibdemo.R
-import mm.chenme.lib.commutillibdemo.complex_demo.netdemo.DemoActivity
-import mm.chenme.lib.commutillibdemo.complex_demo.rv_paging_scroll.GridPagerSnapHelperActivity
-import mm.chenme.lib.commutillibdemo.consts.Values
 import mm.chenme.lib.commutillibdemo.complex_demo.bezier.BezierHeartViewTestActivity
 import mm.chenme.lib.commutillibdemo.complex_demo.interview.base.pass_value4service.ServiceActivity
 import mm.chenme.lib.commutillibdemo.complex_demo.live_data.LiveDataActivity
 import mm.chenme.lib.commutillibdemo.complex_demo.lottery.LotteryViewActivity
 import mm.chenme.lib.commutillibdemo.complex_demo.lottery_pro.LotteryProActivity
 import mm.chenme.lib.commutillibdemo.complex_demo.lotteryx.LotteryXViewActivity
-import mm.chenme.lib.commutillibdemo.complex_demo.rating_bar.RatingBerActivity
+import mm.chenme.lib.commutillibdemo.complex_demo.netdemo.DemoActivity
+import mm.chenme.lib.commutillibdemo.complex_demo.rv_paging_scroll.GridPagerSnapHelperActivity
 import mm.chenme.lib.commutillibdemo.complex_demo.staggered_grid.StaggeredGridActivity
 import mm.chenme.lib.commutillibdemo.complex_demo.surface_view.SurfaceViewActivity
+import mm.chenme.lib.commutillibdemo.consts.Values
 import mm.chenme.lib.commutillibdemo.ui.main.FragmentMainActivity
 import mm.chenme.lib.commutillibdemo.ui.other.*
 import mm.chenme.lib.commutillibdemo.ui.qmui.QMUIBottomSheetActivity
@@ -29,6 +35,7 @@ import mm.chenme.lib.commutillibdemo.ui.qmui.QMUIWidgetTestActivity
 import mm.chenme.lib.commutillibdemo.ui.rare.ClipChildrenTestActivity
 import mm.chenme.lib.commutillibdemo.ui.rare.ClipToPaddingTestActivity
 import org.jetbrains.anko.startActivity
+
 
 class MainActivity(
     override val layoutResId: Int = R.layout.act_main,
@@ -44,11 +51,16 @@ class MainActivity(
         getSP().edit { putString("asdadsa", "小盆友，你是不是有很多问？") }
     }
 
+
+
+
     override fun initListener() {
 //            startActivity<FlutterDemoActivity>()
 //        srb_passValueService.onClick { startActivity<RatingBerActivity>() }
+//        srb_passValueService.onClick { startActivity<ASD>() }
         srb_passValueService.onClick { startActivity<ServiceActivity>() }
         srb_openLiveData.onClick { startActivity<LiveDataActivity>() }
+        srb_permissionDemo.onClick { startActivity<PermissionDemoActivity>() }
 
         srb_staggeredGrid.onClick { startActivity<StaggeredGridActivity>() }
 
@@ -83,6 +95,10 @@ class MainActivity(
         srb_coroutineDemo.onClick { startActivity<CoroutineDemoActivity>() }
         srb_bezier.onClick { startActivity<BezierHeartViewTestActivity>() }
         srb_fragmentMain.onClick { startActivity<FragmentMainActivity>() }
+
+
+        srb_specialText.onClick { startActivity<SpanTextActivity>() }
+        srb_shapeableImageView.onClick { startActivity<ShapeableImageViewActivity>() }
     }
 
     /**
