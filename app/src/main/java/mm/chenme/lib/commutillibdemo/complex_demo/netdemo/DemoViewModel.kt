@@ -70,6 +70,8 @@ class DemoViewModel(application: Application) : AndroidViewModel(application) {
             mlvWeather
         }
     }
+
+
 }
 
 
