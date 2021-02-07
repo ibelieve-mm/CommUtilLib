@@ -5,13 +5,12 @@ import mm.chenme.lib.commutillib.utils.AppGlobals
 import mm.cme.commnetlib.config.BaseUrl
 import mm.cme.commnetlib.interceptor.FilterInterceptor
 import mm.cme.commnetlib.interceptor.HeaderInterceptor
-import mm.cme.commnetlib.interceptor.HttpInterceptor
 import okhttp3.ConnectionPool
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
-import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.converter.moshi.MoshiConverterFactory
 import java.util.concurrent.TimeUnit
 
 
@@ -50,7 +49,8 @@ object RetrofitClient {
         return Retrofit.Builder()
             .client(client)
             .baseUrl(url ?: BaseUrl)
-            .addConverterFactory(GsonConverterFactory.create())
+//            .addConverterFactory(GsonConverterFactory.create()) // 使用 Gson 解析
+            .addConverterFactory(MoshiConverterFactory.create()) // 使用 Moshi 解析
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .build()
     }

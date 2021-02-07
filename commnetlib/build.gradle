@@ -48,9 +48,11 @@ dependencies {
      * net
      */
     api rootProject.depsLibs.retrofit
-    api rootProject.depsLibs.retrofitConvertGson
+//    api rootProject.depsLibs.retrofitConvertGson // 使用 Gson 解析
+    api rootProject.depsLibs.converterMoshi // 使用 Moshi 解析
     api rootProject.depsLibs.retrofitAdapterRxjava2
     api rootProject.depsLibs.okhttp3Logging
+
 //    api rootProject.depsLibs.rxjava
 //    api rootProject.depsLibs.rxandroid
 
